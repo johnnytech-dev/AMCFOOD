@@ -1,22 +1,25 @@
-/* AM SEA FOOD SALES - High-Converting Attractive Coastal Ocean Theme */
+/* AMCFOOD - Pure Natural Seafood Coastal Ocean Theme */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
 
 :root {
-  --ocean-deep: #031326;
-  --ocean-sapphire: #004e75;
-  --ocean-blue: #0284c7;
-  --ocean-teal: #0d9488;
-  --frost-cyan: #38bdf8;
-  --coral-accent: #f97316;
-  --coral-vibrant: #ff5722;
-  --amber-warm: #f59e0b;
-  --sea-ice: #f0f9ff;
+  --amc-navy: #0B1B2B;
+  --amc-dark: #071320;
+  --amc-orange: #EA580C;
+  --amc-coral: #F97316;
+  --amc-blue: #0284c7;
+  --amc-cyan: #38bdf8;
+  --amc-emerald: #059669;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #0f172a;
-  background-color: #f8fafc;
+  background-color: #F8FAFC;
   overflow-x: hidden;
 }
 
@@ -24,7 +27,7 @@ h1, h2, h3, h4, .font-heading {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Custom scrollbar */
+/* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -40,28 +43,47 @@ h1, h2, h3, h4, .font-heading {
   background: #94a3b8;
 }
 
-/* Radiant Ocean Hero Styling */
-.hero-vibrant-ocean {
-  background: 
-    radial-gradient(circle at 78% 22%, rgba(14, 165, 233, 0.45) 0%, rgba(6, 182, 212, 0.2) 35%, transparent 70%),
-    radial-gradient(circle at 18% 78%, rgba(249, 115, 22, 0.22) 0%, rgba(245, 158, 11, 0.1) 40%, transparent 65%),
-    linear-gradient(135deg, #04162a 0%, #062b4e 32%, #034b75 68%, #00688f 100%);
-  position: relative;
+/* Ultra-smooth interactive tactile buttons */
+button, .btn, a, input, select {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Subtle water light shimmer overlay */
-.hero-vibrant-ocean::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
-    radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
-  background-size: 100% 100%, 28px 28px;
-  pointer-events-none;
+button:active:not(:disabled), .btn:active {
+  transform: scale(0.96);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Card hover elevations */
+.hover-card-elevate {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-card-elevate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(11, 27, 43, 0.1), 0 8px 10px -6px rgba(11, 27, 43, 0.1);
+}
+
+/* Pill active states */
+.cat-pill.active-cat {
+  background-color: #0B1B2B !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(11, 27, 43, 0.25);
+}
+
+.tag-pill.active-tag {
+  background-color: #ffedd5 !important;
+  color: #c2410c !important;
+  border-color: #fdba74 !important;
+}
+
+/* Radiant Ocean Gradient Overlay */
+.hero-vibrant-ocean {
+  background: 
+    radial-gradient(circle at 78% 22%, rgba(56, 189, 248, 0.2) 0%, transparent 60%),
+    radial-gradient(circle at 18% 78%, rgba(234, 88, 12, 0.18) 0%, transparent 55%),
+    linear-gradient(135deg, #0B1B2B 0%, #0E243A 50%, #0B1B2B 100%);
 }
 
 /* Glowing text highlights */
@@ -69,83 +91,14 @@ h1, h2, h3, h4, .font-heading {
   text-shadow: 0 0 25px rgba(249, 115, 22, 0.4), 0 0 50px rgba(249, 115, 22, 0.2);
 }
 
-.glow-cyan-text {
-  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+/* Subtle Shimmer on Box Tray */
+@keyframes shimmerPulse {
+  0%, 100% { opacity: 0.95; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
 }
 
-/* Glassmorphism Showcase Card */
-.glass-showcase-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1.5px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 25px 50px -12px rgba(2, 24, 46, 0.8), 0 0 35px rgba(56, 189, 248, 0.25);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-showcase-card:hover {
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: 0 30px 60px -12px rgba(2, 24, 46, 0.9), 0 0 45px rgba(56, 189, 248, 0.4);
-}
-
-/* Button pulse aura */
-.btn-primary-glow {
-  background: linear-gradient(135deg, #ff5722 0%, #f97316 50%, #ea580c 100%);
-  box-shadow: 0 10px 25px -3px rgba(249, 115, 22, 0.5), 0 0 20px rgba(249, 115, 22, 0.3);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-primary-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px -3px rgba(249, 115, 22, 0.65), 0 0 30px rgba(249, 115, 22, 0.45);
-}
-
-.btn-secondary-glow {
-  background: rgba(3, 105, 161, 0.35);
-  border: 1.5px solid rgba(56, 189, 248, 0.5);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px -3px rgba(2, 132, 199, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-secondary-glow:hover {
-  background: rgba(3, 105, 161, 0.55);
-  border-color: rgba(56, 189, 248, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px -3px rgba(56, 189, 248, 0.4);
-}
-
-/* Shimmer animation */
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
-}
-
-.shimmer-active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.35) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  animation: shimmer 3s infinite;
-}
-
-/* Badge tags */
-.badge-wild {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  color: #ffffff;
-}
-
-.badge-coral {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-  color: #ffffff;
+.animate-shimmer-pulse {
+  animation: shimmerPulse 2s infinite ease-in-out;
 }
 
 /* Print receipt styling */

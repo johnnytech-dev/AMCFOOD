@@ -1,6 +1,6 @@
 /**
- * AM SEA FOOD SALES - Pure Interactive Application Logic
- * High-Converting Seafood D2C Storefront inspired by Sizzlefish
+ * AMCFOOD - Pure Natural Seafood D2C Storefront
+ * High-Converting Seafood D2C Storefront
  * Works 100% both offline (file://) and online (http://localhost:3000)
  */
 
@@ -1163,20 +1163,20 @@
     applyPromoCode: function (manualCode = null) {
       const input = document.getElementById('promo-input');
       const code = (manualCode || (input ? input.value : '')).trim().toUpperCase();
-      if (code === 'SIZZLE10' || code === 'SF10') {
+      if (code === 'AMC10' || code === 'SIZZLE10' || code === 'SF10') {
         state.discountPercent = 10;
-        state.appliedPromoName = 'SIZZLE10 (10% OFF)';
-        showToast("🎉 Promo SIZZLE10 applied: 10% OFF your Sizzlefish box!");
-      } else if (code === 'SIZZLE15' || code === 'AM15') {
+        state.appliedPromoName = 'AMC10 (10% OFF)';
+        showToast("🎉 Promo AMC10 applied: 10% OFF your AMCFOOD box!");
+      } else if (code === 'AMC15' || code === 'SIZZLE15' || code === 'AM15') {
         state.discountPercent = 15;
-        state.appliedPromoName = 'SIZZLE15 (15% OFF)';
-        showToast("🎉 Promo SIZZLE15 applied: 15% OFF your order!");
+        state.appliedPromoName = 'AMC15 (15% OFF)';
+        showToast("🎉 Promo AMC15 applied: 15% OFF your order!");
       } else if (code === 'FREESHIP') {
         state.discountPercent = 10;
-        state.appliedPromoName = 'FREESHIP';
-        showToast("🎉 Promo FREESHIP applied: 10% Discount!");
+        state.appliedPromoName = 'FREESHIP (FREE SHIPPING)';
+        showToast("🎉 Promo FREESHIP applied: Free Shipping Discount!");
       } else {
-        alert("Invalid code. Try 'SIZZLE10' for 10% off your first box!");
+        alert("Invalid code. Try 'AMC10' for 10% off your first box!");
         return;
       }
       updateCartUI();
@@ -1267,22 +1267,36 @@
     },
     setCategory: function (cat, btn) {
       state.activeCategory = cat;
-      document.querySelectorAll('.cat-pill, .cat-btn').forEach(b => {
-        b.className = "cat-pill px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-slate-700 border border-slate-200 hover:bg-slate-50";
-        if (b.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || (cat === 'Fresh Catch' && b.textContent.includes('Salmon'))) {
-          b.className = "cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition bg-[#0B1B2B] text-white shadow";
-        }
+      const pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(b => {
+        b.className = "cat-pill px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer";
       });
+      if (btn) {
+        btn.className = "cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition bg-[#0B1B2B] text-white shadow cursor-pointer";
+      } else {
+        pills.forEach(b => {
+          if (b.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || (cat === 'Fresh Catch' && b.textContent.includes('Salmon'))) {
+            b.className = "cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition bg-[#0B1B2B] text-white shadow cursor-pointer";
+          }
+        });
+      }
       renderCatalog();
     },
     setTag: function (tag, btn) {
       state.activeTag = tag;
-      document.querySelectorAll('.tag-pill, .tag-btn').forEach(b => {
-        b.className = "tag-pill px-3 py-1 rounded-lg font-bold border transition bg-white text-slate-600 border-slate-200 hover:bg-slate-50";
-        if (b.textContent.trim().toLowerCase() === tag.toLowerCase()) {
-          b.className = "tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition bg-orange-100 text-orange-700 border-orange-300";
-        }
+      const pills = document.querySelectorAll('.tag-pill');
+      pills.forEach(b => {
+        b.className = "tag-pill px-3 py-1 rounded-lg font-bold border transition bg-white text-slate-600 border-slate-200 hover:bg-slate-50 cursor-pointer";
       });
+      if (btn) {
+        btn.className = "tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition bg-orange-100 text-orange-700 border-orange-300 cursor-pointer";
+      } else {
+        pills.forEach(b => {
+          if (b.textContent.trim().toLowerCase() === tag.toLowerCase()) {
+            b.className = "tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition bg-orange-100 text-orange-700 border-orange-300 cursor-pointer";
+          }
+        });
+      }
       renderCatalog();
     },
     handleSort: function (val) {
@@ -1345,16 +1359,18 @@
     },
 
     // Product detail modal (PDP)
-    openProductModal: function (productId) {
+        openProductModal: function (productId) {
       const p = PRODUCTS.find(prod => prod.id === productId);
       if (!p) return;
       const modal = document.getElementById('product-modal');
       const content = document.getElementById('product-modal-content');
       if (!modal || !content) return;
 
-      const v = p.variants[0];
+      const activeVarIdx = state.selectedVariants[p.id] || 0;
+      const v = p.variants[activeVarIdx] || p.variants[0];
+
       content.innerHTML = `
-        <button onclick="app.closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center z-10">✕</button>
+        <button type="button" onclick="app.closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center z-10 cursor-pointer">✕</button>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div class="rounded-2xl overflow-hidden h-72 sm:h-80 bg-slate-100 border border-slate-200">
@@ -1366,14 +1382,15 @@
           </div>
           <div class="flex flex-col justify-between">
             <div>
-              <span class="text-[11px] font-bold uppercase tracking-wider text-coral-600 block">${p.origin} • ${p.harvestMethod}</span>
-              <h2 class="text-2xl font-black font-heading text-ocean-950 mt-1 mb-2">${p.name}</h2>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-orange-600 block">${p.origin} • ${p.harvestMethod}</span>
+              <h2 class="text-2xl font-black font-heading text-[#0B1B2B] mt-1 mb-2">${p.name}</h2>
               <div class="flex items-center gap-2 text-xs mb-3">
                 <span class="text-yellow-400 font-bold">★★★★★</span>
                 <span class="text-slate-500 font-semibold">${p.rating} (${p.reviewsCount} verified reviews)</span>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">${p.shortDescription}</p>
 
+              <!-- Nutrition Facts -->
               <div class="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-3 rounded-xl border border-slate-200 mb-4">
                 <div><strong>Calories:</strong> ${p.nutrition.calories} kcal</div>
                 <div><strong>Protein:</strong> ${p.nutrition.protein}</div>
@@ -1381,26 +1398,75 @@
                 <div><strong>Total Fat:</strong> ${p.nutrition.fat}</div>
               </div>
 
+              <!-- Chef Technique -->
               <div class="text-xs text-slate-600 bg-sky-50 p-3 rounded-xl border border-sky-100 mb-4">
-                <p class="font-semibold text-ocean-950 mb-1">👨‍🍳 Preparation Technique:</p>
+                <p class="font-semibold text-[#0B1B2B] mb-1">👨‍🍳 Preparation Technique:</p>
                 <p>${p.cookingTips}</p>
               </div>
 
+              <!-- Pack Size Selector in Modal -->
+              <div class="mb-4">
+                <label class="text-xs font-bold text-slate-700 uppercase mb-1.5 block">Select Pack Size:</label>
+                <div class="flex gap-2">
+                  ${p.variants.map((variant, idx) => `
+                    <button
+                      type="button"
+                      onclick="app.selectModalVariant('${p.id}', ${idx})"
+                      id="modal-var-btn-${idx}"
+                      class="flex-1 py-2 px-2 rounded-xl text-xs font-bold transition border cursor-pointer ${idx === activeVarIdx ? 'bg-[#0B1B2B] text-white border-[#0B1B2B] shadow' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}"
+                    >
+                      ${variant.packCount} Fillets<br/><span class="text-[11px] font-black">${variant.price}</span>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Preparation Dropdown -->
               <div class="space-y-1 mb-6">
                 <label class="text-xs font-bold text-slate-700 uppercase">Cut Preparation:</label>
-                <select id="modal-prep-select" class="w-full text-xs font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+                <select id="modal-prep-select" class="w-full text-xs font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-orange-500 cursor-pointer">
                   ${p.preparationOptions.map(prep => `<option value="${prep}">${prep}</option>`).join('')}
                 </select>
               </div>
             </div>
 
-            <button onclick="app.addToCart('${p.id}', 0, document.getElementById('modal-prep-select').value); app.closeProductModal();" class="w-full py-4 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-black text-xs uppercase tracking-wider shadow-lg shadow-coral-500/25">
-              Add ${v.packCount}-Pack to Cart ($${v.price})
+            <button 
+              id="modal-add-to-cart-btn"
+              type="button"
+              onclick="app.addToCart('${p.id}', state.selectedVariants['${p.id}'] || 0, document.getElementById('modal-prep-select').value); app.closeProductModal();" 
+              class="w-full py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider shadow-lg shadow-orange-600/25 cursor-pointer active:scale-95 transition"
+            >
+              Add ${v.packCount}-Pack to Cart (${v.price})
             </button>
           </div>
         </div>
       `;
       modal.classList.remove('hidden');
+    },
+    selectModalVariant: function (productId, variantIdx) {
+      const p = PRODUCTS.find(prod => prod.id === productId);
+      if (!p) return;
+      state.selectedVariants[productId] = variantIdx;
+      const v = p.variants[variantIdx];
+
+      p.variants.forEach((_, idx) => {
+        const btn = document.getElementById(`modal-var-btn-${idx}`);
+        if (btn) {
+          if (idx === variantIdx) {
+            btn.className = "flex-1 py-2 px-2 rounded-xl text-xs font-bold transition border cursor-pointer bg-[#0B1B2B] text-white border-[#0B1B2B] shadow";
+          } else {
+            btn.className = "flex-1 py-2 px-2 rounded-xl text-xs font-bold transition border cursor-pointer bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100";
+          }
+        }
+      });
+
+      const addBtn = document.getElementById('modal-add-to-cart-btn');
+      if (addBtn) {
+        addBtn.textContent = `Add ${v.packCount}-Pack to Cart (${v.price})`;
+      }
+
+      // Also sync catalog card if visible
+      app.selectProductVariant(productId, variantIdx);
     },
     closeProductModal: function () {
       const modal = document.getElementById('product-modal');
@@ -1455,7 +1521,7 @@
       }
     },
     placeFinalOrder: function () {
-      const orderId = "SF-" + Math.floor(100000 + Math.random() * 900000);
+      const orderId = "AMC-" + Math.floor(100000 + Math.random() * 900000);
       const tracking = "1Z" + Math.floor(100000000000 + Math.random() * 900000000000);
 
       const subtotal = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);

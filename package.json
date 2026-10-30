@@ -1,7 +1,7 @@
 {
-  "name": "sizzlefish-seafood-market",
+  "name": "amcfood",
   "version": "1.0.0",
-  "description": "SIZZLEFISH - Pure Natural Seafood Delivered To Your Door. Direct-to-Consumer fresh & flash-frozen premium seafood e-commerce shop.",
+  "description": "AMCFOOD - Pure Natural Seafood Delivered To Your Door. Direct-to-Consumer fresh & flash-frozen premium seafood e-commerce market.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

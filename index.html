@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sizzlefish | Pure Natural Seafood Delivered To Your Door</title>
-  <meta name="description" content="Shop premium wild-caught Alaskan salmon, cold-water Maine lobster tails, sea scallops, and build custom Sizzlefish Prime subscription boxes. Flash-frozen at sea and packed with dry ice for guaranteed frozen arrival.">
+  <title>AMCFOOD | Pure Natural Seafood Delivered To Your Door</title>
+  <meta name="description" content="Shop premium wild-caught Alaskan salmon, cold-water Maine lobster tails, sea scallops, and build custom AMCFOOD Prime subscription boxes. Flash-frozen at sea and packed with dry ice for guaranteed frozen arrival.">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐟</text></svg>">
 
@@ -57,15 +57,15 @@
     <span id="toast-message" class="text-xs sm:text-sm font-semibold">Item added to cart!</span>
   </div>
 
-  <!-- 1. TOP ANNOUNCEMENT BAR (SIZZLEFISH OFFICIAL STYLE) -->
-  <div class="bg-[#0B1B2B] text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sticky top-0 z-40">
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <div class="bg-[#0B1B2B] text-slate-200 border-b border-slate-800 text-xs py-2.5 px-4 sticky top-0 z-40 shadow-sm">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
       
       <!-- Phone Support & Customer Care -->
       <div class="flex items-center gap-2 text-[11px] sm:text-xs">
         <i class="fa-solid fa-phone text-orange-400"></i>
-        <span>Call Us Mon-Fri, 7-4 ET: <strong class="text-white hover:underline cursor-pointer">(833) 603-0888</strong></span>
-        <span class="hidden sm:inline text-slate-500">|</span>
+        <span>Call Us Mon-Fri, 7-4 ET: <a href="tel:8336030888" class="text-white font-bold hover:underline cursor-pointer">(833) 603-0888</a></span>
+        <span class="hidden sm:inline text-slate-600">|</span>
         <span class="hidden sm:inline text-cyan-300 font-medium">100% Satisfaction & Fresh Frozen Guarantee</span>
       </div>
 
@@ -76,8 +76,9 @@
         </span>
 
         <button 
+          type="button"
           onclick="app.openZipModal()"
-          class="flex items-center gap-1.5 text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded-full border border-slate-700 transition"
+          class="flex items-center gap-1.5 text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded-full border border-slate-700 transition cursor-pointer"
           title="Click to check your chilled delivery date"
         >
           <i class="fa-solid fa-location-dot text-orange-400"></i>
@@ -89,15 +90,14 @@
     </div>
   </div>
 
-  <!-- 2. GLOBAL SIZZLEFISH HEADER & NAVIGATION -->
-  <header class="bg-white/95 backdrop-blur-md sticky top-8 z-30 border-b border-slate-200 shadow-sm">
+  <!-- 2. GLOBAL AMCFOOD HEADER & NAVIGATION -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-9 z-30 border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- SIZZLEFISH BRAND LOGO -->
-        <a href="#" class="flex items-center gap-3 group">
+        <!-- AMCFOOD BRAND LOGO -->
+        <a href="#" class="flex items-center gap-3 group cursor-pointer">
           <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0B1B2B] via-slate-900 to-orange-600 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform text-white">
-            <!-- Sizzlefish Flame / Fish Icon -->
             <svg class="w-6 h-6 text-orange-400 fill-current" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
             </svg>
@@ -105,7 +105,7 @@
           <div>
             <div class="flex items-center gap-1.5">
               <span class="text-2xl font-black tracking-tight text-[#0B1B2B] font-heading uppercase leading-none">
-                SIZZLEFISH
+                AMCFOOD
               </span>
               <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
             </div>
@@ -117,20 +117,20 @@
 
         <!-- DESKTOP NAVIGATION -->
         <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold text-slate-700">
-          <a href="#catalog" class="hover:text-orange-600 transition flex items-center gap-1">
+          <a href="#catalog" class="hover:text-orange-600 transition flex items-center gap-1 cursor-pointer">
             Shop All Seafood
           </a>
-          <a href="#custom-box-builder" class="hover:text-orange-600 transition flex items-center gap-1.5 text-orange-600 font-extrabold">
+          <a href="#custom-box-builder" class="hover:text-orange-600 transition flex items-center gap-1.5 text-orange-600 font-extrabold cursor-pointer">
             <span class="px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 text-[10px] tracking-wide uppercase font-black">Prime</span>
             Build Your Box
           </a>
-          <a href="#curated-boxes" class="hover:text-orange-600 transition">
+          <a href="#curated-boxes" class="hover:text-orange-600 transition cursor-pointer">
             Subscriptions
           </a>
-          <button onclick="app.openSourcingModal()" class="hover:text-orange-600 transition">
+          <button type="button" onclick="app.openSourcingModal()" class="hover:text-orange-600 transition cursor-pointer font-bold">
             Our Story & Sourcing
           </button>
-          <a href="#recipes" class="hover:text-orange-600 transition">
+          <a href="#recipes" class="hover:text-orange-600 transition cursor-pointer">
             Chef Recipes
           </a>
         </nav>
@@ -152,8 +152,9 @@
 
           <!-- Cart Drawer Trigger -->
           <button 
+            type="button"
             onclick="app.openCart()"
-            class="relative bg-[#0B1B2B] hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-sm transition hover:shadow-md"
+            class="relative bg-[#0B1B2B] hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-sm transition hover:shadow-md cursor-pointer active:scale-95"
           >
             <i class="fa-solid fa-basket-shopping text-orange-400"></i>
             <span class="hidden sm:inline">Cart</span>
@@ -171,7 +172,7 @@
     </div>
   </header>
 
-  <!-- 3. SIZZLEFISH HERO SECTION -->
+  <!-- 3. HERO SECTION -->
   <section class="relative overflow-hidden bg-gradient-to-b from-[#0B1B2B] via-[#0E243A] to-[#0B1B2B] text-white pt-16 pb-20 lg:pt-24 lg:pb-32">
     <!-- Ambient light glow effects -->
     <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -183,7 +184,7 @@
         <!-- HERO LEFT COPY -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-4 py-1.5 rounded-full text-xs font-semibold text-slate-200">
+          <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-4 py-1.5 rounded-full text-xs font-semibold text-slate-200 shadow-sm">
             <span class="text-yellow-400">★★★★★</span>
             <span>4.8/5 Rated by 38,000+ Verified Customers • 30+ Years Experience</span>
           </div>
@@ -203,7 +204,7 @@
           <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start">
             <a 
               href="#catalog"
-              class="px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/30 transition hover:-translate-y-0.5"
+              class="px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/30 transition hover:-translate-y-0.5 cursor-pointer active:scale-95"
             >
               <i class="fa-solid fa-fish"></i>
               Shop Best Sellers
@@ -211,7 +212,7 @@
 
             <a 
               href="#custom-box-builder"
-              class="px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition hover:-translate-y-0.5"
+              class="px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition hover:-translate-y-0.5 cursor-pointer active:scale-95"
             >
               <span>Build Your Own Box</span>
               <span class="bg-orange-500 text-[10px] px-2 py-0.5 rounded-full font-extrabold uppercase">Save 10%</span>
@@ -271,8 +272,9 @@
               </div>
               
               <button 
+                type="button"
                 onclick="app.addToCart('prod-sockeye-salmon', 0, 'Portioned Fillets (Skin-on)')"
-                class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition"
+                class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer active:scale-95"
               >
                 <i class="fa-solid fa-cart-plus"></i>
                 Add to Cart
@@ -286,7 +288,7 @@
     </div>
   </section>
 
-  <!-- 4. TRUST BADGES BAR (SIZZLEFISH 5 PILLARS) -->
+  <!-- 4. TRUST BADGES BAR (AMCFOOD 5 PILLARS) -->
   <div class="bg-white border-y border-slate-200 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -335,14 +337,14 @@
     </div>
   </div>
 
-  <!-- 5. SIZZLEFISH PRIME / CUSTOM BOX BUILDER SECTION -->
+  <!-- 5. AMCFOOD PRIME / CUSTOM BOX BUILDER SECTION -->
   <section id="custom-box-builder" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs font-black tracking-widest text-orange-600 uppercase bg-orange-100 px-3 py-1 rounded-full">
-          SIZZLEFISH PRIME • CUSTOM SEAFOOD BOX
+          AMCFOOD PRIME • CUSTOM SEAFOOD BOX
         </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B1B2B] mt-3">
           Build Your Own Seafood Box
@@ -354,19 +356,21 @@
         <!-- Box Size & Frequency Controls -->
         <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
           
-          <!-- Size Toggle: 14 vs 28 Portions (or 6 vs 12) -->
+          <!-- Size Toggle: 12 vs 6 Portions -->
           <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex">
             <button 
               id="box-size-btn-12"
+              type="button"
               onclick="app.setBoxTargetSize(12)"
-              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow cursor-pointer active:scale-95"
             >
               12-Portion Box
             </button>
             <button 
               id="box-size-btn-6"
+              type="button"
               onclick="app.setBoxTargetSize(6)"
-              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black cursor-pointer active:scale-95"
             >
               6-Portion Starter
             </button>
@@ -376,16 +380,18 @@
           <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex">
             <button 
               id="box-freq-sub"
+              type="button"
               onclick="app.setBoxFrequency('subscribe')"
-              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-orange-600 text-white shadow flex items-center gap-1.5"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-orange-600 text-white shadow flex items-center gap-1.5 cursor-pointer active:scale-95"
             >
               <span>Subscribe & Save 10%</span>
               <span class="bg-white text-orange-600 text-[10px] px-1.5 py-0.2 rounded-full font-black">Best</span>
             </button>
             <button 
               id="box-freq-onetime"
+              type="button"
               onclick="app.setBoxFrequency('onetime')"
-              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black cursor-pointer active:scale-95"
             >
               One-Time Order
             </button>
@@ -426,8 +432,9 @@
 
             <button 
               id="btn-add-custom-box"
+              type="button"
               onclick="app.addCustomBoxToCart()"
-              class="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider shadow-md transition"
+              class="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider shadow-md transition cursor-pointer active:scale-95"
             >
               Add Box to Cart
             </button>
@@ -477,7 +484,7 @@
           <select 
             id="catalog-sort" 
             onchange="app.handleSort(this.value)"
-            class="text-xs font-bold text-slate-800 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            class="text-xs font-bold text-slate-800 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 cursor-pointer"
           >
             <option value="popular">Most Popular</option>
             <option value="price-asc">Price: Low to High</option>
@@ -489,20 +496,20 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap items-center gap-2 mb-6">
-        <button onclick="app.setCategory('All Catch')" class="cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition">All Catch</button>
-        <button onclick="app.setCategory('Fresh Catch')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Wild Alaska Salmon & Fillets</button>
-        <button onclick="app.setCategory('Shellfish')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Shellfish & Sea Scallops</button>
-        <button onclick="app.setCategory('Sashimi Grade')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Sashimi Grade Ahi Tuna</button>
-        <button onclick="app.setCategory('Smoked & Prepared')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Smoked & Specialties</button>
+        <button type="button" onclick="app.setCategory('All Catch', this)" class="cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer">All Catch</button>
+        <button type="button" onclick="app.setCategory('Fresh Catch', this)" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer">Wild Alaska Salmon & Fillets</button>
+        <button type="button" onclick="app.setCategory('Shellfish', this)" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer">Shellfish & Sea Scallops</button>
+        <button type="button" onclick="app.setCategory('Sashimi Grade', this)" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer">Sashimi Grade Ahi Tuna</button>
+        <button type="button" onclick="app.setCategory('Smoked & Prepared', this)" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer">Smoked & Specialties</button>
       </div>
 
       <!-- Secondary Tag Filter Pills -->
       <div class="flex items-center gap-2 mb-8 text-xs text-slate-500">
         <span class="font-bold">Filter By:</span>
-        <button onclick="app.setTag('All')" class="tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition">All</button>
-        <button onclick="app.setTag('Wild')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Wild-Caught</button>
-        <button onclick="app.setTag('Omega-3')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Omega-3 Rich</button>
-        <button onclick="app.setTag('Best Seller')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Top Rated</button>
+        <button type="button" onclick="app.setTag('All', this)" class="tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition cursor-pointer">All</button>
+        <button type="button" onclick="app.setTag('Wild', this)" class="tag-pill px-3 py-1 rounded-lg font-bold border transition cursor-pointer">Wild-Caught</button>
+        <button type="button" onclick="app.setTag('Omega-3', this)" class="tag-pill px-3 py-1 rounded-lg font-bold border transition cursor-pointer">Omega-3 Rich</button>
+        <button type="button" onclick="app.setTag('Best Seller', this)" class="tag-pill px-3 py-1 rounded-lg font-bold border transition cursor-pointer">Top Rated</button>
       </div>
 
       <!-- Product Cards Grid -->
@@ -513,7 +520,7 @@
     </div>
   </section>
 
-  <!-- 7. HOW SIZZLEFISH WORKS (3-STEP DIAGRAM) -->
+  <!-- 7. HOW AMCFOOD WORKS (3-STEP DIAGRAM) -->
   <section class="py-16 sm:py-24 bg-[#0B1B2B] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -522,7 +529,7 @@
           Freshness Assured
         </span>
         <h2 class="text-3xl sm:text-4xl font-black font-heading text-white mt-2">
-          How Sizzlefish Works
+          How AMCFOOD Works
         </h2>
         <p class="text-slate-300 text-sm mt-2">
           From cold ocean waters to your dinner table in 3 simple steps.
@@ -532,18 +539,18 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Step 1 -->
-        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative hover-card-elevate">
           <div class="w-16 h-16 rounded-2xl bg-orange-600/20 text-orange-400 border border-orange-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
             1
           </div>
           <h3 class="text-lg font-bold font-heading mb-2">You Choose Your Catch</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
-            Select individual à la carte fillets or hand-pick your favorite portions in a customized Sizzlefish Prime Box (6 or 12 portions).
+            Select individual à la carte fillets or hand-pick your favorite portions in a customized AMCFOOD Prime Box (6 or 12 portions).
           </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative hover-card-elevate">
           <div class="w-16 h-16 rounded-2xl bg-cyan-600/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
             2
           </div>
@@ -554,7 +561,7 @@
         </div>
 
         <!-- Step 3 -->
-        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative hover-card-elevate">
           <div class="w-16 h-16 rounded-2xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
             3
           </div>
@@ -569,16 +576,16 @@
     </div>
   </section>
 
-  <!-- 8. WHY SIZZLEFISH VS SUPERMARKET SEAFOOD -->
+  <!-- 8. WHY AMCFOOD VS SUPERMARKET SEAFOOD -->
   <section class="py-16 sm:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-12">
         <span class="text-xs font-black tracking-widest text-orange-600 uppercase">
-          The Sizzlefish Difference
+          The AMCFOOD Difference
         </span>
         <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-2">
-          Why Sizzlefish Beats The Grocery Store
+          Why AMCFOOD Beats The Grocery Store
         </h2>
       </div>
 
@@ -587,7 +594,7 @@
           <thead>
             <tr class="bg-slate-50 border-b border-slate-200">
               <th class="p-4 sm:p-5 font-bold text-slate-500 uppercase text-xs">Quality Factor</th>
-              <th class="p-4 sm:p-5 font-black text-orange-600 bg-orange-50/50 uppercase text-xs">Sizzlefish</th>
+              <th class="p-4 sm:p-5 font-black text-orange-600 bg-orange-50/50 uppercase text-xs">AMCFOOD</th>
               <th class="p-4 sm:p-5 font-bold text-slate-500 uppercase text-xs">Typical Grocery Store</th>
             </tr>
           </thead>
@@ -633,7 +640,7 @@
           Curated Monthly Selections
         </span>
         <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-2">
-          Sizzlefish Subscription Boxes
+          AMCFOOD Subscription Boxes
         </h2>
         <p class="text-slate-600 text-xs sm:text-sm mt-2">
           Pre-assembled boxes curated by our master fishmongers. Enjoy recurring savings with full freedom to pause, change, or cancel anytime.
@@ -663,21 +670,21 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3 hover-card-elevate">
           <div class="flex items-center justify-between">
             <span class="text-yellow-400 text-xs">★★★★★</span>
             <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
           </div>
           <h4 class="font-bold text-slate-900 text-sm">"The Salmon is unbelievable!"</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            "I've ordered salmon from three different online companies and Sizzlefish is in a league of its own. The color and flavor of the Sockeye are stunning, and it arrived frozen rock solid with plenty of dry ice."
+            "I've ordered salmon from three different online companies and AMCFOOD is in a league of its own. The color and flavor of the Sockeye are stunning, and it arrived frozen rock solid with plenty of dry ice."
           </p>
           <div class="text-[11px] font-bold text-slate-800 pt-2 border-t border-slate-200">
             Sarah M. — Austin, TX
           </div>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3 hover-card-elevate">
           <div class="flex items-center justify-between">
             <span class="text-yellow-400 text-xs">★★★★★</span>
             <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
@@ -691,7 +698,7 @@
           </div>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3 hover-card-elevate">
           <div class="flex items-center justify-between">
             <span class="text-yellow-400 text-xs">★★★★★</span>
             <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
@@ -735,7 +742,7 @@
     </div>
   </section>
 
-  <!-- 12. SIZZLEFISH FOOTER -->
+  <!-- 12. AMCFOOD FOOTER -->
   <footer class="bg-[#0B1B2B] text-slate-400 pt-16 pb-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -748,7 +755,7 @@
               <i class="fa-solid fa-fish text-xl"></i>
             </div>
             <span class="text-2xl font-black tracking-tight text-white font-heading uppercase">
-              SIZZLEFISH
+              AMCFOOD
             </span>
           </div>
 
@@ -757,8 +764,8 @@
           </p>
 
           <div class="text-xs text-slate-300 space-y-1">
-            <p><i class="fa-solid fa-phone text-orange-400 mr-2"></i>(833) 603-0888 (Mon-Fri 7am - 4pm ET)</p>
-            <p><i class="fa-solid fa-envelope text-orange-400 mr-2"></i>support@sizzlefish.com</p>
+            <p><i class="fa-solid fa-phone text-orange-400 mr-2"></i><a href="tel:8336030888" class="hover:underline">(833) 603-0888</a> (Mon-Fri 7am - 4pm ET)</p>
+            <p><i class="fa-solid fa-envelope text-orange-400 mr-2"></i><a href="mailto:support@amcfood.com" class="hover:underline">support@amcfood.com</a></p>
           </div>
         </div>
 
@@ -767,7 +774,7 @@
           <div class="bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-700">
             <h4 class="text-white text-lg font-bold font-heading mb-1">Get 10% Off Your First Box</h4>
             <p class="text-xs text-slate-400 mb-4">
-              Subscribe to the Sizzlefish Catch of the Week newsletter for recipes, seasonal alerts, and exclusive discounts.
+              Subscribe to the AMCFOOD Catch of the Week newsletter for recipes, seasonal alerts, and exclusive discounts.
             </p>
             
             <form onsubmit="app.handleNewsletter(event)" class="flex flex-col sm:flex-row gap-2">
@@ -780,7 +787,7 @@
               />
               <button 
                 type="submit"
-                class="px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider transition"
+                class="px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider transition cursor-pointer active:scale-95"
               >
                 Subscribe
               </button>
@@ -795,41 +802,41 @@
         <div>
           <h5 class="text-white font-bold uppercase text-[11px] mb-3">Shop Seafood</h5>
           <ul class="space-y-2">
-            <li><a href="#catalog" class="hover:text-white transition">Wild Alaskan Salmon</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Pacific Halibut & Cod</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Dry Sea Scallops</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Wild Gulf Shrimp</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Maine Lobster Tails</a></li>
+            <li><a href="#catalog" class="hover:text-white transition cursor-pointer">Wild Alaskan Salmon</a></li>
+            <li><a href="#catalog" class="hover:text-white transition cursor-pointer">Pacific Halibut & Cod</a></li>
+            <li><a href="#catalog" class="hover:text-white transition cursor-pointer">Dry Sea Scallops</a></li>
+            <li><a href="#catalog" class="hover:text-white transition cursor-pointer">Wild Gulf Shrimp</a></li>
+            <li><a href="#catalog" class="hover:text-white transition cursor-pointer">Maine Lobster Tails</a></li>
           </ul>
         </div>
 
         <div>
           <h5 class="text-white font-bold uppercase text-[11px] mb-3">Subscriptions</h5>
           <ul class="space-y-2">
-            <li><a href="#custom-box-builder" class="hover:text-white transition">Build Your Own Box</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Wild Salmon Box</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Shellfish Feast Box</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Omega-3 Power Box</a></li>
+            <li><a href="#custom-box-builder" class="hover:text-white transition cursor-pointer">Build Your Own Box</a></li>
+            <li><a href="#curated-boxes" class="hover:text-white transition cursor-pointer">Wild Salmon Box</a></li>
+            <li><a href="#curated-boxes" class="hover:text-white transition cursor-pointer">Shellfish Feast Box</a></li>
+            <li><a href="#curated-boxes" class="hover:text-white transition cursor-pointer">Omega-3 Power Box</a></li>
           </ul>
         </div>
 
         <div>
           <h5 class="text-white font-bold uppercase text-[11px] mb-3">Customer Care</h5>
           <ul class="space-y-2">
-            <li><button onclick="app.openZipModal()" class="hover:text-white transition">Check Delivery Date</button></li>
-            <li><a href="#" class="hover:text-white transition">Shipping & Dry Ice FAQ</a></li>
-            <li><a href="#" class="hover:text-white transition">100% Satisfaction Guarantee</a></li>
-            <li><a href="#" class="hover:text-white transition">Contact Customer Support</a></li>
+            <li><button type="button" onclick="app.openZipModal()" class="hover:text-white transition cursor-pointer">Check Delivery Date</button></li>
+            <li><button type="button" onclick="app.openSourcingModal()" class="hover:text-white transition cursor-pointer">Shipping & Dry Ice FAQ</button></li>
+            <li><button type="button" onclick="app.openSourcingModal()" class="hover:text-white transition cursor-pointer">100% Satisfaction Guarantee</button></li>
+            <li><a href="tel:8336030888" class="hover:text-white transition cursor-pointer">Contact Customer Support</a></li>
           </ul>
         </div>
 
         <div>
-          <h5 class="text-white font-bold uppercase text-[11px] mb-3">About Sizzlefish</h5>
+          <h5 class="text-white font-bold uppercase text-[11px] mb-3">About AMCFOOD</h5>
           <ul class="space-y-2">
-            <li><button onclick="app.openSourcingModal()" class="hover:text-white transition">Our 30-Year Story</button></li>
-            <li><button onclick="app.openSourcingModal()" class="hover:text-white transition">Sustainable Fisheries</button></li>
-            <li><a href="#recipes" class="hover:text-white transition">Chef Recipes</a></li>
-            <li><a href="#" class="hover:text-white transition">Nutritional Benefits</a></li>
+            <li><button type="button" onclick="app.openSourcingModal()" class="hover:text-white transition cursor-pointer">Our 30-Year Story</button></li>
+            <li><button type="button" onclick="app.openSourcingModal()" class="hover:text-white transition cursor-pointer">Sustainable Fisheries</button></li>
+            <li><a href="#recipes" class="hover:text-white transition cursor-pointer">Chef Recipes</a></li>
+            <li><button type="button" onclick="app.openSourcingModal()" class="hover:text-white transition cursor-pointer">Nutritional Benefits</button></li>
           </ul>
         </div>
       </div>
@@ -837,7 +844,7 @@
       <!-- Bottom Bar -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <div>
-          © 2026 Sizzlefish. All rights reserved. Pure Natural Seafood Delivered.
+          © 2026 AMCFOOD. All rights reserved. Pure Natural Seafood Delivered.
         </div>
         <div class="flex items-center gap-4 text-lg text-slate-400">
           <i class="fa-brands fa-cc-visa"></i>
@@ -855,7 +862,7 @@
 
   <!-- SLIDE-OVER CART DRAWER -->
   <div id="cart-drawer-container" class="fixed inset-0 z-50 overflow-hidden hidden">
-    <div onclick="app.closeCart()" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+    <div onclick="app.closeCart()" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity cursor-pointer"></div>
     <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
       <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
         
@@ -863,12 +870,12 @@
         <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-basket-shopping text-orange-600"></i>
-            <h3 class="font-black font-heading text-slate-900 text-base">Your Sizzlefish Box</h3>
+            <h3 class="font-black font-heading text-slate-900 text-base">Your AMCFOOD Box</h3>
             <span id="drawer-counter-badge" class="bg-orange-100 text-orange-700 text-xs px-2 py-0.5 rounded-full font-bold">
               0 items
             </span>
           </div>
-          <button onclick="app.closeCart()" class="text-slate-400 hover:text-slate-700 text-lg">✕</button>
+          <button type="button" onclick="app.closeCart()" class="text-slate-400 hover:text-slate-700 text-lg cursor-pointer p-1">✕</button>
         </div>
 
         <!-- Free Shipping Progress -->
@@ -898,12 +905,13 @@
             <input 
               id="promo-input" 
               type="text" 
-              placeholder="Promo Code (Try SIZZLE10)" 
+              placeholder="Promo Code (Try AMC10)" 
               class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-200 uppercase font-mono font-bold focus:outline-none focus:ring-1 focus:ring-orange-500"
             />
             <button 
+              type="button"
               onclick="app.applyPromoCode()"
-              class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl"
+              class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl cursor-pointer active:scale-95"
             >
               Apply
             </button>
@@ -932,8 +940,9 @@
           </div>
 
           <button 
+            type="button"
             onclick="app.openCheckoutModal()"
-            class="w-full py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/25 transition"
+            class="w-full py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/25 transition cursor-pointer active:scale-95"
           >
             <span>Proceed to Checkout</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -947,7 +956,7 @@
   <!-- ZIP CODE DELIVERY DATE ESTIMATOR MODAL -->
   <div id="zip-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
     <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
-      <button onclick="app.closeZipModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm">✕</button>
+      <button type="button" onclick="app.closeZipModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm cursor-pointer p-1">✕</button>
       
       <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4">
         <i class="fa-solid fa-location-dot"></i>
@@ -983,7 +992,7 @@
 
         <button 
           type="submit" 
-          class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider"
+          class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider cursor-pointer active:scale-95"
         >
           Update Location
         </button>
@@ -1001,14 +1010,14 @@
   <!-- SOURCING & STORY MODAL -->
   <div id="sourcing-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
     <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="app.closeSourcingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-base">✕</button>
+      <button type="button" onclick="app.closeSourcingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-base cursor-pointer p-1">✕</button>
       
       <span class="text-xs font-black text-orange-600 uppercase tracking-widest">Our 30-Year Heritage</span>
       <h3 class="text-2xl font-black font-heading text-[#0B1B2B] mt-1 mb-4">Sourced with Integrity</h3>
 
       <div class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
         <p>
-          Founded on over 30 years of seafood industry expertise, Sizzlefish was created to provide pure, premium, flash-frozen wild seafood directly to homes across the nation.
+          Founded on over 30 years of seafood industry expertise, AMCFOOD was created to provide pure, premium, flash-frozen wild seafood directly to homes across the nation.
         </p>
         <p>
           Unlike grocery counter seafood that has sat thawed on ice for days, our catch is shock-frozen at -40°F within hours of harvest. This locks in the pristine ocean flavor, tender texture, and natural Omega-3s.
@@ -1039,7 +1048,7 @@
   <!-- MULTI-STEP CHECKOUT MODAL -->
   <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
     <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-      <button onclick="app.closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm">✕</button>
+      <button type="button" onclick="app.closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm cursor-pointer p-1">✕</button>
       
       <div class="flex items-center gap-2 mb-6 border-b border-slate-200 pb-3 text-xs font-bold">
         <span id="chk-step1-tab" class="text-orange-600 underline">1. Shipping Address</span>
@@ -1087,7 +1096,7 @@
 
         <button 
           type="submit" 
-          class="w-full py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider mt-4"
+          class="w-full py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider mt-4 cursor-pointer active:scale-95"
         >
           Continue to Payment →
         </button>
@@ -1126,13 +1135,13 @@
           <button 
             type="button" 
             onclick="app.goToCheckoutStep(1)"
-            class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
+            class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 cursor-pointer active:scale-95"
           >
             ← Back
           </button>
           <button 
             type="submit" 
-            class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/20"
+            class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/20 cursor-pointer active:scale-95"
           >
             Confirm & Place Order
           </button>
@@ -1151,7 +1160,7 @@
           <i class="fa-solid fa-circle-check"></i>
         </div>
         <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Order Confirmed</span>
-        <h3 id="receipt-order-id" class="text-2xl font-black font-heading text-[#0B1B2B] mt-1">Receipt #SF-849201</h3>
+        <h3 id="receipt-order-id" class="text-2xl font-black font-heading text-[#0B1B2B] mt-1">Receipt #AMC-849201</h3>
         <p class="text-xs text-slate-500 mt-1">
           Tracking Number: <strong id="receipt-tracking-num" class="text-slate-900">1Z9999999999</strong>
         </p>
@@ -1188,23 +1197,25 @@
 
       <div class="flex gap-3">
         <button 
+          type="button"
           onclick="window.print()"
-          class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 font-bold text-xs text-slate-800"
+          class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 font-bold text-xs text-slate-800 cursor-pointer active:scale-95"
         >
           Print Receipt
         </button>
         <button 
+          type="button"
           onclick="app.closeReceiptModal()"
-          class="flex-1 py-3 rounded-xl bg-[#0B1B2B] hover:bg-slate-800 font-bold text-xs text-white"
+          class="flex-1 py-3 rounded-xl bg-[#0B1B2B] hover:bg-slate-800 font-bold text-xs text-white cursor-pointer active:scale-95"
         >
-          Back to Sizzlefish
+          Back to AMCFOOD
         </button>
       </div>
 
     </div>
   </div>
 
-  <!-- SIZZLEFISH APPLICATION LOGIC -->
+  <!-- AMCFOOD APPLICATION LOGIC -->
   <script src="app.js"></script>
 </body>
 </html>

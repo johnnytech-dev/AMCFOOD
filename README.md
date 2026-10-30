@@ -1,15 +1,15 @@
-# SIZZLEFISH 🐟🔥
+# AMCFOOD 🐟🔥
 > **Pure Natural Seafood Delivered Directly to Your Door**  
-> High-converting, direct-to-consumer (D2C) e-commerce storefront mirroring the exact design, brand aesthetics, cold-chain assurance, and subscription box experience of [Sizzlefish](https://www.sizzlefish.com/).
+> High-converting, direct-to-consumer (D2C) e-commerce storefront with cold-chain assurance and custom seafood subscription boxes.
 
 ---
 
 ## 🌟 Key Highlights & Features
 
-### 1. Header & Announcement Bar
+### 1. Global Header & Announcement Bar
 - **Promotional Bar**: Fast Free Shipping on Orders $100+ • Call Us Mon-Fri, 7-4 ET at: (833) 603-0888.
 - **Interactive Zip Code Estimator**: Dynamic delivery date calculator based on customer's zip code, routing through FedEx / UPS Chilled Air with guaranteed frozen delivery with dry ice.
-- **Sizzlefish Identity**: Signature Sizzlefish typography with orange/coral flame fish emblem and "Pure Natural Seafood" tagline.
+- **AMCFOOD Brand Identity**: Modern typography with orange/coral flame fish emblem and "Pure Natural Seafood" tagline.
 - **Search & Cart Trigger**: Instant auto-filtering and slide-over cart with live quantity and subtotal counter.
 
 ### 2. High-Impact Hero & Trust Bar
@@ -18,27 +18,27 @@
 - **Dual CTAs**: "Shop Best Sellers" (Primary Coral) & "Build Your Own Box" (Secondary Ice Blue with Save 10% badge).
 - **Core Trust Indicators**: *30+ Years Experience*, *100% Sustainably Sourced*, *Zero Additives or Chemicals (No STPP)*, *Flash-Frozen at Sea (-40°F)*, *100% Satisfaction Guarantee*.
 
-### 3. Sizzlefish Prime / Custom Box Builder
-- **Box Sizes**: 14-Portion (Standard Prime) & 28-Portion (Best Value Prime) or 6 & 12 starter options.
+### 3. AMCFOOD Prime / Custom Box Builder
+- **Box Sizes**: 12-Portion Box & 6-Portion Starter.
 - **Purchase Mode**: One-time purchase vs. **Subscribe & Save 10%** recurring deliveries.
 - **Visual Slot Tray**: Real-time slot filling animations as portions are selected.
 - **Portion Selection Grid**: Wild Sockeye Salmon, Pacific Halibut, Dry-Pack Sea Scallops, Gulf Pink Shrimp, Ahi Tuna, Chilean Sea Bass, Pacific Cod, and more.
 - **Capacity Lock**: Enforces exact portion quotas before adding to cart.
 
 ### 4. Direct Market Product Catalog
-- **Category Tabs**: *Best Sellers*, *Wild Alaska Salmon*, *White Fish*, *Shellfish & Lobster*, *Smoked & Specialties*.
-- **Filter Tags**: *Wild-Caught*, *Omega-3 Rich*, *Top Rated*.
+- **Category Tabs**: *All Catch*, *Wild Alaska Salmon & Fillets*, *Shellfish & Sea Scallops*, *Sashimi Grade Ahi Tuna*, *Smoked & Specialties*.
+- **Filter Tags**: *All*, *Wild-Caught*, *Omega-3 Rich*, *Top Rated*.
 - **Interactive Fillet Pack Variant Selector**: 4-Pack, 8-Pack, 14-Pack with active selection state and dynamic price/portion recalculations.
 - **Preparation Dropdown**: Portioned fillets (Skin-on), Skinless portions, Thick-cut steaks.
-- **Quick View Modal**: Deep dive into nutritional facts (calories, protein, omega-3s), certifications, and chef preparation techniques.
+- **Quick View Modal**: Deep dive into nutritional facts (calories, protein, omega-3s), certifications, interactive pack size switcher, and chef preparation techniques.
 
-### 5. 3-Step "How Sizzlefish Works" Section
+### 5. 3-Step "How AMCFOOD Works" Section
 1. **You Choose Your Catch**: Pick individual portions or subscribe to curated boxes.
 2. **Flash-Frozen at Peak Freshness**: Cryogenically frozen within hours of harvest at -40°F to seal in ocean flavor.
 3. **Packed With Solid Dry Ice**: Shipped in recyclable insulated coolers, guaranteed rock-solid frozen at your doorstep.
 
-### 6. Why Sizzlefish Comparison
-- Direct side-by-side comparison between **Sizzlefish** and typical supermarket seafood display cases.
+### 6. Why AMCFOOD Comparison
+- Direct side-by-side comparison between **AMCFOOD** and typical supermarket seafood display cases.
 
 ### 7. Chef Recipes & Cooking Inspiration
 - Culinary guides for pan-seared halibut, cedar plank salmon, and seafood dishes with 1-click "Add Catch to Cart".
@@ -46,7 +46,7 @@
 ### 8. Slide-Over Cart & Multi-Step Checkout
 - **$100 Free Shipping Progress Bar**: Live threshold calculator.
 - **Cross-Sell Add-ons**: Finishing butter, cedar planks, ocean seasoning rub, colossal shrimp.
-- **Promo Code Engine**: Test codes `SIZZLE10` (10% off), `SIZZLE15` (15% off), `FREESHIP`.
+- **Promo Code Engine**: Test codes `AMC10` (10% off), `AMC15` (15% off), `FREESHIP`.
 - **Checkout Modal**: Shipping address, cold-chain delivery estimate, payment simulation, and printable order confirmation receipt.
 
 ---
