@@ -506,6 +506,7 @@
   // 2. APPLICATION STATE
   const state = {
     cart: [],
+    selectedVariants: {}, // Tracks active fillet pack variant index per product
     boxTargetSize: 12,
     boxFrequency: 'subscribe',
     customBoxPortions: {
@@ -521,12 +522,12 @@
     sortBy: 'popular',
     zipCode: '90210',
     deliveryDate: 'Tomorrow',
-    carrier: 'UPS Next-Day Chilled Express',
+    carrier: 'UPS / FedEx Next-Day Chilled Express',
     discountPercent: 0,
     appliedPromoName: ''
   };
 
-  const FREE_SHIPPING_THRESHOLD = 125.00;
+  const FREE_SHIPPING_THRESHOLD = 100.00; // Sizzlefish Fast Free Shipping on Orders $100+
 
   // 3. TOAST HELPER
   function showToast(msg) {
@@ -567,9 +568,9 @@
 
     if (shipLabel) {
       if (subtotal >= FREE_SHIPPING_THRESHOLD) {
-        shipLabel.innerHTML = '🎉 <strong class="text-emerald-700">You unlocked FREE Chilled Express Shipping!</strong>';
+        shipLabel.innerHTML = '🎉 <strong class="text-emerald-700">You unlocked FREE Fast Shipping (${freeDiff.toFixed(2)}00+)!</strong>';
       } else {
-        shipLabel.innerHTML = `Add <strong class="text-coral-600">$${freeDiff.toFixed(2)}</strong> more for FREE Shipping!`;
+        shipLabel.innerHTML = `Add <strong class="text-orange-600">${freeDiff.toFixed(2)}</strong> more for FREE Shipping!`;
       }
     }
     if (shipPercent) shipPercent.textContent = `${progressPct}%`;
@@ -640,7 +641,7 @@
     }
   }
 
-  // 5. RENDER CATALOG
+    // 5. RENDER CATALOG (SIZZLEFISH BEST SELLERS & CATCH)
   function renderCatalog() {
     const grid = document.getElementById('products-catalog-grid');
     if (!grid) return;
@@ -678,7 +679,7 @@
           <i class="fa-solid fa-magnifying-glass text-4xl text-slate-400 mb-3"></i>
           <h3 class="text-lg font-bold text-slate-700">No seafood matched your search</h3>
           <p class="text-xs text-slate-500 mt-1">Try clearing your filters or search keywords.</p>
-          <button onclick="app.resetFilters()" class="mt-4 px-4 py-2 bg-ocean-900 text-white rounded-xl text-xs font-bold">
+          <button onclick="app.resetFilters()" class="mt-4 px-4 py-2 bg-[#0B1B2B] text-white rounded-xl text-xs font-bold">
             Reset All Filters
           </button>
         </div>
@@ -687,21 +688,22 @@
     }
 
     grid.innerHTML = list.map(product => {
-      const v = product.variants[0];
+      const activeVarIdx = state.selectedVariants[product.id] || 0;
+      const v = product.variants[activeVarIdx] || product.variants[0];
       return `
         <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="relative h-56 overflow-hidden bg-slate-100">
               <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div class="absolute top-3 left-3 flex flex-col gap-1.5">
-                <span class="badge-coral text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                <span class="bg-orange-600 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
                   ${product.badge}
                 </span>
-                <span class="badge-wild text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow">
+                <span class="bg-slate-900/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow backdrop-blur">
                   ${product.tag}
                 </span>
               </div>
-              <button onclick="app.openProductModal('${product.id}')" class="absolute bottom-3 right-3 bg-white/90 hover:bg-white text-ocean-950 text-xs font-bold px-3 py-1.5 rounded-xl shadow backdrop-blur transition opacity-0 group-hover:opacity-100">
+              <button onclick="app.openProductModal('${product.id}')" class="absolute bottom-3 right-3 bg-white/95 hover:bg-white text-[#0B1B2B] text-xs font-bold px-3 py-1.5 rounded-xl shadow backdrop-blur transition opacity-0 group-hover:opacity-100">
                 Quick View
               </button>
             </div>
@@ -714,17 +716,17 @@
                 <span class="text-emerald-600 font-bold text-[11px]">${product.origin}</span>
               </div>
 
-              <h3 onclick="app.openProductModal('${product.id}')" class="text-base font-bold font-heading text-ocean-950 group-hover:text-ocean-600 transition cursor-pointer mb-1 line-clamp-1">
+              <h3 onclick="app.openProductModal('${product.id}')" class="text-base font-bold font-heading text-[#0B1B2B] group-hover:text-orange-600 transition cursor-pointer mb-1 line-clamp-1">
                 ${product.name}
               </h3>
               <p class="text-xs text-slate-500 line-clamp-2 mb-4 leading-relaxed">${product.shortDescription}</p>
 
               <div class="flex items-baseline justify-between mb-4 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
                 <div>
-                  <span id="price-${product.id}" class="text-lg font-black text-ocean-950 font-heading">$${v.price}</span>
-                  <span id="compare-${product.id}" class="text-[11px] text-slate-400 line-through ml-1.5">$${v.compareAtPrice}</span>
+                  <span id="price-${product.id}" class="text-lg font-black text-[#0B1B2B] font-heading">${v.price}</span>
+                  <span id="compare-${product.id}" class="text-[11px] text-slate-400 line-through ml-1.5">${v.compareAtPrice}</span>
                 </div>
-                <span id="portion-price-${product.id}" class="text-[11px] font-bold text-coral-600">~$${(v.price / v.packCount).toFixed(2)}/portion</span>
+                <span id="portion-price-${product.id}" class="text-[11px] font-bold text-orange-600">~${(v.price / v.packCount).toFixed(2)}/portion</span>
               </div>
 
               <div class="space-y-2 mb-4">
@@ -733,14 +735,14 @@
                     <button
                       onclick="app.selectProductVariant('${product.id}', ${idx})"
                       id="var-btn-${product.id}-${idx}"
-                      class="var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border ${idx === 0 ? 'bg-ocean-900 text-white border-ocean-900 shadow-sm' : 'bg-white text-slate-600 border-slate-200'}"
+                      class="var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border ${idx === activeVarIdx ? 'bg-[#0B1B2B] text-white border-[#0B1B2B] shadow-sm' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}"
                     >
                       ${variant.packCount} Fillets
                     </button>
                   `).join('')}
                 </div>
 
-                <select id="prep-${product.id}" class="w-full text-[11px] font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-ocean-500">
+                <select id="prep-${product.id}" class="w-full text-[11px] font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-orange-500">
                   ${product.preparationOptions.map(p => `<option value="${p}">${p}</option>`).join('')}
                 </select>
               </div>
@@ -749,7 +751,7 @@
           </div>
 
           <div class="p-5 pt-0">
-            <button onclick="app.addCatalogProductToCart('${product.id}')" class="w-full py-3 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition hover:shadow-md">
+            <button onclick="app.addCatalogProductToCart('${product.id}')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition hover:shadow-md">
               <i class="fa-solid fa-cart-plus"></i>
               Add to Cart
             </button>
@@ -759,7 +761,7 @@
     }).join('');
   }
 
-  // 6. RENDER CUSTOM BOX BUILDER
+    // 6. RENDER CUSTOM BOX BUILDER (SIZZLEFISH PRIME)
   function renderBoxBuilder() {
     const totalSelected = Object.values(state.customBoxPortions).reduce((sum, q) => sum + (q || 0), 0);
     const target = state.boxTargetSize;
@@ -788,35 +790,45 @@
     if (portionsLabel) portionsLabel.textContent = `${totalSelected} of ${target} Portions Selected`;
     if (statusBadge) {
       statusBadge.className = isFull 
-        ? "bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase"
-        : "bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase";
-      statusBadge.textContent = isFull ? "✓ 100% Full & Ready" : "In Progress";
+        ? "bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-black uppercase"
+        : "bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full text-xs font-black uppercase";
+      statusBadge.textContent = isFull ? "✓ 100% Full & Ready" : `In Progress (${totalSelected}/${target})`;
     }
-    if (remainingLabel) remainingLabel.textContent = remaining > 0 ? `${remaining} more portions needed` : "Box ready for delivery!";
+    if (remainingLabel) remainingLabel.textContent = remaining > 0 ? `${remaining} more portions needed` : "Box full & ready for dry ice dispatch!";
     if (progressBar) progressBar.style.width = `${Math.min(100, (totalSelected / target) * 100)}%`;
-    if (summaryPrice) summaryPrice.textContent = `$${finalPrice.toFixed(2)}`;
+    if (summaryPrice) summaryPrice.textContent = `${finalPrice.toFixed(2)}`;
     if (subBadge) subBadge.style.display = state.boxFrequency === 'subscribe' ? 'inline-block' : 'none';
 
     if (addBoxBtn) {
       if (isFull) {
         addBoxBtn.disabled = false;
-        addBoxBtn.className = "px-8 py-3.5 rounded-xl font-extrabold text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg transition bg-coral-500 hover:bg-coral-600 text-white shadow-coral-500/30";
-        addBoxBtn.innerHTML = '<i class="fa-solid fa-box-open"></i> Add Custom Box to Cart';
+        addBoxBtn.className = "px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-md transition bg-orange-600 hover:bg-orange-500 text-white cursor-pointer";
+        addBoxBtn.innerHTML = '<i class="fa-solid fa-box-open"></i> Add Box to Cart';
       } else {
         addBoxBtn.disabled = true;
-        addBoxBtn.className = "px-8 py-3.5 rounded-xl font-extrabold text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg transition bg-slate-300 text-slate-500 cursor-not-allowed";
-        addBoxBtn.innerHTML = `<i class="fa-solid fa-box-open"></i> Select ${remaining} More to Finish`;
+        addBoxBtn.className = "px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm transition bg-slate-200 text-slate-400 cursor-not-allowed";
+        addBoxBtn.innerHTML = `<i class="fa-solid fa-box-open"></i> Select ${remaining} More`;
       }
     }
 
-    // Slots tray
-    const tray = document.getElementById('box-slots-tray');
-    if (tray) {
-      tray.innerHTML = Array.from({ length: target }).map((_, idx) => {
+    // Slots container
+    const slotsEl = document.getElementById('box-slots-container') || document.getElementById('box-slots-tray');
+    if (slotsEl) {
+      // Gather flat list of selected portions
+      const filledItems = [];
+      Object.entries(state.customBoxPortions).forEach(([id, qty]) => {
+        const prod = PRODUCTS.find(p => p.id === id);
+        for (let i = 0; i < qty; i++) {
+          filledItems.push(prod ? prod.name.split(' ')[0] : 'Catch');
+        }
+      });
+
+      slotsEl.innerHTML = Array.from({ length: target }).map((_, idx) => {
         const isFilled = idx < totalSelected;
+        const itemName = filledItems[idx] || '';
         return `
-          <div class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold transition-all ${isFilled ? 'bg-coral-500 text-white shadow' : 'border border-dashed border-ocean-700 text-ocean-700'}">
-            ${isFilled ? '🐟' : (idx + 1)}
+          <div class="h-9 rounded-xl flex items-center justify-center text-[10px] font-black transition-all ${isFilled ? 'bg-orange-600 text-white shadow-sm' : 'border border-dashed border-slate-300 text-slate-400 bg-slate-50'}">
+            ${isFilled ? `🐟 ${itemName}` : (idx + 1)}
           </div>
         `;
       }).join('');
@@ -828,13 +840,13 @@
       grid.innerHTML = PRODUCTS.filter(p => p.boxBuilderEligible).map(p => {
         const currentQty = state.customBoxPortions[p.id] || 0;
         return `
-          <div class="p-4 rounded-2xl border transition-all ${currentQty > 0 ? 'border-coral-400 bg-coral-50/20 shadow-sm' : 'border-slate-200 bg-white'}">
+          <div class="p-4 rounded-2xl border transition-all ${currentQty > 0 ? 'border-orange-400 bg-orange-50/20 shadow-sm' : 'border-slate-200 bg-white'}">
             <div class="flex gap-3 items-center">
               <img src="${p.image}" alt="${p.name}" class="w-16 h-16 rounded-xl object-cover border border-slate-100" />
               <div class="flex-1 min-w-0">
                 <h4 class="text-xs font-bold text-slate-900 truncate">${p.name}</h4>
                 <span class="text-[11px] text-slate-500 block">${p.portionSize} portion</span>
-                <span class="text-xs font-black text-ocean-700">$${p.pricePerPortion}/ea</span>
+                <span class="text-xs font-black text-orange-700">${p.pricePerPortion}/ea</span>
               </div>
             </div>
 
@@ -852,7 +864,7 @@
                 <button
                   onclick="app.adjustBoxPortion('${p.id}', 1)"
                   ${totalSelected >= target ? 'disabled' : ''}
-                  class="w-7 h-7 rounded-lg bg-coral-500 hover:bg-coral-600 disabled:opacity-40 text-white font-bold flex items-center justify-center transition shadow-sm"
+                  class="w-7 h-7 rounded-lg bg-orange-600 hover:bg-orange-500 disabled:opacity-40 text-white font-bold flex items-center justify-center transition shadow-sm"
                 >
                   +
                 </button>
@@ -1151,16 +1163,20 @@
     applyPromoCode: function (manualCode = null) {
       const input = document.getElementById('promo-input');
       const code = (manualCode || (input ? input.value : '')).trim().toUpperCase();
-      if (code === 'SIZZLE15' || code === 'AM15') {
+      if (code === 'SIZZLE10' || code === 'SF10') {
+        state.discountPercent = 10;
+        state.appliedPromoName = 'SIZZLE10 (10% OFF)';
+        showToast("🎉 Promo SIZZLE10 applied: 10% OFF your Sizzlefish box!");
+      } else if (code === 'SIZZLE15' || code === 'AM15') {
         state.discountPercent = 15;
-        state.appliedPromoName = code;
+        state.appliedPromoName = 'SIZZLE15 (15% OFF)';
         showToast("🎉 Promo SIZZLE15 applied: 15% OFF your order!");
       } else if (code === 'FREESHIP') {
         state.discountPercent = 10;
-        state.appliedPromoName = code;
+        state.appliedPromoName = 'FREESHIP';
         showToast("🎉 Promo FREESHIP applied: 10% Discount!");
       } else {
-        alert("Invalid code. Try 'SIZZLE15' for 15% off!");
+        alert("Invalid code. Try 'SIZZLE10' for 10% off your first box!");
         return;
       }
       updateCartUI();
@@ -1169,27 +1185,27 @@
     // Box builder operations
     setBoxTargetSize: function (size) {
       state.boxTargetSize = size;
-      const btn6 = document.getElementById('btn-box-6');
-      const btn12 = document.getElementById('btn-box-12');
+      const b6 = document.getElementById('box-size-btn-6') || document.getElementById('btn-box-6');
+      const b12 = document.getElementById('box-size-btn-12') || document.getElementById('btn-box-12');
       if (size === 6) {
-        if (btn6) btn6.className = "px-5 py-2 rounded-lg font-bold text-xs transition bg-coral-500 text-white shadow-md";
-        if (btn12) btn12.className = "px-5 py-2 rounded-lg font-bold text-xs transition text-slate-300 hover:text-white";
+        if (b6) b6.className = "px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow";
+        if (b12) b12.className = "px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black";
       } else {
-        if (btn12) btn12.className = "px-5 py-2 rounded-lg font-bold text-xs transition bg-coral-500 text-white shadow-md";
-        if (btn6) btn6.className = "px-5 py-2 rounded-lg font-bold text-xs transition text-slate-300 hover:text-white";
+        if (b12) b12.className = "px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow";
+        if (b6) b6.className = "px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black";
       }
       renderBoxBuilder();
     },
     setBoxFrequency: function (freq) {
       state.boxFrequency = freq;
-      const btnO = document.getElementById('btn-freq-onetime');
-      const btnS = document.getElementById('btn-freq-sub');
-      if (freq === 'one-time') {
-        if (btnO) btnO.className = "px-5 py-2 rounded-lg font-bold text-xs transition bg-ocean-700 text-white shadow-md";
-        if (btnS) btnS.className = "px-5 py-2 rounded-lg font-bold text-xs transition text-emerald-400 hover:text-white flex items-center gap-1.5";
+      const bSub = document.getElementById('box-freq-sub') || document.getElementById('btn-freq-sub');
+      const bOne = document.getElementById('box-freq-onetime') || document.getElementById('btn-freq-onetime');
+      if (freq === 'subscribe') {
+        if (bSub) bSub.className = "px-5 py-2.5 rounded-xl text-xs font-black transition bg-orange-600 text-white shadow flex items-center gap-1.5";
+        if (bOne) bOne.className = "px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black";
       } else {
-        if (btnS) btnS.className = "px-5 py-2 rounded-lg font-bold text-xs transition bg-emerald-600 text-white shadow-md flex items-center gap-1.5";
-        if (btnO) btnO.className = "px-5 py-2 rounded-lg font-bold text-xs transition text-slate-300 hover:text-white";
+        if (bOne) bOne.className = "px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow";
+        if (bSub) bSub.className = "px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black flex items-center gap-1.5";
       }
       renderBoxBuilder();
     },
@@ -1251,18 +1267,22 @@
     },
     setCategory: function (cat, btn) {
       state.activeCategory = cat;
-      document.querySelectorAll('.cat-btn').forEach(b => {
-        b.className = "cat-btn px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-slate-100 text-slate-600 hover:bg-slate-200";
+      document.querySelectorAll('.cat-pill, .cat-btn').forEach(b => {
+        b.className = "cat-pill px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-slate-700 border border-slate-200 hover:bg-slate-50";
+        if (b.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || (cat === 'Fresh Catch' && b.textContent.includes('Salmon'))) {
+          b.className = "cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition bg-[#0B1B2B] text-white shadow";
+        }
       });
-      if (btn) btn.className = "cat-btn active px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-ocean-900 text-white shadow";
       renderCatalog();
     },
     setTag: function (tag, btn) {
       state.activeTag = tag;
-      document.querySelectorAll('.tag-btn').forEach(b => {
-        b.className = "tag-btn text-slate-500 hover:text-slate-800 px-3 py-1 rounded-lg text-xs font-semibold transition";
+      document.querySelectorAll('.tag-pill, .tag-btn').forEach(b => {
+        b.className = "tag-pill px-3 py-1 rounded-lg font-bold border transition bg-white text-slate-600 border-slate-200 hover:bg-slate-50";
+        if (b.textContent.trim().toLowerCase() === tag.toLowerCase()) {
+          b.className = "tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition bg-orange-100 text-orange-700 border-orange-300";
+        }
       });
-      if (btn) btn.className = "tag-btn font-bold text-coral-800 bg-coral-100 border border-coral-300 px-3 py-1 rounded-lg text-xs transition";
       renderCatalog();
     },
     handleSort: function (val) {
@@ -1287,12 +1307,18 @@
       const el = document.getElementById('zip-modal');
       if (el) el.classList.add('hidden');
     },
-    submitZipCode: function (zip) {
-      if (!zip || zip.trim().length < 4) {
+    submitZipCode: function (eOrZip) {
+      let zip = eOrZip;
+      if (eOrZip && eOrZip.preventDefault) {
+        eOrZip.preventDefault();
+        const input = document.getElementById('zip-modal-input');
+        zip = input ? input.value : '90210';
+      }
+      if (!zip || zip.toString().trim().length < 4) {
         alert("Please enter a valid 5-digit US Zip or Postal code.");
         return;
       }
-      const clean = zip.trim();
+      const clean = zip.toString().trim();
       const isNextDay = parseInt(clean.slice(-1), 10) % 2 === 0;
 
       const target = new Date();
@@ -1429,7 +1455,7 @@
       }
     },
     placeFinalOrder: function () {
-      const orderId = "AM-" + Math.floor(100000 + Math.random() * 900000);
+      const orderId = "SF-" + Math.floor(100000 + Math.random() * 900000);
       const tracking = "1Z" + Math.floor(100000000000 + Math.random() * 900000000000);
 
       const subtotal = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);

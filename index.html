@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AM SEA FOOD SALES | Direct-to-Consumer Wild & Fresh Seafood Market</title>
-  <meta name="description" content="Shop premium wild-caught Alaskan salmon, cold-water Maine lobster tails, dry sea scallops, and custom curated seafood boxes. Flash-frozen at sea and packed with dry ice for guaranteed fresh arrival.">
+  <title>Sizzlefish | Pure Natural Seafood Delivered To Your Door</title>
+  <meta name="description" content="Shop premium wild-caught Alaskan salmon, cold-water Maine lobster tails, sea scallops, and build custom Sizzlefish Prime subscription boxes. Flash-frozen at sea and packed with dry ice for guaranteed frozen arrival.">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐟</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,24 +24,17 @@
       theme: {
         extend: {
           colors: {
-            ocean: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#081b2f',
-              950: '#040d18',
-            },
-            coral: {
-              400: '#fb923c',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
+            sizzle: {
+              navy: '#0B1B2B',
+              dark: '#071320',
+              blue: '#0284c7',
+              sky: '#38bdf8',
+              orange: '#EA580C',
+              coral: '#F97316',
+              fire: '#E64A19',
+              light: '#F8FAFC',
+              ice: '#F0F9FF',
+              emerald: '#059669',
             }
           },
           fontFamily: {
@@ -56,82 +49,88 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-coral-500 selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-900 antialiased selection:bg-orange-600 selection:text-white">
 
   <!-- FLOATING TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-ocean-950 text-white border-l-4 border-coral-500 px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#0B1B2B] text-white border-l-4 border-orange-500 px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
     <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
     <span id="toast-message" class="text-xs sm:text-sm font-semibold">Item added to cart!</span>
   </div>
 
-  <!-- 1. TOP EMERGENCY COLD-CHAIN ANNOUNCEMENT BAR -->
-  <div class="bg-ocean-950 text-cyan-200 border-b border-ocean-800 text-xs py-2 px-4 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+  <!-- 1. TOP ANNOUNCEMENT BAR (SIZZLEFISH OFFICIAL STYLE) -->
+  <div class="bg-[#0B1B2B] text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
       
-      <div className="flex items-center gap-2 font-medium">
-        <span class="flex h-2 w-2 relative inline-flex mr-1">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-        </span>
-        <strong class="text-white">COLD-CHAIN ASSURANCE:</strong>
-        <span>Packed with Dry Ice • Flash Frozen at -40°F • Guaranteed Fresh Arrival &lt; 4°C</span>
+      <!-- Phone Support & Customer Care -->
+      <div class="flex items-center gap-2 text-[11px] sm:text-xs">
+        <i class="fa-solid fa-phone text-orange-400"></i>
+        <span>Call Us Mon-Fri, 7-4 ET: <strong class="text-white hover:underline cursor-pointer">(833) 603-0888</strong></span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="hidden sm:inline text-cyan-300 font-medium">100% Satisfaction & Fresh Frozen Guarantee</span>
       </div>
 
-      <div class="flex items-center gap-4 text-xs">
+      <!-- Free Shipping & Postal Code Live Estimator -->
+      <div class="flex items-center gap-3 text-[11px] sm:text-xs">
+        <span class="font-bold text-white bg-orange-600/30 text-orange-300 border border-orange-500/40 px-2.5 py-0.5 rounded-full">
+          Fast Free Shipping on Orders $100+
+        </span>
+
         <button 
           onclick="app.openZipModal()"
-          class="flex items-center gap-1.5 text-cyan-300 hover:text-white bg-ocean-900 hover:bg-ocean-800 px-3 py-1 rounded-full border border-ocean-700 transition"
+          class="flex items-center gap-1.5 text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded-full border border-slate-700 transition"
+          title="Click to check your chilled delivery date"
         >
-          <i class="fa-solid fa-location-dot text-coral-400"></i>
-          <span>Delivering to: <strong id="topbar-zip" class="text-white underline">90210</strong> (<span id="topbar-date">Tomorrow</span>)</span>
-          <i class="fa-solid fa-chevron-down text-[10px] text-cyan-400"></i>
+          <i class="fa-solid fa-location-dot text-orange-400"></i>
+          <span>Delivering to: <strong id="topbar-zip" class="text-white underline">90210</strong> (<span id="topbar-date" class="text-cyan-300">Tomorrow</span>)</span>
+          <i class="fa-solid fa-chevron-down text-[9px] text-slate-400"></i>
         </button>
-
-        <span class="hidden lg:inline text-cyan-400/60">|</span>
-        <span class="hidden lg:inline text-white font-semibold">
-          Free 2-Day Express Shipping on Orders $125+
-        </span>
       </div>
 
     </div>
   </div>
 
-  <!-- 2. GLOBAL HEADER & NAVIGATION -->
+  <!-- 2. GLOBAL SIZZLEFISH HEADER & NAVIGATION -->
   <header class="bg-white/95 backdrop-blur-md sticky top-8 z-30 border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- BRAND LOGO -->
+        <!-- SIZZLEFISH BRAND LOGO -->
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-ocean-900 via-ocean-800 to-ocean-600 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform text-white">
-            <i class="fa-solid fa-fish-fins text-2xl text-cyan-300"></i>
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0B1B2B] via-slate-900 to-orange-600 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform text-white">
+            <!-- Sizzlefish Flame / Fish Icon -->
+            <svg class="w-6 h-6 text-orange-400 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
           </div>
           <div>
-            <span class="block text-2xl font-black tracking-tight text-ocean-950 font-heading leading-tight">
-              AM SEA FOOD
-            </span>
-            <span class="block text-[10px] uppercase font-extrabold tracking-widest text-coral-600">
-              Direct Ocean Catch • Est. 2018
+            <div class="flex items-center gap-1.5">
+              <span class="text-2xl font-black tracking-tight text-[#0B1B2B] font-heading uppercase leading-none">
+                SIZZLEFISH
+              </span>
+              <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+            </div>
+            <span class="block text-[10px] uppercase font-black tracking-widest text-orange-600 mt-0.5">
+              Pure Natural Seafood
             </span>
           </div>
         </a>
 
         <!-- DESKTOP NAVIGATION -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-slate-700">
-          <a href="#catalog" class="hover:text-ocean-600 transition flex items-center gap-1">
-            Shop Seafood <i class="fa-solid fa-chevron-down text-[10px] text-slate-400"></i>
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold text-slate-700">
+          <a href="#catalog" class="hover:text-orange-600 transition flex items-center gap-1">
+            Shop All Seafood
           </a>
-          <a href="#custom-box-builder" class="hover:text-ocean-600 transition flex items-center gap-1.5 text-coral-600 font-extrabold">
-            <span class="px-2 py-0.5 rounded-full bg-coral-100 text-coral-700 text-[10px] tracking-wide uppercase">Popular</span>
+          <a href="#custom-box-builder" class="hover:text-orange-600 transition flex items-center gap-1.5 text-orange-600 font-extrabold">
+            <span class="px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 text-[10px] tracking-wide uppercase font-black">Prime</span>
             Build Your Box
           </a>
-          <a href="#curated-boxes" class="hover:text-ocean-600 transition">
-            Curated Boxes
+          <a href="#curated-boxes" class="hover:text-orange-600 transition">
+            Subscriptions
           </a>
-          <button onclick="app.openSourcingModal()" class="hover:text-ocean-600 transition">
-            Our Sourcing Story
+          <button onclick="app.openSourcingModal()" class="hover:text-orange-600 transition">
+            Our Story & Sourcing
           </button>
-          <a href="#recipes" class="hover:text-ocean-600 transition">
+          <a href="#recipes" class="hover:text-orange-600 transition">
             Chef Recipes
           </a>
         </nav>
@@ -144,9 +143,9 @@
             <input
               id="search-input"
               type="text"
-              placeholder="Search wild salmon, halibut..."
+              placeholder="Search salmon, halibut, cod..."
               oninput="app.handleSearch(this.value)"
-              class="w-full pl-9 pr-4 py-2 text-xs rounded-full bg-slate-100 border border-slate-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ocean-500 transition"
+              class="w-full pl-9 pr-4 py-2 text-xs rounded-full bg-slate-100 border border-slate-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
             />
             <i class="fa-solid fa-magnifying-glass text-slate-400 absolute left-3 top-2.5 text-xs"></i>
           </div>
@@ -154,14 +153,14 @@
           <!-- Cart Drawer Trigger -->
           <button 
             onclick="app.openCart()"
-            class="relative bg-ocean-900 hover:bg-ocean-800 text-white px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-sm transition hover:shadow-md"
+            class="relative bg-[#0B1B2B] hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-sm transition hover:shadow-md"
           >
-            <i class="fa-solid fa-basket-shopping text-coral-400"></i>
+            <i class="fa-solid fa-basket-shopping text-orange-400"></i>
             <span class="hidden sm:inline">Cart</span>
-            <span id="cart-counter-badge" class="bg-coral-500 text-white text-xs px-2 py-0.5 rounded-full font-black">
+            <span id="cart-counter-badge" class="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-black">
               0
             </span>
-            <span id="cart-subtotal-header" class="hidden xl:inline text-xs font-semibold text-cyan-200 border-l border-ocean-700 pl-2">
+            <span id="cart-subtotal-header" class="hidden xl:inline text-xs font-semibold text-cyan-200 border-l border-slate-700 pl-2">
               $0.00
             </span>
           </button>
@@ -172,10 +171,11 @@
     </div>
   </header>
 
-  <!-- 3. HERO SECTION -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-ocean-950 via-ocean-900 to-ocean-800 text-white pt-16 pb-20 lg:pt-20 lg:pb-28">
+  <!-- 3. SIZZLEFISH HERO SECTION -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#0B1B2B] via-[#0E243A] to-[#0B1B2B] text-white pt-16 pb-20 lg:pt-24 lg:pb-32">
+    <!-- Ambient light glow effects -->
     <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-10 w-96 h-96 bg-coral-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -183,94 +183,102 @@
         <!-- HERO LEFT COPY -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 bg-ocean-800/80 border border-ocean-700/80 px-4 py-1.5 rounded-full text-xs font-semibold text-cyan-300">
+          <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-4 py-1.5 rounded-full text-xs font-semibold text-slate-200">
             <span class="text-yellow-400">★★★★★</span>
-            <span class="text-slate-200">Rated 4.9/5 by 38,000+ Seafood Lovers</span>
+            <span>4.8/5 Rated by 38,000+ Verified Customers • 30+ Years Experience</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight">
-            Pure, Natural Seafood <br/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-coral-400">
-              Delivered Fresh to Your Door
+            Pure Natural Seafood <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-cyan-300">
+              Delivered To Your Door
             </span>
           </h1>
 
           <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-            Wild-caught from the frigid, pure waters of Alaska and Maine. Flash-frozen onboard at <span class="text-cyan-300 font-bold">-40°F</span> within hours of harvest to lock in fresh-from-the-ocean flavor, texture, and natural Omega-3s.
+            Wild-caught and sustainably raised seafood portioned and flash-frozen at peak freshness within hours of harvest at <strong class="text-cyan-300">-40°F</strong>. Shipped directly in recyclable coolers with dry ice. Guaranteed frozen arrival or we replace it 100% free.
           </p>
 
-          <!-- DUAL CTAs -->
-          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start">
+            <a 
               href="#catalog"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-white font-extrabold text-base shadow-lg shadow-coral-500/30 flex items-center justify-center gap-2 transition hover:-translate-y-0.5"
+              class="px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/30 transition hover:-translate-y-0.5"
             >
-              <i class="fa-solid fa-compass"></i>
-              Shop All Catch
+              <i class="fa-solid fa-fish"></i>
+              Shop Best Sellers
             </a>
 
-            <a
+            <a 
               href="#custom-box-builder"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-ocean-800/90 hover:bg-ocean-700/90 border border-cyan-400/30 text-white font-extrabold text-base flex items-center justify-center gap-2 transition hover:-translate-y-0.5 shadow-md"
+              class="px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition hover:-translate-y-0.5"
             >
-              <i class="fa-solid fa-box text-cyan-300"></i>
-              Build Your Seafood Box
-              <span class="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full font-bold">Save 10%</span>
+              <span>Build Your Own Box</span>
+              <span class="bg-orange-500 text-[10px] px-2 py-0.5 rounded-full font-extrabold uppercase">Save 10%</span>
             </a>
           </div>
 
-          <!-- Zip quick preview -->
-          <div class="pt-4 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-400">
-            <i class="fa-solid fa-truck text-emerald-400"></i>
-            <span>Order in the next <strong class="text-white">4 hours</strong> for guaranteed delivery by <strong id="hero-delivery-date" class="text-cyan-300">Tomorrow</strong>.</span>
+          <!-- Micro trust highlights -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800 text-xs text-slate-400">
+            <div>
+              <strong class="block text-white text-sm font-bold">100% Pure</strong>
+              <span>Zero added water or STPP</span>
+            </div>
+            <div>
+              <strong class="block text-white text-sm font-bold">Flash-Frozen</strong>
+              <span>Cryogenic nitrogen freeze</span>
+            </div>
+            <div>
+              <strong class="block text-white text-sm font-bold">Solid Dry Ice</strong>
+              <span>Guaranteed &lt; 4°C upon arrival</span>
+            </div>
           </div>
 
         </div>
 
         <!-- HERO RIGHT SHOWCASE CARD -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-ocean-700/60 bg-ocean-900 group">
-            <img
-              src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=80"
-              alt="Wild Sockeye Salmon"
-              class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/40 to-transparent"></div>
-
-            <div class="absolute top-4 left-4 flex flex-col gap-2">
-              <span class="badge-coral px-3 py-1 rounded-full text-xs font-black tracking-wide uppercase shadow">
-                Fresh Catch of the Week
-              </span>
-              <span class="badge-wild px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow flex items-center gap-1">
-                <i class="fa-solid fa-snowflake text-xs"></i>
-                Flash-Frozen at -40°F
-              </span>
+        <div class="lg:col-span-5">
+          <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl text-white relative group">
+            
+            <div class="absolute -top-3 -right-3 bg-orange-600 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg uppercase tracking-wider">
+              Weekly Featured Catch
             </div>
 
-            <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
-              <div class="flex items-center justify-between">
-                <h3 class="text-xl font-bold font-heading">Wild Alaskan Sockeye Salmon</h3>
-                <span class="text-xl font-black text-cyan-300">$32.99 <span class="text-xs text-slate-300 font-normal">/ 4-pack</span></span>
-              </div>
-              <p class="text-xs text-slate-300 line-clamp-2">
-                Harvested in Bristol Bay. 1,450mg natural Omega-3s per serving. Ships rock-solid frozen on dry ice.
-              </p>
-              <div class="pt-2 flex items-center justify-between gap-3">
-                <button
-                  onclick="app.addToCart('prod-sockeye-salmon')"
-                  class="w-full py-2.5 rounded-xl bg-coral-500 hover:bg-coral-600 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow"
-                >
-                  <i class="fa-solid fa-cart-plus"></i>
-                  Add to Cart (4 Fillets)
-                </button>
-                <button
-                  onclick="app.openProductModal('prod-sockeye-salmon')"
-                  class="px-3 py-2.5 rounded-xl bg-ocean-800 hover:bg-ocean-700 text-xs font-bold border border-ocean-600"
-                >
-                  Details
-                </button>
-              </div>
+            <div class="h-60 sm:h-72 rounded-2xl overflow-hidden mb-5 bg-slate-900 border border-white/10">
+              <img 
+                src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" 
+                alt="Wild Alaskan Sockeye Salmon" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
             </div>
+
+            <div class="flex items-center gap-2 text-xs mb-2">
+              <span class="text-yellow-400 font-bold">★★★★★</span>
+              <span class="text-slate-300 font-semibold">(1,420 Reviews)</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-cyan-300 font-bold">Bristol Bay, Alaska</span>
+            </div>
+
+            <h3 class="text-xl font-bold font-heading mb-1 text-white">Wild Alaskan Sockeye Salmon</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Vibrant ruby-red wild fillets loaded with 1,450mg natural Omega-3s. Flash-frozen onboard at -40°F.
+            </p>
+
+            <div class="flex items-center justify-between pt-4 border-t border-white/10">
+              <div>
+                <span class="text-2xl font-black font-heading text-white">$32.99</span>
+                <span class="text-xs text-slate-400 ml-1">/ 4 x 6oz Fillets</span>
+              </div>
+              
+              <button 
+                onclick="app.addToCart('prod-sockeye-salmon', 0, 'Portioned Fillets (Skin-on)')"
+                class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition"
+              >
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart
+              </button>
+            </div>
+
           </div>
         </div>
 
@@ -278,726 +286,815 @@
     </div>
   </section>
 
-  <!-- 4. TRUST BADGES BAR -->
-  <section class="bg-ocean-950 text-white border-y border-ocean-800/80 py-5">
+  <!-- 4. TRUST BADGES BAR (SIZZLEFISH 5 PILLARS) -->
+  <div class="bg-white border-y border-slate-200 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
         
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-ocean-800/80 flex items-center justify-center text-cyan-400">
-            <i class="fa-solid fa-anchor"></i>
-          </div>
-          <div class="text-left">
-            <h4 class="text-sm font-bold text-white">Sustainably Wild-Caught</h4>
-            <p class="text-[11px] text-slate-400">Never farmed with hormones</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-ocean-800/80 flex items-center justify-center text-cyan-400">
-            <i class="fa-solid fa-snowflake"></i>
-          </div>
-          <div class="text-left">
-            <h4 class="text-sm font-bold text-white">Flash-Frozen at Sea</h4>
-            <p class="text-[11px] text-slate-400">Cryogenic -40°F hold</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-ocean-800/80 flex items-center justify-center text-cyan-400">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <div class="text-left">
-            <h4 class="text-sm font-bold text-white">Zero Added Chemicals</h4>
-            <p class="text-[11px] text-slate-400">No STPP or artificial water</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-ocean-800/80 flex items-center justify-center text-coral-400">
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl">
             <i class="fa-solid fa-award"></i>
           </div>
-          <div class="text-left">
-            <h4 class="text-sm font-bold text-white">100% Satisfaction</h4>
-            <p class="text-[11px] text-slate-400">Arrives frozen or refunded</p>
+          <h4 class="text-xs font-black uppercase text-slate-800">30+ Years Experience</h4>
+          <p class="text-[11px] text-slate-500">Master seafood sourcing</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-water"></i>
           </div>
+          <h4 class="text-xs font-black uppercase text-slate-800">100% Sustainably Sourced</h4>
+          <p class="text-[11px] text-slate-500">Certified wild fisheries</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h4 class="text-xs font-black uppercase text-slate-800">Flash-Frozen at -40°F</h4>
+          <p class="text-[11px] text-slate-500">Locks in peak ocean freshness</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="text-xs font-black uppercase text-slate-800">Pure & Chemical-Free</h4>
+          <p class="text-[11px] text-slate-500">Zero STPP or added water</p>
+        </div>
+
+        <div class="col-span-2 md:col-span-1 flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h4 class="text-xs font-black uppercase text-slate-800">Packed with Dry Ice</h4>
+          <p class="text-[11px] text-slate-500">Arrives frozen solid guaranteed</p>
         </div>
 
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- 5. SIZZLEFISH-INSPIRED CUSTOM BOX BUILDER -->
-  <section id="custom-box-builder" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 via-white to-sky-50">
+  <!-- 5. SIZZLEFISH PRIME / CUSTOM BOX BUILDER SECTION -->
+  <section id="custom-box-builder" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-black tracking-widest text-coral-600 uppercase bg-coral-50 border border-coral-200 px-3 py-1 rounded-full">
-          Signature Experience
+        <span class="text-xs font-black tracking-widest text-orange-600 uppercase bg-orange-100 px-3 py-1 rounded-full">
+          SIZZLEFISH PRIME • CUSTOM SEAFOOD BOX
         </span>
-        <h2 class="text-3xl sm:text-4xl font-black font-heading text-ocean-950 mt-3 mb-4">
-          Build Your Custom Seafood Box
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B1B2B] mt-3">
+          Build Your Own Seafood Box
         </h2>
-        <p class="text-slate-600 text-base">
-          Choose your favorite cuts. Pack your box with 6 or 12 individual 6-8oz portions, flash-frozen at peak freshness. Subscribe to save 10% and adjust or cancel anytime.
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Hand-pick your favorite flash-frozen portions. Individually vacuum-sealed, packed with solid dry ice, and delivered straight to your door with <strong>Free Shipping</strong>.
         </p>
-      </div>
 
-      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
-        
-        <!-- BUILDER CONTROLS -->
-        <div class="bg-ocean-950 text-white p-6 sm:p-8 border-b border-ocean-800">
-          <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
-            
-            <!-- Step 1: Box Size -->
-            <div class="flex items-center gap-4">
-              <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-300">1. Select Size:</span>
-              <div class="inline-flex rounded-xl bg-ocean-900 p-1 border border-ocean-800">
-                <button
-                  id="btn-box-6"
-                  onclick="app.setBoxTargetSize(6)"
-                  class="px-5 py-2 rounded-lg font-bold text-xs transition text-slate-300 hover:text-white"
-                >
-                  6-Pack Box (Starter)
-                </button>
-                <button
-                  id="btn-box-12"
-                  onclick="app.setBoxTargetSize(12)"
-                  class="px-5 py-2 rounded-lg font-bold text-xs transition bg-coral-500 text-white shadow-md"
-                >
-                  12-Pack Box (Best Value)
-                </button>
-              </div>
-            </div>
-
-            <!-- Step 2: Frequency -->
-            <div class="flex items-center gap-4">
-              <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-300">2. Frequency:</span>
-              <div class="inline-flex rounded-xl bg-ocean-900 p-1 border border-ocean-800">
-                <button
-                  id="btn-freq-onetime"
-                  onclick="app.setBoxFrequency('one-time')"
-                  class="px-5 py-2 rounded-lg font-bold text-xs transition text-slate-300 hover:text-white"
-                >
-                  One-Time Purchase
-                </button>
-                <button
-                  id="btn-freq-sub"
-                  onclick="app.setBoxFrequency('subscribe')"
-                  class="px-5 py-2 rounded-lg font-bold text-xs transition bg-emerald-600 text-white shadow-md flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-rotate text-xs"></i>
-                  Subscribe & Save 10%
-                </button>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- PROGRESS CAPACITY BAR -->
-          <div class="mt-8 pt-6 border-t border-ocean-800/80">
-            <div class="flex flex-col sm:flex-row items-center justify-between text-xs font-bold mb-2 gap-2">
-              <div class="flex items-center gap-2">
-                <span class="text-white text-sm">
-                  Box Status: <strong id="box-portions-label">12 of 12 Portions Selected</strong>
-                </span>
-                <span id="box-status-badge" class="bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase">
-                  ✓ 100% Full & Ready
-                </span>
-              </div>
-              <span id="box-remaining-label" class="text-cyan-300">
-                Box ready for delivery!
-              </span>
-            </div>
-
-            <div class="w-full bg-ocean-900 h-3.5 rounded-full overflow-hidden p-0.5 border border-ocean-700">
-              <div
-                id="box-progress-bar"
-                class="h-full rounded-full transition-all duration-500 bg-gradient-to-r from-emerald-500 to-teal-400"
-                style="width: 100%;"
-              ></div>
-            </div>
-
-            <!-- Visual Slot Pills Tray -->
-            <div id="box-slots-tray" class="mt-4 flex flex-wrap gap-2">
-              <!-- Dynamically populated by app.js -->
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- PORTION SELECTION GRID -->
-        <div class="p-6 sm:p-8">
-          <h3 class="text-sm font-extrabold uppercase tracking-wider text-slate-500 mb-4">
-            Click (+) or (-) to customize your portions:
-          </h3>
-
-          <div id="box-builder-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Dynamically populated by app.js -->
-          </div>
-
-          <!-- BUILDER BOTTOM SUMMARY -->
-          <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 bg-slate-50 p-6 rounded-2xl">
-            <div>
-              <div class="flex items-baseline gap-3">
-                <span id="box-summary-price" class="text-2xl font-black text-ocean-950 font-heading">
-                  $89.99
-                </span>
-                <span id="box-sub-discount-badge" class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                  10% Subscription Discount Applied
-                </span>
-              </div>
-              <p class="text-xs text-slate-500 mt-0.5">
-                Includes flash-frozen portions, insulated cornstarch eco-cooler & dry ice packaging.
-              </p>
-            </div>
-
-            <button
-              id="btn-add-custom-box"
-              onclick="app.addCustomBoxToCart()"
-              class="px-8 py-3.5 rounded-xl font-extrabold text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg transition bg-coral-500 hover:bg-coral-600 text-white shadow-coral-500/30"
+        <!-- Box Size & Frequency Controls -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          
+          <!-- Size Toggle: 14 vs 28 Portions (or 6 vs 12) -->
+          <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex">
+            <button 
+              id="box-size-btn-12"
+              onclick="app.setBoxTargetSize(12)"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-[#0B1B2B] text-white shadow"
             >
-              <i class="fa-solid fa-box-open"></i>
-              Add Custom Box to Cart
+              12-Portion Box
+            </button>
+            <button 
+              id="box-size-btn-6"
+              onclick="app.setBoxTargetSize(6)"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black"
+            >
+              6-Portion Starter
+            </button>
+          </div>
+
+          <!-- Frequency Toggle: Subscribe & Save 10% vs One-Time -->
+          <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex">
+            <button 
+              id="box-freq-sub"
+              onclick="app.setBoxFrequency('subscribe')"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition bg-orange-600 text-white shadow flex items-center gap-1.5"
+            >
+              <span>Subscribe & Save 10%</span>
+              <span class="bg-white text-orange-600 text-[10px] px-1.5 py-0.2 rounded-full font-black">Best</span>
+            </button>
+            <button 
+              id="box-freq-onetime"
+              onclick="app.setBoxFrequency('onetime')"
+              class="px-5 py-2.5 rounded-xl text-xs font-black transition text-slate-600 hover:text-black"
+            >
+              One-Time Order
             </button>
           </div>
 
         </div>
+      </div>
 
+      <!-- Live Slot Tray & Progress Display -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm mb-12">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+          <div>
+            <div class="flex items-center gap-3">
+              <h3 id="box-portions-label" class="text-lg font-black font-heading text-[#0B1B2B]">
+                12 of 12 Portions Selected
+              </h3>
+              <span id="box-status-badge" class="bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-black uppercase">
+                ✓ 100% Full & Ready
+              </span>
+            </div>
+            <p id="box-remaining-label" class="text-xs text-slate-500 mt-1">
+              Box is full and ready for express chilled dispatch!
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Total Box Price:</span>
+              <div class="flex items-baseline gap-1.5 justify-end">
+                <span id="box-summary-price" class="text-2xl font-black font-heading text-[#0B1B2B]">
+                  $114.99
+                </span>
+                <span id="box-sub-discount-badge" class="text-xs font-bold text-emerald-600">
+                  (10% Off Applied)
+                </span>
+              </div>
+            </div>
+
+            <button 
+              id="btn-add-custom-box"
+              onclick="app.addCustomBoxToCart()"
+              class="px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider shadow-md transition"
+            >
+              Add Box to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden mb-6">
+          <div id="box-progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-emerald-500 transition-all duration-300" style="width: 100%;"></div>
+        </div>
+
+        <!-- Visual Slot Badges Container -->
+        <div id="box-slots-container" class="grid grid-cols-6 sm:grid-cols-12 gap-2">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Portion Selector Grid -->
+      <div id="box-builder-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Populated by app.js -->
       </div>
 
     </div>
   </section>
 
-  <!-- 6. FILTERABLE PRODUCT CATALOG -->
-  <section id="catalog" class="py-16 sm:py-24 bg-white">
+  <!-- 6. DIRECT MARKET PRODUCT CATALOG -->
+  <section id="catalog" class="py-16 sm:py-24 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- CATALOG HEADER -->
+      <!-- Catalog Header & Category Tabs -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
-          <span class="text-xs font-black tracking-widest text-ocean-600 uppercase">
-            Direct Ocean Inventory
+          <span class="text-xs font-black tracking-widest text-orange-600 uppercase">
+            Sustainably Harvested • Flash-Frozen at Sea
           </span>
-          <h2 class="text-3xl sm:text-4xl font-black font-heading text-ocean-950 mt-1">
-            Shop Premium Seafood
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-1">
+            Shop Premium Wild Seafood
           </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Individually portioned & vacuum sealed. Ready to pan-sear, bake, grill, or enjoy raw.
+          </p>
         </div>
 
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-bold text-slate-500">Sort by:</span>
-          <select
-            id="sort-select"
+        <!-- Sorter Dropdown -->
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-bold text-slate-500 uppercase">Sort by:</label>
+          <select 
+            id="catalog-sort" 
             onchange="app.handleSort(this.value)"
-            class="text-xs font-bold text-slate-700 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ocean-500"
+            class="text-xs font-bold text-slate-800 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           >
             <option value="popular">Most Popular</option>
-            <option value="rating">Highest Rated</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Customer Rating</option>
           </select>
         </div>
       </div>
 
-      <!-- CATEGORY TABS -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 border-b border-slate-100">
-        <button onclick="app.setCategory('All Catch', this)" class="cat-btn active px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-ocean-900 text-white shadow">
-          All Catch
-        </button>
-        <button onclick="app.setCategory('Fresh Catch', this)" class="cat-btn px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-slate-100 text-slate-600 hover:bg-slate-200">
-          Fresh Catch & Fillets
-        </button>
-        <button onclick="app.setCategory('Shellfish', this)" class="cat-btn px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-slate-100 text-slate-600 hover:bg-slate-200">
-          Shellfish & Scallops
-        </button>
-        <button onclick="app.setCategory('Sashimi Grade', this)" class="cat-btn px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-slate-100 text-slate-600 hover:bg-slate-200">
-          Sashimi Grade
-        </button>
-        <button onclick="app.setCategory('Smoked & Prepared', this)" class="cat-btn px-5 py-2.5 rounded-full text-xs font-extrabold whitespace-nowrap transition bg-slate-100 text-slate-600 hover:bg-slate-200">
-          Smoked & Prepared
-        </button>
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <button onclick="app.setCategory('All Catch')" class="cat-pill active-cat px-4 py-2 rounded-xl text-xs font-bold transition">All Catch</button>
+        <button onclick="app.setCategory('Fresh Catch')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Wild Alaska Salmon & Fillets</button>
+        <button onclick="app.setCategory('Shellfish')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Shellfish & Sea Scallops</button>
+        <button onclick="app.setCategory('Sashimi Grade')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Sashimi Grade Ahi Tuna</button>
+        <button onclick="app.setCategory('Smoked & Prepared')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold transition">Smoked & Specialties</button>
       </div>
 
-      <!-- SECONDARY FILTER TAGS -->
-      <div class="flex items-center gap-2 mb-8">
-        <span class="text-xs font-bold text-slate-400">Filter:</span>
-        <button onclick="app.setTag('All', this)" class="tag-btn font-bold text-coral-800 bg-coral-100 border border-coral-300 px-3 py-1 rounded-lg text-xs transition">
-          All
-        </button>
-        <button onclick="app.setTag('Wild', this)" class="tag-btn text-slate-500 hover:text-slate-800 px-3 py-1 rounded-lg text-xs font-semibold transition">
-          Wild-Caught
-        </button>
-        <button onclick="app.setTag('Omega-3', this)" class="tag-btn text-slate-500 hover:text-slate-800 px-3 py-1 rounded-lg text-xs font-semibold transition">
-          Omega-3 Rich
-        </button>
-        <button onclick="app.setTag('Best Seller', this)" class="tag-btn text-slate-500 hover:text-slate-800 px-3 py-1 rounded-lg text-xs font-semibold transition">
-          Best Sellers
-        </button>
+      <!-- Secondary Tag Filter Pills -->
+      <div class="flex items-center gap-2 mb-8 text-xs text-slate-500">
+        <span class="font-bold">Filter By:</span>
+        <button onclick="app.setTag('All')" class="tag-pill active-tag px-3 py-1 rounded-lg font-bold border transition">All</button>
+        <button onclick="app.setTag('Wild')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Wild-Caught</button>
+        <button onclick="app.setTag('Omega-3')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Omega-3 Rich</button>
+        <button onclick="app.setTag('Best Seller')" class="tag-pill px-3 py-1 rounded-lg font-bold border transition">Top Rated</button>
       </div>
 
-      <!-- PRODUCTS GRID -->
-      <div id="products-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-        <!-- Dynamically rendered by app.js -->
+      <!-- Product Cards Grid -->
+      <div id="products-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by app.js -->
       </div>
 
     </div>
   </section>
 
-  <!-- 7. CURATED SUBSCRIPTION BOXES -->
-  <section id="curated-boxes" class="py-16 sm:py-24 bg-slate-900 text-white">
+  <!-- 7. HOW SIZZLEFISH WORKS (3-STEP DIAGRAM) -->
+  <section class="py-16 sm:py-24 bg-[#0B1B2B] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-black tracking-widest text-cyan-400 uppercase bg-ocean-800 border border-ocean-700 px-3 py-1 rounded-full">
-          Curated by Our Fishmongers
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-black tracking-widest text-orange-400 uppercase">
+          Freshness Assured
         </span>
-        <h2 class="text-3xl sm:text-4xl font-black font-heading mt-3 mb-4">
-          Pre-Packaged Seafood Boxes
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white mt-2">
+          How Sizzlefish Works
         </h2>
-        <p class="text-slate-300 text-base">
-          The easiest way to keep your freezer stocked with pristine ocean proteins. Choose one-time delivery or save an extra 10% on recurring deliveries.
+        <p class="text-slate-300 text-sm mt-2">
+          From cold ocean waters to your dinner table in 3 simple steps.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+          <div class="w-16 h-16 rounded-2xl bg-orange-600/20 text-orange-400 border border-orange-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
+            1
+          </div>
+          <h3 class="text-lg font-bold font-heading mb-2">You Choose Your Catch</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Select individual à la carte fillets or hand-pick your favorite portions in a customized Sizzlefish Prime Box (6 or 12 portions).
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-600/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
+            2
+          </div>
+          <h3 class="text-lg font-bold font-heading mb-2">Flash-Frozen at -40°F</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Cryogenically frozen at peak ocean season within hours of catch. Individually vacuum-sealed to lock in flavor, texture, and natural Omega-3s.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-3xl p-8 text-center relative">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-2xl mx-auto mb-6 font-black font-heading">
+            3
+          </div>
+          <h3 class="text-lg font-bold font-heading mb-2">Packed with Solid Dry Ice</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Delivered in 100% recyclable insulated thermal packaging with dry ice blocks. Arrives rock-solid frozen to your doorstep, guaranteed.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. WHY SIZZLEFISH VS SUPERMARKET SEAFOOD -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-black tracking-widest text-orange-600 uppercase">
+          The Sizzlefish Difference
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-2">
+          Why Sizzlefish Beats The Grocery Store
+        </h2>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200">
+              <th class="p-4 sm:p-5 font-bold text-slate-500 uppercase text-xs">Quality Factor</th>
+              <th class="p-4 sm:p-5 font-black text-orange-600 bg-orange-50/50 uppercase text-xs">Sizzlefish</th>
+              <th class="p-4 sm:p-5 font-bold text-slate-500 uppercase text-xs">Typical Grocery Store</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-4 sm:p-5 font-bold text-slate-900">Freezing Method</td>
+              <td class="p-4 sm:p-5 text-emerald-700 font-bold bg-orange-50/30">Cryogenic flash-freeze at -40°F within hours</td>
+              <td class="p-4 sm:p-5 text-slate-500">Slow commercial freeze days after catch</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-bold text-slate-900">Chemicals & Additives</td>
+              <td class="p-4 sm:p-5 text-emerald-700 font-bold bg-orange-50/30">100% Pure • Zero STPP or added water weight</td>
+              <td class="p-4 sm:p-5 text-slate-500">Often soaked in sodium tripolyphosphate</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-bold text-slate-900">Traceability & Sourcing</td>
+              <td class="p-4 sm:p-5 text-emerald-700 font-bold bg-orange-50/30">100% Traceable to certified wild fisheries</td>
+              <td class="p-4 sm:p-5 text-slate-500">Mixed origin lots, vague country labels</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-bold text-slate-900">Packaging</td>
+              <td class="p-4 sm:p-5 text-emerald-700 font-bold bg-orange-50/30">Vacuum-sealed single portions in dry ice</td>
+              <td class="p-4 sm:p-5 text-slate-500">Sitting thawed on melting display ice</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-bold text-slate-900">Satisfaction Policy</td>
+              <td class="p-4 sm:p-5 text-emerald-700 font-bold bg-orange-50/30">100% Replacement or refund guarantee</td>
+              <td class="p-4 sm:p-5 text-slate-500">Rarely refundable once opened</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. CURATED SUBSCRIPTION BOXES SECTION -->
+  <section id="curated-boxes" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-black tracking-widest text-orange-600 uppercase">
+          Curated Monthly Selections
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-2">
+          Sizzlefish Subscription Boxes
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-2">
+          Pre-assembled boxes curated by our master fishmongers. Enjoy recurring savings with full freedom to pause, change, or cancel anytime.
         </p>
       </div>
 
       <div id="curated-boxes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Dynamically populated by app.js -->
+        <!-- Rendered by app.js -->
       </div>
 
     </div>
   </section>
 
-  <!-- 8. COLD-CHAIN & SOURCING SECTION -->
-  <section class="py-16 sm:py-24 bg-gradient-to-b from-sky-50 to-white">
+  <!-- 10. CUSTOMER REVIEWS & TESTIMONIALS -->
+  <section class="py-16 sm:py-24 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-black tracking-widest text-ocean-600 uppercase bg-ocean-100 border border-ocean-200 px-3 py-1 rounded-full">
-          Pristine Cold-Chain Integrity
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-black font-heading text-ocean-950 mt-3 mb-4">
-          How AM Seafood Guarantees Unmatched Freshness
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="text-yellow-400 text-lg mb-2">★★★★★</div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B]">
+          Loved by 38,000+ Seafood Enthusiasts
         </h2>
-        <p class="text-slate-600 text-base">
-          Supermarket fish is often weeks old and thawed multiple times. Our direct-from-ocean cold-chain ensures your catch is blast-frozen within hours of harvest and arrives solid frozen at your kitchen table.
+        <p class="text-slate-500 text-xs sm:text-sm mt-1">
+          Read real verified reviews from customers across the United States.
         </p>
       </div>
 
-      <!-- 4 COLD-CHAIN PILLARS -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative group hover:-translate-y-1 transition">
-          <div class="w-14 h-14 rounded-2xl bg-ocean-100 text-ocean-700 mx-auto flex items-center justify-center mb-4 text-xl">
-            <i class="fa-solid fa-anchor"></i>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-yellow-400 text-xs">★★★★★</span>
+            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
           </div>
-          <span class="text-xs font-black text-coral-600 uppercase">Step 01</span>
-          <h3 class="text-base font-bold text-ocean-950 mt-1 mb-2">Sustainable Harvest</h3>
+          <h4 class="font-bold text-slate-900 text-sm">"The Salmon is unbelievable!"</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Direct partnerships with small-boat wild fleets in Alaska & Maine. Zero chemical dips or artificial water weight.
+            "I've ordered salmon from three different online companies and Sizzlefish is in a league of its own. The color and flavor of the Sockeye are stunning, and it arrived frozen rock solid with plenty of dry ice."
           </p>
+          <div class="text-[11px] font-bold text-slate-800 pt-2 border-t border-slate-200">
+            Sarah M. — Austin, TX
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative group hover:-translate-y-1 transition">
-          <div class="w-14 h-14 rounded-2xl bg-cyan-100 text-cyan-700 mx-auto flex items-center justify-center mb-4 text-xl">
-            <i class="fa-solid fa-snowflake"></i>
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-yellow-400 text-xs">★★★★★</span>
+            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
           </div>
-          <span class="text-xs font-black text-coral-600 uppercase">Step 02</span>
-          <h3 class="text-base font-bold text-ocean-950 mt-1 mb-2">Flash-Frozen at -40°F</h3>
+          <h4 class="font-bold text-slate-900 text-sm">"Scallops caramelized like a dream"</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Cryogenically blast-frozen within 2-4 hours onboard. Rapid freeze preserves moisture, flavor, and cell membrane integrity.
+            "These dry-pack scallops do not weep water in the pan! They sear to a crisp golden brown in two minutes. Restaurant quality right in my own kitchen. Five stars all around."
           </p>
+          <div class="text-[11px] font-bold text-slate-800 pt-2 border-t border-slate-200">
+            Michael D. — Chicago, IL
+          </div>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative group hover:-translate-y-1 transition">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center mb-4 text-xl">
-            <i class="fa-solid fa-box"></i>
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-yellow-400 text-xs">★★★★★</span>
+            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full">✓ Verified Buyer</span>
           </div>
-          <span class="text-xs font-black text-coral-600 uppercase">Step 03</span>
-          <h3 class="text-base font-bold text-ocean-950 mt-1 mb-2">100% Recyclable Cooler</h3>
+          <h4 class="font-bold text-slate-900 text-sm">"Top-notch customer service"</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Insulated with eco-friendly cornstarch foam and packed with solid dry ice pellets (-109°F) engineered for 72-hour transit.
+            "I called with a question about delivery dates for our anniversary dinner. A real person answered immediately and made sure my box arrived right on time. Outstanding service!"
           </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative group hover:-translate-y-1 transition">
-          <div class="w-14 h-14 rounded-2xl bg-coral-100 text-coral-700 mx-auto flex items-center justify-center mb-4 text-xl">
-            <i class="fa-solid fa-shield-halved"></i>
+          <div class="text-[11px] font-bold text-slate-800 pt-2 border-t border-slate-200">
+            Elena R. — Seattle, WA
           </div>
-          <span class="text-xs font-black text-coral-600 uppercase">Step 04</span>
-          <h3 class="text-base font-bold text-ocean-950 mt-1 mb-2">Guaranteed Frozen</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Arrives frozen solid below 4°C. In the unlikely event of transit thaw or delay, we re-ship or refund 100% instantly.
-          </p>
-        </div>
-      </div>
-
-      <!-- SOURCING ORIGINS SHOWCASE -->
-      <div class="bg-ocean-950 text-white rounded-3xl p-8 sm:p-12 border border-ocean-800 shadow-xl">
-        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
-          <div>
-            <span class="text-xs font-black text-cyan-400 uppercase tracking-widest">Ocean-To-Table Traceability</span>
-            <h3 class="text-2xl sm:text-3xl font-black font-heading mt-1">Our Certified Fishing Grounds</h3>
-          </div>
-          <button
-            onclick="app.openSourcingModal()"
-            class="px-5 py-2.5 rounded-xl bg-ocean-800 hover:bg-ocean-700 text-xs font-bold text-cyan-300 border border-ocean-700 flex items-center gap-2 self-start md:self-auto"
-          >
-            <i class="fa-solid fa-map-location-dot"></i>
-            View Interactive Origin Map
-          </button>
         </div>
 
-        <div id="sourcing-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Dynamically populated by app.js -->
-        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- 9. CHEF RECIPES -->
-  <section id="recipes" class="py-16 sm:py-24 bg-white">
+  <!-- 11. CHEF RECIPES SECTION -->
+  <section id="recipes" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs font-black tracking-widest text-coral-600 uppercase">
+          <span class="text-xs font-black tracking-widest text-orange-600 uppercase">
             Culinary Inspiration
           </span>
-          <h2 class="text-3xl sm:text-4xl font-black font-heading text-ocean-950 mt-1">
-            Chef-Approved Seafood Recipes
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B1B2B] mt-1">
+            Chef Recipes & Cooking Guides
           </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Simple gourmet seafood preparation techniques tested by master chefs.
+          </p>
         </div>
-        <p class="text-slate-500 text-xs max-w-md">
-          Cooking wild seafood at home is simple and takes under 20 minutes. Browse chef techniques and add the exact catch to your cart in one click.
-        </p>
       </div>
 
-      <div id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Dynamically populated by app.js -->
+      <div id="recipes-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Populated by app.js -->
       </div>
 
     </div>
   </section>
 
-  <!-- 10. GLOBAL FOOTER -->
-  <footer class="bg-ocean-950 text-slate-400 text-xs pt-16 pb-12 border-t border-ocean-800">
+  <!-- 12. SIZZLEFISH FOOTER -->
+  <footer class="bg-[#0B1B2B] text-slate-400 pt-16 pb-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-ocean-900">
+      
+      <!-- Top Footer: Newsletter & Logo -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
         
-        <div class="lg:col-span-2 space-y-4">
+        <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-ocean-800 flex items-center justify-center text-cyan-300">
-              <i class="fa-solid fa-fish-fins text-xl"></i>
+            <div class="w-10 h-10 rounded-xl bg-orange-600 flex items-center justify-center text-white">
+              <i class="fa-solid fa-fish text-xl"></i>
             </div>
-            <div>
-              <span class="block text-xl font-black text-white font-heading">AM SEA FOOD SALES</span>
-              <span class="block text-[10px] uppercase tracking-widest text-coral-400 font-bold">Premium Flash-Frozen D2C Seafood</span>
-            </div>
+            <span class="text-2xl font-black tracking-tight text-white font-heading uppercase">
+              SIZZLEFISH
+            </span>
           </div>
-          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
-            Delivering wild Alaskan salmon, cold-water Maine lobster, and dry-pack sea scallops directly to American dinner tables with 100% guaranteed cold-chain arrival.
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Delivering pure, natural, sustainably sourced wild seafood directly to your doorstep. Flash-frozen at peak season and shipped with dry ice.
           </p>
-          <div class="pt-2 text-slate-300 space-y-0.5">
-            <p>📍 Fulfillment Docks: Anchorage, AK & Gloucester, MA</p>
-            <p>📞 Customer Support: 1-800-555-CATCH (Mon-Fri 8am-6pm EST)</p>
+
+          <div class="text-xs text-slate-300 space-y-1">
+            <p><i class="fa-solid fa-phone text-orange-400 mr-2"></i>(833) 603-0888 (Mon-Fri 7am - 4pm ET)</p>
+            <p><i class="fa-solid fa-envelope text-orange-400 mr-2"></i>support@sizzlefish.com</p>
           </div>
         </div>
 
+        <!-- Newsletter Signup -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-700">
+            <h4 class="text-white text-lg font-bold font-heading mb-1">Get 10% Off Your First Box</h4>
+            <p class="text-xs text-slate-400 mb-4">
+              Subscribe to the Sizzlefish Catch of the Week newsletter for recipes, seasonal alerts, and exclusive discounts.
+            </p>
+            
+            <form onsubmit="app.handleNewsletter(event)" class="flex flex-col sm:flex-row gap-2">
+              <input 
+                id="newsletter-email"
+                type="email" 
+                required 
+                placeholder="Enter your email address..."
+                class="flex-1 px-4 py-3 text-xs rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+              />
+              <button 
+                type="submit"
+                class="px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Links Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 text-xs border-b border-slate-800">
         <div>
-          <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Shop Seafood</h4>
-          <ul class="space-y-2.5">
+          <h5 class="text-white font-bold uppercase text-[11px] mb-3">Shop Seafood</h5>
+          <ul class="space-y-2">
             <li><a href="#catalog" class="hover:text-white transition">Wild Alaskan Salmon</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Pacific Halibut & Cod</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Dry Sea Scallops</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Wild Gulf Shrimp</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Maine Lobster Tails</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Jumbo Dry Sea Scallops</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Colossal King Crab</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Boxes & Plans</h4>
-          <ul class="space-y-2.5">
-            <li><a href="#custom-box-builder" class="hover:text-white transition text-coral-400 font-bold">Build Your Own Box</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Wild Salmon Showcase</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Shellfish & Lobster Box</a></li>
+          <h5 class="text-white font-bold uppercase text-[11px] mb-3">Subscriptions</h5>
+          <ul class="space-y-2">
+            <li><a href="#custom-box-builder" class="hover:text-white transition">Build Your Own Box</a></li>
+            <li><a href="#curated-boxes" class="hover:text-white transition">Wild Salmon Box</a></li>
+            <li><a href="#curated-boxes" class="hover:text-white transition">Shellfish Feast Box</a></li>
             <li><a href="#curated-boxes" class="hover:text-white transition">Omega-3 Power Box</a></li>
-            <li><a href="#curated-boxes" class="hover:text-white transition">Subscribe & Save 10%</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Get $15 Off First Order</h4>
-          <p class="text-slate-400 mb-3">Join 50,000+ seafood enthusiasts. Receive secret seasonal catches & chef recipes.</p>
-          <form onsubmit="event.preventDefault(); app.applyPromoCode('SIZZLE15');" class="space-y-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
-              class="w-full px-3.5 py-2.5 rounded-xl bg-ocean-900 border border-ocean-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-coral-500"
-            />
-            <button
-              type="submit"
-              class="w-full py-2.5 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-bold text-xs uppercase tracking-wider transition"
-            >
-              Claim $15 Discount
-            </button>
-          </form>
+          <h5 class="text-white font-bold uppercase text-[11px] mb-3">Customer Care</h5>
+          <ul class="space-y-2">
+            <li><button onclick="app.openZipModal()" class="hover:text-white transition">Check Delivery Date</button></li>
+            <li><a href="#" class="hover:text-white transition">Shipping & Dry Ice FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">100% Satisfaction Guarantee</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact Customer Support</a></li>
+          </ul>
         </div>
 
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-4">
-        <p>© 2026 AM SEA FOOD SALES. All rights reserved. Packed with dry ice and delivered cold.</p>
-        <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
-          <a href="#" class="hover:text-slate-400">Cold Chain Terms</a>
-          <a href="#" class="hover:text-slate-400">Shipping Policy</a>
+        <div>
+          <h5 class="text-white font-bold uppercase text-[11px] mb-3">About Sizzlefish</h5>
+          <ul class="space-y-2">
+            <li><button onclick="app.openSourcingModal()" class="hover:text-white transition">Our 30-Year Story</button></li>
+            <li><button onclick="app.openSourcingModal()" class="hover:text-white transition">Sustainable Fisheries</button></li>
+            <li><a href="#recipes" class="hover:text-white transition">Chef Recipes</a></li>
+            <li><a href="#" class="hover:text-white transition">Nutritional Benefits</a></li>
+          </ul>
         </div>
       </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Sizzlefish. All rights reserved. Pure Natural Seafood Delivered.
+        </div>
+        <div class="flex items-center gap-4 text-lg text-slate-400">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+          <i class="fa-brands fa-paypal"></i>
+        </div>
+      </div>
+
     </div>
   </footer>
 
-  <!-- ============================================================= -->
-  <!-- MODALS & DRAWERS -->
-  <!-- ============================================================= -->
+  <!-- ==================== MODALS & DRAWERS ==================== -->
 
-  <!-- 1. SLIDE-OVER CART DRAWER -->
-  <div id="cart-drawer-container" class="fixed inset-0 z-50 flex justify-end hidden">
-    <div onclick="app.closeCart()" class="fixed inset-0 bg-ocean-950/70 backdrop-blur-sm transition-opacity"></div>
-    <div class="relative w-full max-w-md bg-white h-full shadow-2xl flex flex-col z-10">
-      
-      <div class="p-5 border-b border-slate-200 bg-ocean-950 text-white flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-basket-shopping text-coral-400"></i>
-          <h3 class="font-heading font-bold text-base">Your Chilled Catch Cart</h3>
-          <span id="drawer-counter-badge" class="text-xs bg-ocean-800 text-cyan-300 px-2 py-0.5 rounded-full font-bold">0 items</span>
+  <!-- SLIDE-OVER CART DRAWER -->
+  <div id="cart-drawer-container" class="fixed inset-0 z-50 overflow-hidden hidden">
+    <div onclick="app.closeCart()" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+        
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-basket-shopping text-orange-600"></i>
+            <h3 class="font-black font-heading text-slate-900 text-base">Your Sizzlefish Box</h3>
+            <span id="drawer-counter-badge" class="bg-orange-100 text-orange-700 text-xs px-2 py-0.5 rounded-full font-bold">
+              0 items
+            </span>
+          </div>
+          <button onclick="app.closeCart()" class="text-slate-400 hover:text-slate-700 text-lg">✕</button>
         </div>
-        <button onclick="app.closeCart()" class="text-slate-400 hover:text-white p-1 rounded-lg text-lg">✕</button>
-      </div>
 
-      <!-- FREE SHIPPING PROGRESS BAR -->
-      <div class="bg-sky-50 px-5 py-3 border-b border-sky-100 text-xs">
-        <div class="flex justify-between font-bold mb-1.5">
-          <span id="free-shipping-label" class="text-slate-700">Add $125.00 for FREE Express Shipping!</span>
-          <span id="free-shipping-percent" class="text-slate-500">0%</span>
+        <!-- Free Shipping Progress -->
+        <div class="bg-orange-50/70 p-4 border-b border-orange-100 text-xs">
+          <div class="flex justify-between items-center mb-1.5 font-bold">
+            <span id="free-shipping-label">Add <strong class="text-orange-600">$100.00</strong> more for FREE Shipping!</span>
+            <span id="free-shipping-percent" class="text-orange-600">0%</span>
+          </div>
+          <div class="w-full bg-orange-200/50 h-2 rounded-full overflow-hidden">
+            <div id="free-shipping-bar" class="bg-orange-600 h-full transition-all duration-300" style="width: 0%;"></div>
+          </div>
         </div>
-        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-          <div id="free-shipping-bar" class="bg-coral-500 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+
+        <!-- Cart Items Scroll Area -->
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4">
+          <!-- Populated by app.js -->
         </div>
-      </div>
 
-      <!-- CART ITEMS LIST -->
-      <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4">
-        <!-- Rendered by app.js -->
-      </div>
+        <!-- In-Cart Cross-Sells Section -->
+        <div id="cart-cross-sells-container" class="p-4 border-t border-slate-200 bg-slate-50">
+          <!-- Populated by app.js -->
+        </div>
 
-      <!-- CROSS-SELL RECOMMENDATIONS IN CART -->
-      <div id="cart-cross-sells-container" class="px-5 pb-3 border-t border-slate-200 pt-3">
-        <!-- Rendered by app.js -->
-      </div>
+        <!-- Promo Code Input -->
+        <div class="p-4 border-t border-slate-200 bg-white">
+          <div class="flex gap-2">
+            <input 
+              id="promo-input" 
+              type="text" 
+              placeholder="Promo Code (Try SIZZLE10)" 
+              class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-200 uppercase font-mono font-bold focus:outline-none focus:ring-1 focus:ring-orange-500"
+            />
+            <button 
+              onclick="app.applyPromoCode()"
+              class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl"
+            >
+              Apply
+            </button>
+          </div>
+          <div id="promo-applied-badge" class="hidden items-center justify-between text-xs text-emerald-700 bg-emerald-50 p-2 rounded-lg mt-2">
+            <span>Promo Applied:</span>
+            <strong id="promo-discount-amount">-$0.00</strong>
+          </div>
+        </div>
 
-      <!-- CART FOOTER -->
-      <div id="cart-footer-panel" class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
-        <div class="flex gap-2">
-          <input
-            id="promo-input"
-            type="text"
-            placeholder="Promo code (e.g. SIZZLE15)"
-            class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ocean-500 uppercase font-bold"
-          />
-          <button
-            onclick="app.applyPromoCode()"
-            class="px-3.5 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl"
+        <!-- Drawer Footer / Checkout Actions -->
+        <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
+          <div class="space-y-1.5 text-xs text-slate-600">
+            <div class="flex justify-between">
+              <span>Subtotal:</span>
+              <strong id="cart-subtotal-val" class="text-slate-900">$0.00</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Express Chilled Shipping:</span>
+              <strong id="cart-shipping-val" class="text-slate-900">$18.50</strong>
+            </div>
+            <div class="flex justify-between text-sm font-black text-slate-900 pt-2 border-t border-slate-200">
+              <span>Total:</span>
+              <strong id="cart-total-val" class="text-lg text-[#0B1B2B] font-heading">$0.00</strong>
+            </div>
+          </div>
+
+          <button 
+            onclick="app.openCheckoutModal()"
+            class="w-full py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-orange-600/25 transition"
           >
-            Apply
+            <span>Proceed to Checkout</span>
+            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
 
-        <div id="promo-applied-badge" class="hidden justify-between text-xs text-emerald-600 font-bold bg-emerald-50 p-2 rounded-lg">
-          <span>Discount Applied:</span>
-          <span id="promo-discount-amount">-$0.00</span>
-        </div>
-
-        <div class="space-y-1 text-xs text-slate-600">
-          <div class="flex justify-between">
-            <span>Subtotal</span>
-            <span id="cart-subtotal-val" class="font-bold text-slate-900">$0.00</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Chilled Dry Ice Shipping</span>
-            <span id="cart-shipping-val" class="font-bold text-slate-900">$18.50</span>
-          </div>
-          <div class="flex justify-between text-base font-black text-ocean-950 pt-2 border-t border-slate-200 font-heading">
-            <span>Total Due</span>
-            <span id="cart-total-val">$0.00</span>
-          </div>
-        </div>
-
-        <button
-          onclick="app.openCheckoutModal()"
-          class="w-full py-4 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-coral-500/25 transition"
-        >
-          <i class="fa-solid fa-lock"></i>
-          Proceed to Chilled Checkout
-        </button>
-
-        <p class="text-[10px] text-center text-slate-400">
-          🔒 Encrypted 256-Bit SSL Checkout • Ships with 5 lbs Solid Dry Ice
-        </p>
       </div>
-
     </div>
   </div>
 
-  <!-- 2. POSTAL CODE CHECKER MODAL -->
-  <div id="zip-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/80 backdrop-blur-sm hidden">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
-      <button onclick="app.closeZipModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
-
-      <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4 text-xl">
+  <!-- ZIP CODE DELIVERY DATE ESTIMATOR MODAL -->
+  <div id="zip-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+      <button onclick="app.closeZipModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm">✕</button>
+      
+      <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4">
         <i class="fa-solid fa-location-dot"></i>
       </div>
 
-      <h3 class="text-xl font-bold font-heading text-ocean-950">Verify Cold-Chain Delivery</h3>
-      <p class="text-xs text-slate-600 mt-1 mb-6">
-        Enter your US 5-digit zip code to calculate next-day express delivery date and temperature-controlled routing.
+      <h3 class="text-xl font-bold font-heading text-[#0B1B2B] mb-1">Check Delivery Date</h3>
+      <p class="text-xs text-slate-500 mb-4">
+        Enter your 5-digit US Zip Code to calculate your guaranteed next-day chilled delivery routing.
       </p>
 
-      <form onsubmit="event.preventDefault(); app.submitZipCode(document.getElementById('zip-modal-input').value);" class="space-y-4">
+      <form onsubmit="app.submitZipCode(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">ZIP / Postal Code:</label>
-          <input
-            id="zip-modal-input"
-            value="90210"
-            placeholder="e.g. 90210, 10001, 33101"
-            class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-ocean-500 focus:outline-none"
+          <label class="text-[11px] font-bold text-slate-600 uppercase">Zip / Postal Code</label>
+          <input 
+            id="zip-modal-input" 
+            type="text" 
+            maxlength="5"
+            value="90210" 
+            required 
+            class="w-full px-4 py-2.5 text-sm rounded-xl border border-slate-200 font-bold focus:outline-none focus:ring-2 focus:ring-orange-500 mt-1"
           />
         </div>
 
-        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-1.5">
-          <div class="flex items-center gap-2 text-emerald-700 font-bold">
-            <i class="fa-solid fa-circle-check text-emerald-500"></i>
-            <span>Ships in Insulated Dry Ice Coolers</span>
+        <div id="zip-results-preview" class="p-3 bg-cyan-50 rounded-xl border border-cyan-100 text-xs space-y-1">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-truck-fast text-cyan-600"></i>
+            <span>Carrier: <span id="zip-res-carrier">UPS Next-Day Chilled Express</span></span>
           </div>
-          <p class="text-[11px] text-slate-500">
-            Guaranteed arrival below 4°C (frozen solid). 100% money-back freshness guarantee.
+          <p class="text-[11px] text-slate-600">
+            Estimated Delivery: <strong id="zip-res-date" class="text-cyan-800">Tomorrow</strong>
           </p>
         </div>
 
-        <button
-          type="submit"
-          class="w-full py-3.5 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-coral-500/20 transition"
+        <button 
+          type="submit" 
+          class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider"
         >
-          Check Delivery Schedule
+          Update Location
         </button>
       </form>
     </div>
   </div>
 
-  <!-- 3. PRODUCT DETAIL MODAL (PDP QUICK VIEW) -->
-  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/80 backdrop-blur-sm hidden">
-    <div id="product-modal-content" class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-      <!-- Populated dynamically by app.js -->
+  <!-- PRODUCT DETAIL QUICK-VIEW MODAL -->
+  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div id="product-modal-content" class="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <!-- Populated by app.js -->
     </div>
   </div>
 
-  <!-- 4. SOURCING ORIGINS MODAL -->
-  <div id="sourcing-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/80 backdrop-blur-sm hidden">
-    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-      <button onclick="app.closeSourcingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
+  <!-- SOURCING & STORY MODAL -->
+  <div id="sourcing-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="app.closeSourcingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-base">✕</button>
+      
+      <span class="text-xs font-black text-orange-600 uppercase tracking-widest">Our 30-Year Heritage</span>
+      <h3 class="text-2xl font-black font-heading text-[#0B1B2B] mt-1 mb-4">Sourced with Integrity</h3>
 
-      <span class="text-xs font-black tracking-widest text-ocean-600 uppercase">Traceability & Fisheries</span>
-      <h3 class="text-2xl font-black font-heading text-ocean-950 mt-1 mb-2">Where Our Seafood Is Harvested</h3>
-      <p class="text-xs text-slate-600 mb-6">
-        Every catch is tagged with harvest coordinates, vessel ID, and flash-freeze timestamps. We harvest exclusively from verified certified sustainable fisheries.
-      </p>
+      <div class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <p>
+          Founded on over 30 years of seafood industry expertise, Sizzlefish was created to provide pure, premium, flash-frozen wild seafood directly to homes across the nation.
+        </p>
+        <p>
+          Unlike grocery counter seafood that has sat thawed on ice for days, our catch is shock-frozen at -40°F within hours of harvest. This locks in the pristine ocean flavor, tender texture, and natural Omega-3s.
+        </p>
 
-      <div id="sourcing-modal-list" class="space-y-6">
-        <!-- Populated by app.js -->
-      </div>
-
-      <button
-        onclick="app.closeSourcingModal()"
-        class="mt-6 w-full py-3 bg-ocean-950 text-white font-bold text-xs uppercase tracking-wider rounded-xl"
-      >
-        Close Sourcing Guide
-      </button>
-    </div>
-  </div>
-
-  <!-- 5. MULTI-STEP CHECKOUT MODAL -->
-  <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/80 backdrop-blur-sm hidden">
-    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
-      <button onclick="app.closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">✕</button>
-
-      <div class="flex items-center justify-center gap-4 mb-6 text-xs font-bold">
-        <span id="chk-step1-tab" class="text-coral-600 underline">1. Shipping & Cold Chain</span>
-        <span class="text-slate-300">→</span>
-        <span id="chk-step2-tab" class="text-slate-400">2. Secure Payment</span>
-      </div>
-
-      <!-- Step 1: Shipping Details -->
-      <form id="checkout-form-step1" onsubmit="event.preventDefault(); app.goToCheckoutStep(2);" class="space-y-4">
-        <h3 class="text-xl font-bold font-heading text-ocean-950">Chilled Delivery Address</h3>
-        
-        <div class="bg-sky-50 p-3.5 rounded-xl border border-sky-100 text-xs text-sky-900">
-          <p class="font-bold flex items-center gap-1.5">
-            <i class="fa-solid fa-snowflake text-sky-600"></i>
-            Guaranteed Delivery Date: <span id="checkout-delivery-date" class="underline">Tomorrow</span>
-          </p>
-          <p class="text-[11px] text-sky-700 mt-0.5">
-            Method: UPS Next-Day Chilled Express • Insulated with 5 lbs dry ice
-          </p>
+        <div class="grid grid-cols-2 gap-3 pt-3">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="block text-slate-900 font-bold mb-1">Bristol Bay, Alaska</strong>
+            <span class="text-xs text-slate-500">World's most sustainable wild sockeye salmon fishery.</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="block text-slate-900 font-bold mb-1">Gulf of Alaska</strong>
+            <span class="text-xs text-slate-500">Icy, deep water longline-caught halibut and cod.</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="block text-slate-900 font-bold mb-1">Georges Bank, MA</strong>
+            <span class="text-xs text-slate-500">100% natural chemical-free dry-pack sea scallops.</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="block text-slate-900 font-bold mb-1">Casco Bay, Maine</strong>
+            <span class="text-xs text-slate-500">Cold-water wild Maine lobster tails harvested with pots.</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- MULTI-STEP CHECKOUT MODAL -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      <button onclick="app.closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm">✕</button>
+      
+      <div class="flex items-center gap-2 mb-6 border-b border-slate-200 pb-3 text-xs font-bold">
+        <span id="chk-step1-tab" class="text-orange-600 underline">1. Shipping Address</span>
+        <span class="text-slate-300">→</span>
+        <span id="chk-step2-tab" class="text-slate-400">2. Payment & Confirmation</span>
+      </div>
+
+      <!-- Step 1: Shipping Form -->
+      <form id="checkout-form-step1" onsubmit="event.preventDefault(); app.goToCheckoutStep(2);" class="space-y-4 text-xs">
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="text-[11px] font-bold text-slate-600 uppercase">First Name</label>
-            <input id="chk-fname" value="Alex" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+            <input required value="David" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
           </div>
           <div>
             <label class="text-[11px] font-bold text-slate-600 uppercase">Last Name</label>
-            <input id="chk-lname" value="Morgan" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+            <input required value="Miller" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
           </div>
         </div>
 
         <div>
-          <label class="text-[11px] font-bold text-slate-600 uppercase">Email for Tracking Receipt</label>
-          <input id="chk-email" type="email" value="alex.morgan@example.com" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+          <label class="text-[11px] font-bold text-slate-600 uppercase">Email Address</label>
+          <input type="email" required value="david.miller@example.com" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
         </div>
 
         <div>
           <label class="text-[11px] font-bold text-slate-600 uppercase">Street Address</label>
-          <input id="chk-address" value="742 Evergreen Terrace" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+          <input required value="742 Evergreen Terrace" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
         </div>
 
-        <div class="grid grid-cols-3 gap-3">
-          <div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="col-span-1">
             <label class="text-[11px] font-bold text-slate-600 uppercase">City</label>
-            <input id="chk-city" value="Beverly Hills" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+            <input required value="Beverly Hills" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
           </div>
           <div>
             <label class="text-[11px] font-bold text-slate-600 uppercase">State</label>
-            <input id="chk-state" value="CA" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+            <input required value="CA" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
           </div>
           <div>
-            <label class="text-[11px] font-bold text-slate-600 uppercase">ZIP</label>
-            <input id="chk-zip" value="90210" required class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 font-medium" />
+            <label class="text-[11px] font-bold text-slate-600 uppercase">Zip Code</label>
+            <input required value="90210" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300" />
           </div>
         </div>
 
-        <button
-          type="submit"
-          class="w-full py-4 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-extrabold text-xs uppercase tracking-wider mt-4"
+        <button 
+          type="submit" 
+          class="w-full py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-black text-xs uppercase tracking-wider mt-4"
         >
           Continue to Payment →
         </button>
       </form>
 
-      <!-- Step 2: Payment Details -->
-      <form id="checkout-form-step2" onsubmit="event.preventDefault(); app.placeFinalOrder();" class="space-y-4 hidden">
-        <h3 class="text-xl font-bold font-heading text-ocean-950">Payment Details</h3>
-
+      <!-- Step 2: Payment Form -->
+      <form id="checkout-form-step2" onsubmit="event.preventDefault(); app.placeFinalOrder();" class="space-y-4 text-xs hidden">
         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-1">
           <div class="flex justify-between">
             <span>Order Total:</span>
@@ -1005,7 +1102,7 @@
           </div>
           <div class="flex justify-between text-slate-500 text-[11px]">
             <span>Express Chilled Delivery</span>
-            <span>Arrival: Guaranteed Chilled</span>
+            <span class="text-emerald-600 font-bold">Guaranteed Frozen Arrival</span>
           </div>
         </div>
 
@@ -1026,15 +1123,15 @@
         </div>
 
         <div class="flex gap-3 pt-4">
-          <button
-            type="button"
+          <button 
+            type="button" 
             onclick="app.goToCheckoutStep(1)"
             class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
           >
             ← Back
           </button>
-          <button
-            type="submit"
+          <button 
+            type="submit" 
             class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/20"
           >
             Confirm & Place Order
@@ -1046,26 +1143,27 @@
   </div>
 
   <!-- 6. PRINTABLE ORDER CONFIRMATION RECEIPT MODAL -->
-  <div id="receipt-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/80 backdrop-blur-sm hidden">
+  <div id="receipt-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
     <div id="printable-receipt" class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      
       <div class="text-center mb-6">
         <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center mb-3 text-2xl">
           <i class="fa-solid fa-circle-check"></i>
         </div>
         <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Order Confirmed</span>
-        <h3 id="receipt-order-id" class="text-2xl font-black font-heading text-ocean-950 mt-1">Receipt #AM-849201</h3>
+        <h3 id="receipt-order-id" class="text-2xl font-black font-heading text-[#0B1B2B] mt-1">Receipt #SF-849201</h3>
         <p class="text-xs text-slate-500 mt-1">
-          Tracking Number: <strong id="receipt-tracking-num" class="text-ocean-900">1Z9999999999</strong>
+          Tracking Number: <strong id="receipt-tracking-num" class="text-slate-900">1Z9999999999</strong>
         </p>
       </div>
 
       <div class="bg-sky-50 p-4 rounded-2xl border border-sky-200 text-xs text-sky-900 mb-5 space-y-1">
         <div class="font-bold flex items-center gap-1.5">
           <i class="fa-solid fa-truck text-sky-600"></i>
-          <span>Scheduled Chilled Arrival: <span id="receipt-arrival-date">Friday, Oct 30</span></span>
+          <span>Scheduled Chilled Arrival: <span id="receipt-arrival-date">Tomorrow</span></span>
         </div>
         <p class="text-[11px] text-sky-700">
-          Carrier: UPS Next-Day Chilled Air • Packed with 5 lbs solid dry ice blocks.
+          Carrier: UPS / FedEx Next-Day Air • Packed with 5 lbs solid dry ice blocks.
         </p>
       </div>
 
@@ -1082,30 +1180,31 @@
           <span>Express Chilled Shipping:</span>
           <span id="receipt-shipping">FREE</span>
         </div>
-        <div class="flex justify-between text-sm font-black text-ocean-950 pt-2 border-t border-slate-200">
+        <div class="flex justify-between text-sm font-black text-[#0B1B2B] pt-2 border-t border-slate-200">
           <span>Total Paid:</span>
           <span id="receipt-total">$0.00</span>
         </div>
       </div>
 
       <div class="flex gap-3">
-        <button
+        <button 
           onclick="window.print()"
           class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 font-bold text-xs text-slate-800"
         >
           Print Receipt
         </button>
-        <button
+        <button 
           onclick="app.closeReceiptModal()"
-          class="flex-1 py-3 rounded-xl bg-ocean-950 hover:bg-ocean-900 font-bold text-xs text-white"
+          class="flex-1 py-3 rounded-xl bg-[#0B1B2B] hover:bg-slate-800 font-bold text-xs text-white"
         >
-          Back to Store
+          Back to Sizzlefish
         </button>
       </div>
+
     </div>
   </div>
 
-  <!-- Main Pure Application Logic -->
+  <!-- SIZZLEFISH APPLICATION LOGIC -->
   <script src="app.js"></script>
 </body>
 </html>

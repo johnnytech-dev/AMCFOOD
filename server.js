@@ -198,7 +198,7 @@ app.post('/api/newsletter', (req, res) => {
   res.json({
     success: true,
     promoCode: 'SIZZLE15',
-    message: 'Welcome to the AM SEA FOOD family! Use code SIZZLE15 at checkout for 15% off your first catch.'
+    message: 'Welcome to the Sizzlefish family! Use code SIZZLE10 at checkout for 10% off your first box.'
   });
 });
 
@@ -208,6 +208,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`AM SEA FOOD SALES server running at http://localhost:${PORT}`);
+  console.log(`SIZZLEFISH Seafood Market server running at http://localhost:${PORT}`);
 });
 

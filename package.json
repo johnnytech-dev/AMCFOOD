@@ -1,7 +1,7 @@
 {
-  "name": "am-sea-food-sales",
+  "name": "sizzlefish-seafood-market",
   "version": "1.0.0",
-  "description": "AM SEA FOOD SALES - High-converting Direct-to-Consumer (D2C) premium fresh & flash-frozen seafood e-commerce shop inspired by Sizzlefish",
+  "description": "SIZZLEFISH - Pure Natural Seafood Delivered To Your Door. Direct-to-Consumer fresh & flash-frozen premium seafood e-commerce shop.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
