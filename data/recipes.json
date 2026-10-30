@@ -1,0 +1,118 @@
+{
+  "recipes": [
+    {
+      "id": "rec-pan-seared-halibut",
+      "title": "Pan-Seared Pacific Halibut with Lemon-Caper Butter",
+      "prepTime": "10 mins",
+      "cookTime": "8 mins",
+      "servings": 2,
+      "difficulty": "Easy",
+      "seafoodId": "prod-pacific-halibut",
+      "seafoodName": "Pacific Wild Halibut Portions",
+      "seafoodImage": "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=600&q=80",
+      "description": "Crispy golden crust with tender, buttery white flakes basted in wine, lemon juice, capers, and fresh herbs.",
+      "ingredients": [
+        "2 x 6oz Pacific Halibut Portions (thawed & dried)",
+        "2 tbsp high-heat avocado oil",
+        "3 tbsp unsalted European butter",
+        "2 tbsp non-pareil capers (drained)",
+        "Juice of 1/2 fresh lemon",
+        "2 cloves garlic (smashed)",
+        "1 tbsp fresh chopped Italian parsley",
+        "Sea salt & freshly cracked black pepper"
+      ],
+      "instructions": [
+        "Pat halibut portions thoroughly dry with paper towels. Season generously with sea salt and cracked pepper.",
+        "Heat avocado oil in a stainless steel or cast-iron skillet over medium-high heat until shimmering.",
+        "Carefully lay fillets into the pan. Sear undisturbed for 4 minutes until a deep golden crust forms.",
+        "Gently flip fillets. Add butter, smashed garlic, and capers to the pan. Tilt skillet and spoon foamy butter continuously over the fish for 3-4 minutes.",
+        "Remove from heat, squeeze fresh lemon juice over top, sprinkle parsley, and serve immediately with pan juices."
+      ]
+    },
+    {
+      "id": "rec-cedar-plank-salmon",
+      "title": "Cedar Plank Wild Sockeye Salmon with Maple Dijon Glaze",
+      "prepTime": "15 mins",
+      "cookTime": "15 mins",
+      "servings": 4,
+      "difficulty": "Easy",
+      "seafoodId": "prod-sockeye-salmon",
+      "seafoodName": "Wild Alaskan Sockeye Salmon",
+      "seafoodImage": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80",
+      "description": "Smoky, sweet, and tangy. The cedar plank imparts aromatic Pacific Northwest forest smoke directly into the vibrant wild sockeye.",
+      "ingredients": [
+        "4 x 6oz Wild Alaskan Sockeye Salmon fillets",
+        "1 Western Red Cedar Grilling Plank (soaked in water for 1 hr)",
+        "2 tbsp pure maple syrup or wildflower honey",
+        "1 tbsp coarse whole grain Dijon mustard",
+        "1 tbsp soy sauce or tamari",
+        "1 clove minced garlic",
+        "Fresh dill sprigs & lemon slices"
+      ],
+      "instructions": [
+        "Preheat outdoor grill to medium-high (375°F-400°F).",
+        "Whisk together maple syrup, Dijon mustard, soy sauce, and minced garlic.",
+        "Place soaked cedar plank directly on grill grates for 3 minutes until it begins to lightly crackle and smoke.",
+        "Flip plank over, place salmon fillets skin-side down on the charred side of the plank.",
+        "Brush glaze liberally over each fillet. Close grill lid and smoke-roast for 12-14 minutes until center registers 130°F (medium-rare to medium). Garnish with fresh dill."
+      ]
+    },
+    {
+      "id": "rec-caramelized-scallops",
+      "title": "Golden Caramelized Jumbo Scallops in Garlic Herb Ghee",
+      "prepTime": "8 mins",
+      "cookTime": "4 mins",
+      "servings": 2,
+      "difficulty": "Medium",
+      "seafoodId": "prod-sea-scallops",
+      "seafoodName": "Jumbo Wild Sea Scallops (Dry-Pack)",
+      "seafoodImage": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=600&q=80",
+      "description": "Restaurant-quality dry-pack sea scallops seared to caramelized perfection with a sweet, succulent center.",
+      "ingredients": [
+        "8-10 Jumbo Wild Sea Scallops (dry-pack)",
+        "1.5 tbsp clarified butter (ghee) or grapeseed oil",
+        "2 tbsp unsalted butter",
+        "1 small shallot (minced)",
+        "1 sprig fresh thyme",
+        "Coarse kosher salt & fresh cracked pepper",
+        "Fleur de sel for finishing"
+      ],
+      "instructions": [
+        "Remove side muscle from scallops if present. Place between paper towels on a plate in the fridge for 20 minutes to draw out all exterior moisture.",
+        "Season flat sides right before placing into the pan with salt and pepper.",
+        "Heat cast iron skillet over high heat until very hot. Add ghee.",
+        "Place scallops clockwise in pan with ample space between them. Sear undisturbed for 2 minutes until deep caramel crust develops.",
+        "Flip scallops once, add butter, shallot, and thyme sprig. Baste for 60 to 90 seconds. Scallops should be translucent and tender in center. Plate immediately."
+      ]
+    },
+    {
+      "id": "rec-ahi-poke-bowl",
+      "title": "Hawaiian Sesame-Ginger Ahi Tuna Poke Bowl",
+      "prepTime": "15 mins",
+      "cookTime": "0 mins",
+      "servings": 2,
+      "difficulty": "Easy",
+      "seafoodId": "prod-ahi-tuna",
+      "seafoodName": "Sashimi-Grade Yellowfin Ahi Tuna",
+      "seafoodImage": "https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?auto=format&fit=crop&w=600&q=80",
+      "description": "Ultra-fresh ruby red ahi cubed and tossed in toasted sesame oil, tamari, scallions, sweet Maui onions, and avocado.",
+      "ingredients": [
+        "2 x 6oz Sashimi Grade Yellowfin Ahi Steaks (cubed into 3/4-inch bites)",
+        "2 tbsp low-sodium tamari or soy sauce",
+        "1 tsp toasted sesame oil",
+        "1 tsp sriracha or chili crisp",
+        "2 green onions (thinly sliced)",
+        "1/4 cup thinly sliced sweet Maui or red onion",
+        "1 tsp toasted white & black sesame seeds",
+        "Warm jasmine rice, sliced avocado, edamame, and pickled ginger for serving"
+      ],
+      "instructions": [
+        "Thaw ahi tuna completely in the refrigerator inside packaging, then pat completely dry.",
+        "Cut tuna steaks into clean 3/4-inch cubes with a sharp non-serrated knife.",
+        "In a glass mixing bowl, whisk tamari, sesame oil, and sriracha.",
+        "Gently fold in ahi cubes, sliced scallions, and sweet onion until evenly coated. Chill for 10 minutes.",
+        "Scoop warm sushi rice into bowls, top with marinated ahi poke, sliced avocado, cucumber, edamame, and sprinkle sesame seeds."
+      ]
+    }
+  ]
+}

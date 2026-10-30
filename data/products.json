@@ -1,0 +1,577 @@
+{
+  "products": [
+    {
+      "id": "prod-sockeye-salmon",
+      "name": "Wild Alaskan Sockeye Salmon",
+      "slug": "wild-alaskan-sockeye-salmon",
+      "category": "Fresh Catch",
+      "subCategory": "Wild Salmon",
+      "tag": "Wild-Caught Bristol Bay",
+      "badge": "Best Seller",
+      "rating": 4.95,
+      "reviewsCount": 1420,
+      "shortDescription": "Vibrant ruby-red wild salmon with robust, rich flavor and the highest natural Omega-3 content of any salmon species.",
+      "origin": "Bristol Bay, Alaska",
+      "harvestMethod": "Sustainably Drift Net Harvested",
+      "certifications": ["MSC Certified Sustainable", "Wild-Caught USA", "Non-GMO"],
+      "flashFrozen": "Flash-frozen at sea within 3 hours at -40°F",
+      "pricePerPortion": 7.49,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 32.99, "compareAtPrice": 38.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 59.99, "compareAtPrice": 69.99, "isPopular": true },
+        { "id": "v3", "packCount": 14, "totalWeight": "5.25 lbs", "price": 99.99, "compareAtPrice": 119.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Portioned Fillets (Skin-on)", "Skinless Portions", "Thick-Cut Steaks"],
+      "nutrition": {
+        "calories": 220,
+        "protein": "34g",
+        "omega3": "1,450mg",
+        "fat": "8g",
+        "sodium": "75mg"
+      },
+      "cookingTips": "Pan-sear skin-side down for 4 mins until crispy, flip and cook 2 mins. Medium-rare to medium is ideal.",
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-pacific-halibut",
+      "name": "Pacific Wild Halibut Portions",
+      "slug": "pacific-wild-halibut-portions",
+      "category": "Fresh Catch",
+      "subCategory": "White Fish",
+      "tag": "Wild-Caught Gulf of Alaska",
+      "badge": "Chef Favorite",
+      "rating": 4.92,
+      "reviewsCount": 890,
+      "shortDescription": "Sweet, delicately mild white fish with large, tender flakes and a clean, melt-in-your-mouth oceanic finish.",
+      "origin": "Gulf of Alaska / Dutch Harbor",
+      "harvestMethod": "Hook & Line Longline Harvested",
+      "certifications": ["MSC Certified", "Alaska Seafood Verified"],
+      "flashFrozen": "Flash-frozen within 4 hours at sea",
+      "pricePerPortion": 9.99,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 42.99, "compareAtPrice": 49.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 79.99, "compareAtPrice": 92.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 114.99, "compareAtPrice": 134.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Skinless Center-Cut Fillets", "Portioned Fillets (Skin-on)"],
+      "nutrition": {
+        "calories": 190,
+        "protein": "36g",
+        "omega3": "680mg",
+        "fat": "2.5g",
+        "sodium": "95mg"
+      },
+      "cookingTips": "Perfect for pan-roasting with garlic butter, capers, and fresh lemon. Baste continuously.",
+      "image": "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-sea-scallops",
+      "name": "Jumbo Wild Sea Scallops (Dry-Pack)",
+      "slug": "jumbo-wild-sea-scallops",
+      "category": "Shellfish",
+      "subCategory": "Scallops",
+      "tag": "10-20ct Colossal Dry Pack",
+      "badge": "Top Rated",
+      "rating": 4.98,
+      "reviewsCount": 2150,
+      "shortDescription": "100% natural, chemical-free 'dry' sea scallops. Caramelizes to a golden crust in minutes with buttery sweet tenderness.",
+      "origin": "Georges Bank, Massachusetts",
+      "harvestMethod": "Sustainably Dredged North Atlantic",
+      "certifications": ["Dry Pack (No STPP / No Added Water)", "Wild Atlantic Harvest"],
+      "flashFrozen": "Individually Quick Frozen (IQF) at -40°F",
+      "pricePerPortion": 8.75,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 36.99, "compareAtPrice": 42.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 69.99, "compareAtPrice": 79.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 99.99, "compareAtPrice": 118.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Dry-Pack Colossal (Unprocessed)", "Marinated Herb-Garlic Butter"],
+      "nutrition": {
+        "calories": 160,
+        "protein": "30g",
+        "omega3": "420mg",
+        "fat": "1g",
+        "sodium": "260mg"
+      },
+      "cookingTips": "Pat completely dry with paper towels. Sear in screaming-hot cast iron with butter for 90 seconds per side.",
+      "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-wild-gulf-shrimp",
+      "name": "Wild American Gulf Pink Shrimp",
+      "slug": "wild-american-gulf-pink-shrimp",
+      "category": "Shellfish",
+      "subCategory": "Shrimp",
+      "tag": "Colossal 16/20ct Raw EZ-Peel",
+      "badge": "Customer Favorite",
+      "rating": 4.91,
+      "reviewsCount": 1120,
+      "shortDescription": "Sweet, tender wild shrimp harvested from pristine Gulf waters. Never farm-raised, no chemical tripolyphosphate.",
+      "origin": "Key West & Gulf of Mexico",
+      "harvestMethod": "Wild Trawl Fleet Certified",
+      "certifications": ["Wild American Shrimp Certified", "Zero Chemical Preservatives"],
+      "flashFrozen": "IQF Onboard within 90 minutes",
+      "pricePerPortion": 6.99,
+      "portionSize": "8 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "2.0 lbs", "price": 29.99, "compareAtPrice": 34.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "4.0 lbs", "price": 56.99, "compareAtPrice": 66.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "6.0 lbs", "price": 79.99, "compareAtPrice": 96.99, "isPopular": false }
+      ],
+      "preparationOptions": ["EZ-Peel Deveined (Tail-on)", "Peeled & Deveined (Tail-off)", "Shell-On Raw Whole"],
+      "nutrition": {
+        "calories": 140,
+        "protein": "28g",
+        "omega3": "320mg",
+        "fat": "1.5g",
+        "sodium": "190mg"
+      },
+      "cookingTips": "Grill on skewers 2 mins per side or boil with Old Bay seasoning until pink and opaque.",
+      "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-ahi-tuna",
+      "name": "Sashimi-Grade Yellowfin Ahi Tuna",
+      "slug": "sashimi-grade-yellowfin-ahi-tuna",
+      "category": "Sashimi Grade",
+      "subCategory": "Tuna",
+      "tag": "AAA #1 Sashimi Grade",
+      "badge": "Raw & Poke Ready",
+      "rating": 4.96,
+      "reviewsCount": 1640,
+      "shortDescription": "Vibrant ruby-red sushi-grade tuna steaks. Firm texture, clean flavor, perfect for seared steaks, tartare, or poke bowls.",
+      "origin": "Hawaii / Central Pacific Waters",
+      "harvestMethod": "Sustainable Handline & Pole Caught",
+      "certifications": ["Dolphin-Safe Certified", "100% Sashimi Grade #1"],
+      "flashFrozen": "Super-frozen at -60°C cryogenic hold",
+      "pricePerPortion": 8.49,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 35.99, "compareAtPrice": 41.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 67.99, "compareAtPrice": 78.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 96.99, "compareAtPrice": 114.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Thick-Cut Steaks", "Poke-Cut Cubes", "Saku Sashimi Block"],
+      "nutrition": {
+        "calories": 180,
+        "protein": "38g",
+        "omega3": "890mg",
+        "fat": "1.2g",
+        "sodium": "60mg"
+      },
+      "cookingTips": "Sear in hot sesame oil for 45-60 seconds per side, leaving center cool and ruby-red.",
+      "image": "https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-chilean-seabass",
+      "name": "Glacier 51 Patagonian Toothfish (Chilean Sea Bass)",
+      "slug": "chilean-seabass-portions",
+      "category": "Fresh Catch",
+      "subCategory": "White Fish",
+      "tag": "Wild Antarctic Glacier 51",
+      "badge": "Luxury Catch",
+      "rating": 4.99,
+      "reviewsCount": 780,
+      "shortDescription": "The Wagyu of the sea. Snow-white fillet with an extraordinarily rich, buttery flake that never dries out.",
+      "origin": "Heard Island, Sub-Antarctic Ocean",
+      "harvestMethod": "Strict MSC Certified Demersal Longline",
+      "certifications": ["MSC Certified Glacier 51", "Collette Traceability Tagged"],
+      "flashFrozen": "Flash-frozen within 2 hours at -45°F",
+      "pricePerPortion": 14.99,
+      "portionSize": "7 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.75 lbs", "price": 64.99, "compareAtPrice": 74.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.5 lbs", "price": 124.99, "compareAtPrice": 145.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "5.25 lbs", "price": 179.99, "compareAtPrice": 210.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Skin-on Thick Center Cut", "Skinless Fillet Portions"],
+      "nutrition": {
+        "calories": 280,
+        "protein": "32g",
+        "omega3": "2,100mg",
+        "fat": "16g",
+        "sodium": "85mg"
+      },
+      "cookingTips": "Miso glaze and broil for 8 minutes, or pan-sear in clarified butter until crust is golden.",
+      "image": "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-maine-lobster-tails",
+      "name": "Wild Cold-Water Maine Lobster Tails",
+      "slug": "wild-maine-lobster-tails",
+      "category": "Shellfish",
+      "subCategory": "Lobster",
+      "tag": "Wild-Caught Atlantic Cold Water",
+      "badge": "Signature Luxury",
+      "rating": 4.97,
+      "reviewsCount": 1890,
+      "shortDescription": "Sweet, firm, succulent meat harvested by generational Maine lobstermen from icy Atlantic waters.",
+      "origin": "Casco Bay & Bar Harbor, Maine",
+      "harvestMethod": "Low-Impact Trap & Pot Harvested",
+      "certifications": ["Gulf of Maine Certified", "100% Sustainable Fishery"],
+      "flashFrozen": "Flash-frozen using cryogenic nitrogen bath",
+      "pricePerPortion": 13.50,
+      "portionSize": "5-6 oz Tail",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 58.99, "compareAtPrice": 68.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 112.99, "compareAtPrice": 129.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 159.99, "compareAtPrice": 189.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Butterfly Cut Ready", "Whole Raw Tail Shell-On"],
+      "nutrition": {
+        "calories": 130,
+        "protein": "27g",
+        "omega3": "210mg",
+        "fat": "1g",
+        "sodium": "380mg"
+      },
+      "cookingTips": "Split shell down center, lift meat onto shell, brush with garlic butter and broil 7-8 minutes.",
+      "image": "https://images.unsplash.com/photo-1559737558-245cb384218f?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-king-crab-legs",
+      "name": "Colossal Wild Red King Crab Legs",
+      "slug": "colossal-wild-red-king-crab-legs",
+      "category": "Shellfish",
+      "subCategory": "Crab",
+      "tag": "Bering Sea 6/9ct Colossal Size",
+      "badge": "Pre-Cooked & Steamed",
+      "rating": 4.98,
+      "reviewsCount": 2340,
+      "shortDescription": "Giant succulent legs bursting with rich, naturally sweet king crab meat. Already fully steamed, just heat and serve.",
+      "origin": "Bering Sea / Norton Sound, Alaska",
+      "harvestMethod": "Bering Sea Fleet Pot Harvested",
+      "certifications": ["100% Alaskan Red King Crab", "Responsible Fisheries Management"],
+      "flashFrozen": "Glazed and flash-frozen at sea",
+      "pricePerPortion": 24.99,
+      "portionSize": "1 lb Claws & Legs",
+      "variants": [
+        { "id": "v1", "packCount": 2, "totalWeight": "2.0 lbs", "price": 99.99, "compareAtPrice": 119.99, "isPopular": false },
+        { "id": "v2", "packCount": 4, "totalWeight": "4.0 lbs", "price": 189.99, "compareAtPrice": 229.99, "isPopular": true },
+        { "id": "v3", "packCount": 6, "totalWeight": "6.0 lbs", "price": 274.99, "compareAtPrice": 329.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Whole Legs & Claws (Score-Cut)", "Standard Whole Legs (Unsplit)"],
+      "nutrition": {
+        "calories": 130,
+        "protein": "26g",
+        "omega3": "610mg",
+        "fat": "2g",
+        "sodium": "910mg"
+      },
+      "cookingTips": "Steam over boiling water for 5 minutes until heated through. Serve with warm lemon-garlic butter.",
+      "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1559737558-245cb384218f?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": false
+    },
+    {
+      "id": "prod-wild-cod",
+      "name": "Wild Alaskan Pacific Cod Portions",
+      "slug": "wild-alaskan-pacific-cod-portions",
+      "category": "Fresh Catch",
+      "subCategory": "White Fish",
+      "tag": "Wild Alaskan Longline",
+      "badge": "Everyday Value",
+      "rating": 4.88,
+      "reviewsCount": 940,
+      "shortDescription": "Firm, chunky white flakes with a mild, clean ocean taste. Extremely versatile for fish tacos, beer battering, or baking.",
+      "origin": "Aleutian Islands, Alaska",
+      "harvestMethod": "Certified Longline Hook Caught",
+      "certifications": ["MSC Certified", "Alaska RFM"],
+      "flashFrozen": "Flash-frozen within 3 hours onboard",
+      "pricePerPortion": 5.99,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 24.99, "compareAtPrice": 29.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 47.99, "compareAtPrice": 56.99, "isPopular": true },
+        { "id": "v3", "packCount": 14, "totalWeight": "5.25 lbs", "price": 79.99, "compareAtPrice": 94.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Skinless Fillet Portions", "Portioned Fillets (Skin-on)"],
+      "nutrition": {
+        "calories": 150,
+        "protein": "32g",
+        "omega3": "290mg",
+        "fat": "1g",
+        "sodium": "115mg"
+      },
+      "cookingTips": "Season with panko and herbs, bake at 400°F for 12-14 mins until opaque and flaky.",
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-wild-king-salmon",
+      "name": "Copper River Wild King Salmon (Chinook)",
+      "slug": "copper-river-wild-king-salmon",
+      "category": "Fresh Catch",
+      "subCategory": "Wild Salmon",
+      "tag": "Wild Copper River Chinook",
+      "badge": "Crown Jewel",
+      "rating": 4.99,
+      "reviewsCount": 830,
+      "shortDescription": "The undisputed king of salmon. Immense natural fat marbling, velvety texture, and rich buttery depth.",
+      "origin": "Copper River Flats, Cordova, Alaska",
+      "harvestMethod": "Limited Spring Drift Net Fishery",
+      "certifications": ["Copper River Seal of Authenticity", "Wild-Caught USA"],
+      "flashFrozen": "Flash-frozen on dry ice within 2 hours",
+      "pricePerPortion": 15.99,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 69.99, "compareAtPrice": 79.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 134.99, "compareAtPrice": 159.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 194.99, "compareAtPrice": 229.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Portioned Fillets (Skin-on)", "Skinless Center-Cut Fillets"],
+      "nutrition": {
+        "calories": 290,
+        "protein": "34g",
+        "omega3": "2,200mg",
+        "fat": "16g",
+        "sodium": "70mg"
+      },
+      "cookingTips": "Grill gently over medium charcoal with cedar plank. Do not overcook—medium rare is perfection.",
+      "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-smoked-salmon",
+      "name": "Artisan Cold-Smoked Wild Sockeye Salmon",
+      "slug": "artisan-cold-smoked-wild-sockeye",
+      "category": "Smoked & Prepared",
+      "subCategory": "Smoked Salmon",
+      "tag": "Hardwood Applewood Smoked",
+      "badge": "Ready to Eat",
+      "rating": 4.94,
+      "reviewsCount": 1250,
+      "shortDescription": "Traditional Northwest cure with brown sugar, sea salt, and gentle cold applewood smoke. Silky, delicate, sliced paper-thin.",
+      "origin": "Petersburg, Southeast Alaska",
+      "harvestMethod": "Wild Alaskan Troll & Drift Harvest",
+      "certifications": ["All-Natural Ingredients", "No Nitrates Added", "Kosher Certified"],
+      "flashFrozen": "Vacuum-sealed and chilled immediately",
+      "pricePerPortion": 8.99,
+      "portionSize": "4 oz Pack",
+      "variants": [
+        { "id": "v1", "packCount": 3, "totalWeight": "12 oz", "price": 27.99, "compareAtPrice": 32.99, "isPopular": false },
+        { "id": "v2", "packCount": 6, "totalWeight": "24 oz", "price": 52.99, "compareAtPrice": 62.99, "isPopular": true },
+        { "id": "v3", "packCount": 10, "totalWeight": "40 oz", "price": 84.99, "compareAtPrice": 99.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Thin Sliced Portions", "Cured Salmon Lox Fillet"],
+      "nutrition": {
+        "calories": 160,
+        "protein": "26g",
+        "omega3": "1,200mg",
+        "fat": "5g",
+        "sodium": "580mg"
+      },
+      "cookingTips": "Ready to eat straight from pouch. Serve on toasted bagels with cream cheese, red onion, and capers.",
+      "image": "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    },
+    {
+      "id": "prod-black-cod",
+      "name": "Wild Alaskan Black Cod (Sablefish)",
+      "slug": "wild-alaskan-black-cod-sablefish",
+      "category": "Fresh Catch",
+      "subCategory": "White Fish",
+      "tag": "Deep-Water Wild Sablefish",
+      "badge": "Chef Secret",
+      "rating": 4.96,
+      "reviewsCount": 670,
+      "shortDescription": "Often called Butterfish. Velvety, lush texture with an unctuous richness that melts effortlessly on the tongue.",
+      "origin": "Gulf of Alaska / Prince William Sound",
+      "harvestMethod": "Deep-Water Longline Certified",
+      "certifications": ["MSC Certified Sustainable", "Alaskan Ocean Guard"],
+      "flashFrozen": "Flash-frozen at sea -40°F",
+      "pricePerPortion": 11.25,
+      "portionSize": "6 oz",
+      "variants": [
+        { "id": "v1", "packCount": 4, "totalWeight": "1.5 lbs", "price": 49.99, "compareAtPrice": 58.99, "isPopular": false },
+        { "id": "v2", "packCount": 8, "totalWeight": "3.0 lbs", "price": 94.99, "compareAtPrice": 112.99, "isPopular": true },
+        { "id": "v3", "packCount": 12, "totalWeight": "4.5 lbs", "price": 139.99, "compareAtPrice": 165.99, "isPopular": false }
+      ],
+      "preparationOptions": ["Portioned Fillets (Skin-on)", "Skinless Fillets"],
+      "nutrition": {
+        "calories": 250,
+        "protein": "29g",
+        "omega3": "1,800mg",
+        "fat": "15g",
+        "sodium": "80mg"
+      },
+      "cookingTips": "Nobu-style Saikyo Miso marinade for 24-48 hours, broiled until caramelized and blistered.",
+      "image": "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=800&q=80",
+      "additionalImages": [
+        "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      ],
+      "inStock": true,
+      "boxBuilderEligible": true
+    }
+  ],
+  "curatedBoxes": [
+    {
+      "id": "box-wild-salmon-sampler",
+      "name": "The Alaskan Wild Salmon Showcase Box",
+      "slug": "alaskan-wild-salmon-showcase",
+      "badge": "Signature Box",
+      "portions": 14,
+      "rating": 4.97,
+      "reviewsCount": 840,
+      "price": 109.99,
+      "compareAtPrice": 134.99,
+      "subscribePrice": 98.99,
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
+      "description": "Includes 6x Wild Sockeye Fillets, 4x Wild King Salmon Fillets, and 4x Applewood Smoked Salmon packs. 100% sustainably wild-caught.",
+      "items": [
+        { "name": "Wild Sockeye Salmon 6oz", "qty": 6 },
+        { "name": "Copper River King Salmon 6oz", "qty": 4 },
+        { "name": "Applewood Smoked Sockeye 4oz", "qty": 4 }
+      ]
+    },
+    {
+      "id": "box-surf-and-turf-seafood",
+      "name": "The Ultimate Shellfish & Lobster Feast",
+      "slug": "ultimate-shellfish-lobster-feast",
+      "badge": "Celebration Favorite",
+      "portions": 12,
+      "rating": 4.99,
+      "reviewsCount": 1150,
+      "price": 139.99,
+      "compareAtPrice": 169.99,
+      "subscribePrice": 125.99,
+      "image": "https://images.unsplash.com/photo-1559737558-245cb384218f?auto=format&fit=crop&w=800&q=80",
+      "description": "Indulge in 4x Maine Lobster Tails, 4x Colossal Sea Scallop portions (6oz), and 4x Wild Gulf Pink Shrimp portions (8oz).",
+      "items": [
+        { "name": "Maine Lobster Tails (5-6oz)", "qty": 4 },
+        { "name": "Dry-Pack Jumbo Scallops (6oz)", "qty": 4 },
+        { "name": "Colossal Wild Gulf Shrimp (8oz)", "qty": 4 }
+      ]
+    },
+    {
+      "id": "box-omega3-heart-health",
+      "name": "The Heart-Healthy Omega-3 Power Box",
+      "slug": "omega3-heart-health-box",
+      "badge": "Cardio Recommended",
+      "portions": 14,
+      "rating": 4.94,
+      "reviewsCount": 920,
+      "price": 114.99,
+      "compareAtPrice": 139.99,
+      "subscribePrice": 103.49,
+      "image": "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=800&q=80",
+      "description": "Packed with over 20,000mg of natural EPA/DHA Omega-3s. 6x Sockeye Salmon, 4x Alaskan Sablefish, and 4x Yellowfin Ahi Tuna.",
+      "items": [
+        { "name": "Wild Sockeye Salmon 6oz", "qty": 6 },
+        { "name": "Wild Alaskan Sablefish 6oz", "qty": 4 },
+        { "name": "Yellowfin Ahi Tuna Steaks 6oz", "qty": 4 }
+      ]
+    },
+    {
+      "id": "box-white-fish-variety",
+      "name": "The Pristine Pacific White Fish Medley",
+      "slug": "pristine-pacific-white-fish-medley",
+      "badge": "Everyday Healthy",
+      "portions": 14,
+      "rating": 4.91,
+      "reviewsCount": 630,
+      "price": 99.99,
+      "compareAtPrice": 119.99,
+      "subscribePrice": 89.99,
+      "image": "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=800&q=80",
+      "description": "Clean, light, high-protein white fillets. 6x Pacific Halibut 6oz, 4x Alaskan Cod 6oz, and 4x Patagonian Toothfish portions.",
+      "items": [
+        { "name": "Pacific Wild Halibut 6oz", "qty": 6 },
+        { "name": "Alaskan Pacific Cod 6oz", "qty": 4 },
+        { "name": "Chilean Sea Bass 7oz", "qty": 4 }
+      ]
+    }
+  ],
+  "crossSells": [
+    {
+      "id": "cs-lemon-herb-butter",
+      "name": "Artisan Lemon Herb Finishing Butter",
+      "weight": "3.5 oz Roll",
+      "price": 6.99,
+      "badge": "Pairing Pick",
+      "image": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?auto=format&fit=crop&w=400&q=80",
+      "description": "Slow-churned pasture-raised butter infused with fresh Meyer lemon zest, dill, and sea salt."
+    },
+    {
+      "id": "cs-cedar-planks",
+      "name": "Wild Western Red Cedar Grilling Planks (2-Pack)",
+      "weight": "2 Pack / 12\" Planks",
+      "price": 9.99,
+      "badge": "Grill Master",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80",
+      "description": "100% natural kiln-dried Pacific cedar planks to infuse salmon and halibut with rich sweet smoke."
+    },
+    {
+      "id": "cs-spice-rub",
+      "name": "AM Signature Ocean Citrus & Dill Rub",
+      "weight": "4 oz Tin",
+      "price": 5.99,
+      "badge": "Best Seller",
+      "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80",
+      "description": "Hand-blended organic sea salt, lemon peel, cracked peppercorns, garlic, and fresh dill."
+    },
+    {
+      "id": "cs-shrimp-cocktail-addon",
+      "name": "Cooked Colossal Cocktail Shrimp Add-on",
+      "weight": "8 oz / ~12 Shrimp",
+      "price": 14.99,
+      "badge": "Quick Appetizer",
+      "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=400&q=80",
+      "description": "Chilled, peeled and tail-on colossal wild shrimp with house-made fiery cocktail sauce."
+    }
+  ]
+}

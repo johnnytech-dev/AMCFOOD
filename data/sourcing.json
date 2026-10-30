@@ -1,0 +1,112 @@
+{
+  "coldChainGuarantees": [
+    {
+      "step": 1,
+      "title": "Sustainable Harvest at Peak Ocean Season",
+      "subtitle": "Certified Fisheries Only",
+      "icon": "Anchor",
+      "description": "We partner directly with small-boat family fishermen and certified sustainable harvesters in Alaska, Maine, and the Atlantic. Zero industrial aquaculture chemicals, hormones, or preventive antibiotics."
+    },
+    {
+      "step": 2,
+      "title": "Cryogenic Flash-Freezing at Sea (-40°F)",
+      "subtitle": "Locks in Sweetness & Moisture",
+      "icon": "Snowflake",
+      "description": "Our seafood is portioned and blast-frozen within 2 to 4 hours of leaving the icy water. Rapid deep-freezing prevents large ice crystals from forming, preserving natural oceanic cell integrity."
+    },
+    {
+      "step": 3,
+      "title": "Recyclable Thermal Coolers + Solid Dry Ice",
+      "subtitle": "100% Biodegradable Eco-Liners",
+      "icon": "Package",
+      "description": "Packed in certified curbside-recyclable coolers insulated with non-GMO cornstarch foam and loaded with -109.3°F solid dry ice blocks designed to withstand up to 72 hours of transit."
+    },
+    {
+      "step": 4,
+      "title": "Guaranteed Arrival Chilled & Frozen (< 4°C)",
+      "subtitle": "Zero-Risk 100% Fresh Guarantee",
+      "icon": "ShieldCheck",
+      "description": "Your catch arrives rock-solid frozen or cold to touch (< 4°C). If your shipment is ever delayed by transit or doesn't arrive in immaculate condition, we replace it or refund 100% immediately."
+    }
+  ],
+  "sourcingOrigins": [
+    {
+      "id": "bristol-bay",
+      "name": "Bristol Bay, Alaska",
+      "species": "Wild Sockeye Salmon",
+      "coordinates": { "lat": 58.75, "lng": -158.5 },
+      "ocean": "Bering Sea / North Pacific",
+      "harvestMethod": "Drift Net / Low Impact",
+      "peakSeason": "June – August",
+      "waterTemp": "38°F - 42°F",
+      "sustainabilityBadge": "Marine Stewardship Council (MSC)",
+      "description": "Home to the world's largest certified sustainable wild sockeye salmon run. Clean, glacially fed headwaters ensure unmatched ruby red flesh and natural omega-3 oils.",
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "gulf-of-alaska",
+      "name": "Gulf of Alaska & Dutch Harbor",
+      "species": "Pacific Halibut & Black Cod",
+      "coordinates": { "lat": 54.5, "lng": -166.5 },
+      "ocean": "Sub-Arctic Pacific",
+      "harvestMethod": "Individual Fishing Quota (IFQ) Hook & Line",
+      "peakSeason": "March – November",
+      "waterTemp": "36°F - 40°F",
+      "sustainabilityBadge": "Alaska RFM Certified",
+      "description": "Deep, nutrient-rich trench waters of the North Pacific where halibut and sablefish thrive in cold, high-oxygen depths, developing dense, snow-white meat.",
+      "image": "https://images.unsplash.com/photo-1544943910-4c1dc44a0463?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "maine-coast",
+      "name": "Casco Bay & Bar Harbor, Maine",
+      "species": "Cold-Water Maine Lobster",
+      "coordinates": { "lat": 44.1, "lng": -68.3 },
+      "ocean": "Northwest Atlantic",
+      "harvestMethod": "Generational Wooden & Wire Trap Pots",
+      "peakSeason": "Year-Round / Peak Autumn",
+      "waterTemp": "42°F - 48°F",
+      "sustainabilityBadge": "Maine Lobstermen's Community Accord",
+      "description": "Rugged granite coastlines with frigid oceanic currents create the firmest, sweetest lobster meat in the world.",
+      "image": "https://images.unsplash.com/photo-1559737558-245cb384218f?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "georges-bank",
+      "name": "Georges Bank, Massachusetts",
+      "species": "Jumbo Dry Sea Scallops",
+      "coordinates": { "lat": 41.5, "lng": -67.5 },
+      "ocean": "North Atlantic Shelf",
+      "harvestMethod": "Rotational Area Fishery Scallop Dredge",
+      "peakSeason": "May – October",
+      "waterTemp": "40°F - 46°F",
+      "sustainabilityBadge": "100% Chemical-Free Dry Pack",
+      "description": "Historic offshore banks bathed in tidal nutrients. Never soaked in sodium tripolyphosphate (STPP) so they sear to a sweet, golden caramel crust.",
+      "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "gulf-of-mexico",
+      "name": "Key West & Gulf of Mexico",
+      "species": "Wild American Pink Shrimp",
+      "coordinates": { "lat": 24.8, "lng": -82.2 },
+      "ocean": "Gulf Waters",
+      "harvestMethod": "TED-Equipped Night Trawl Fleet",
+      "peakSeason": "October – May",
+      "waterTemp": "68°F - 74°F",
+      "sustainabilityBadge": "Wild American Shrimp Guild",
+      "description": "Wild pink shrimp feed on coral reefs and clean sand bottoms, yielding an unmistakable sweet natural lobster-like snap.",
+      "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "hawaii-pacific",
+      "name": "Central Pacific & Hawaiian Waters",
+      "species": "Yellowfin Ahi Tuna (#1 Sashimi Grade)",
+      "coordinates": { "lat": 20.0, "lng": -156.0 },
+      "ocean": "Pelagic Pacific Waters",
+      "harvestMethod": "Dolphin-Safe Handline",
+      "peakSeason": "Year-Round",
+      "waterTemp": "72°F - 78°F",
+      "sustainabilityBadge": "Dolphin Safe / Pelagic Stewardship",
+      "description": "Individual handline-caught ahi, chilled immediately in sea ice brine slurry to preserve pristine gem-like red color and sashimi texture.",
+      "image": "https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?auto=format&fit=crop&w=600&q=80"
+    }
+  ]
+}

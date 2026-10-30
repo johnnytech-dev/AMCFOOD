@@ -1,0 +1,14 @@
+{
+  "name": "am-sea-food-sales",
+  "version": "1.0.0",
+  "description": "AM SEA FOOD SALES - High-converting Direct-to-Consumer (D2C) premium fresh & flash-frozen seafood e-commerce shop inspired by Sizzlefish",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
