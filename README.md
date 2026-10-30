@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AM SEA FOOD SALES 🐟
 > **High-Converting, Modern D2C Seafood E-Commerce Platform**  
 > Heavily inspired by the user experience, layout, and cold-chain assurance of [Sizzlefish](https://www.sizzlefish.com/).
@@ -109,3 +110,7 @@ SEAFOOD WEBSITE/
 - **Backend**: Node.js & Express REST API (`/api/products`, `/api/boxes`, `/api/validate-zip`, `/api/orders`).
 - **Cold-Chain Infrastructure**: Dry-ice packaging simulation, temperature threshold guarantees, and postal delivery estimators.
 
+=======
+# AMCFOOD
+A modern, responsive e-commerce web application dedicated to fresh seafood delivery. Built with clean UI/UX design, smooth product catalog browsing, secure cart management, and seamless online ordering for ocean-fresh catches straight to your doorstep
+>>>>>>> c764c4800fddef14ed9f5143fb951c32f6797c0b
