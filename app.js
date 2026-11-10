@@ -611,7 +611,7 @@
             <p class="text-xs text-slate-500 max-w-xs mx-auto">
               Fill your freezer with fresh wild-caught salmon, halibut, or customize your own seafood box!
             </p>
-            <button onclick="app.closeCart()" class="mt-3 px-5 py-2.5 rounded-xl bg-coral-500 text-white font-bold text-xs">
+            <button type="button" onclick="app.closeCart()" class="mt-3 px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs cursor-pointer active:scale-95">
               Start Shopping
             </button>
           </div>
@@ -623,16 +623,16 @@
             <div class="flex-1 min-w-0">
               <div class="flex justify-between items-start">
                 <h4 class="text-xs font-bold text-slate-900 leading-tight">${item.name}</h4>
-                <button onclick="app.removeCartItem('${item.cartItemId}')" class="text-slate-400 hover:text-red-500 text-xs ml-2">✕</button>
+                <button type="button" onclick="app.removeCartItem('${item.cartItemId}')" class="text-slate-400 hover:text-red-500 text-xs ml-2 cursor-pointer p-1">✕</button>
               </div>
               <span class="text-[11px] text-slate-500 block mt-0.5">${item.preparation} • ${item.weight}</span>
               <div class="flex justify-between items-center mt-2.5">
                 <div class="flex items-center gap-2 border border-slate-200 rounded-lg bg-slate-50 px-2 py-0.5">
-                  <button onclick="app.adjustCartItemQty('${item.cartItemId}', -1)" class="text-slate-600 hover:text-black font-bold text-xs">-</button>
+                  <button type="button" onclick="app.adjustCartItemQty('${item.cartItemId}', -1)" class="text-slate-600 hover:text-black font-bold text-xs cursor-pointer px-1 active:scale-95">-</button>
                   <span class="text-xs font-black text-slate-900 w-4 text-center">${item.quantity}</span>
-                  <button onclick="app.adjustCartItemQty('${item.cartItemId}', 1)" class="text-slate-600 hover:text-black font-bold text-xs">+</button>
+                  <button type="button" onclick="app.adjustCartItemQty('${item.cartItemId}', 1)" class="text-slate-600 hover:text-black font-bold text-xs cursor-pointer px-1 active:scale-95">+</button>
                 </div>
-                <span class="text-sm font-black text-ocean-950 font-heading">$${(item.price * item.quantity).toFixed(2)}</span>
+                <span class="text-sm font-black text-slate-900 font-heading">$${(item.price * item.quantity).toFixed(2)}</span>
               </div>
             </div>
           </div>
@@ -703,7 +703,7 @@
                   ${product.tag}
                 </span>
               </div>
-              <button onclick="app.openProductModal('${product.id}')" class="absolute bottom-3 right-3 bg-white/95 hover:bg-white text-[#0B1B2B] text-xs font-bold px-3 py-1.5 rounded-xl shadow backdrop-blur transition opacity-0 group-hover:opacity-100">
+              <button type="button" onclick="app.openProductModal('${product.id}')" class="absolute bottom-3 right-3 bg-white/95 hover:bg-white text-[#0B1B2B] text-xs font-bold px-3 py-1.5 rounded-xl shadow backdrop-blur transition opacity-0 group-hover:opacity-100 cursor-pointer active:scale-95">
                 Quick View
               </button>
             </div>
@@ -751,7 +751,7 @@
           </div>
 
           <div class="p-5 pt-0">
-            <button onclick="app.addCatalogProductToCart('${product.id}')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition hover:shadow-md">
+            <button type="button" onclick="app.addCatalogProductToCart('${product.id}')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition hover:shadow-md cursor-pointer active:scale-95">
               <i class="fa-solid fa-cart-plus"></i>
               Add to Cart
             </button>
@@ -854,17 +854,19 @@
               <span class="text-xs font-semibold text-slate-600">Portions:</span>
               <div class="flex items-center gap-2">
                 <button
+                  type="button"
                   onclick="app.adjustBoxPortion('${p.id}', -1)"
                   ${currentQty === 0 ? 'disabled' : ''}
-                  class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 disabled:opacity-40 text-slate-700 font-bold flex items-center justify-center transition"
+                  class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 disabled:opacity-40 text-slate-700 font-bold flex items-center justify-center transition cursor-pointer active:scale-95"
                 >
                   -
                 </button>
                 <span class="w-6 text-center text-sm font-black text-slate-900">${currentQty}</span>
                 <button
+                  type="button"
                   onclick="app.adjustBoxPortion('${p.id}', 1)"
                   ${totalSelected >= target ? 'disabled' : ''}
-                  class="w-7 h-7 rounded-lg bg-orange-600 hover:bg-orange-500 disabled:opacity-40 text-white font-bold flex items-center justify-center transition shadow-sm"
+                  class="w-7 h-7 rounded-lg bg-orange-600 hover:bg-orange-500 disabled:opacity-40 text-white font-bold flex items-center justify-center transition shadow-sm cursor-pointer active:scale-95"
                 >
                   +
                 </button>
@@ -882,14 +884,14 @@
     const cGrid = document.getElementById('curated-boxes-grid');
     if (cGrid) {
       cGrid.innerHTML = CURATED_BOXES.map(box => `
-        <div class="bg-ocean-950 rounded-3xl border border-ocean-800 overflow-hidden flex flex-col justify-between hover:border-ocean-600 transition shadow-lg group">
+        <div class="bg-[#0B1B2B] text-white rounded-3xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition shadow-lg group">
           <div>
             <div class="relative h-48 overflow-hidden">
               <img src="${box.image}" alt="${box.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-3 left-3 bg-coral-500 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full shadow">
+              <div class="absolute top-3 left-3 bg-orange-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full shadow">
                 ${box.badge}
               </div>
-              <div class="absolute bottom-3 right-3 bg-ocean-900/90 text-cyan-300 text-xs font-bold px-2.5 py-1 rounded-lg backdrop-blur">
+              <div class="absolute bottom-3 right-3 bg-slate-900/90 text-orange-300 text-xs font-bold px-2.5 py-1 rounded-lg backdrop-blur">
                 ${box.portions} Portions
               </div>
             </div>
@@ -907,11 +909,11 @@
             </div>
           </div>
 
-          <div class="p-6 pt-0 border-t border-ocean-900/60 mt-4">
+          <div class="p-6 pt-0 border-t border-slate-800 mt-4">
             <div class="flex items-baseline justify-between mb-4 pt-4">
               <div>
                 <span class="text-xs text-slate-400 line-through mr-1">$${box.compareAtPrice}</span>
-                <span class="text-xl font-black text-cyan-300 font-heading">$${box.price}</span>
+                <span class="text-xl font-black text-white font-heading">$${box.price}</span>
               </div>
               <div class="text-right">
                 <span class="text-[10px] text-emerald-400 block font-bold">Sub & Save 10%</span>
@@ -920,10 +922,10 @@
             </div>
 
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="app.addCuratedBox('${box.id}', false)" class="py-2.5 rounded-xl bg-ocean-800 hover:bg-ocean-700 text-xs font-bold text-white border border-ocean-700 transition">
+              <button type="button" onclick="app.addCuratedBox('${box.id}', false)" class="py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-white border border-slate-700 transition cursor-pointer active:scale-95">
                 One-Time
               </button>
-              <button onclick="app.addCuratedBox('${box.id}', true)" class="py-2.5 rounded-xl bg-coral-500 hover:bg-coral-600 text-xs font-extrabold text-white transition shadow">
+              <button type="button" onclick="app.addCuratedBox('${box.id}', true)" class="py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-xs font-extrabold text-white transition shadow cursor-pointer active:scale-95">
                 Subscribe
               </button>
             </div>
@@ -936,14 +938,14 @@
     const sGrid = document.getElementById('sourcing-cards-grid');
     if (sGrid) {
       sGrid.innerHTML = SOURCING_DATA.map(origin => `
-        <div class="bg-ocean-900/80 rounded-2xl p-5 border border-ocean-800 flex flex-col justify-between">
+        <div class="bg-[#0B1B2B] rounded-2xl p-5 border border-slate-800 text-white flex flex-col justify-between">
           <div>
             <img src="${origin.image}" alt="${origin.name}" class="w-full h-32 rounded-xl object-cover mb-3" />
-            <span class="text-[10px] uppercase font-bold text-coral-400 block">${origin.species}</span>
+            <span class="text-[10px] uppercase font-bold text-orange-400 block">${origin.species}</span>
             <h4 class="text-sm font-bold text-white mt-0.5">${origin.name}</h4>
             <p class="text-xs text-slate-300 mt-2 line-clamp-3">${origin.description}</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-ocean-800/80 text-[11px] text-cyan-300 font-semibold flex items-center gap-1">
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-orange-300 font-semibold flex items-center gap-1">
             <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
             <span>${origin.badge}</span>
           </div>
@@ -959,8 +961,8 @@
           <img src="${origin.image}" alt="${origin.name}" class="w-full md:w-44 h-32 rounded-xl object-cover" />
           <div class="flex-1">
             <div class="flex items-center justify-between">
-              <h4 class="text-base font-bold text-ocean-950">${origin.name}</h4>
-              <span class="text-xs font-bold text-coral-600 bg-coral-50 px-2.5 py-0.5 rounded-full border border-coral-200">${origin.species}</span>
+              <h4 class="text-base font-bold text-slate-900">${origin.name}</h4>
+              <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">${origin.species}</span>
             </div>
             <p class="text-xs text-slate-600 mt-1 mb-3">${origin.description}</p>
             <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-500">
@@ -982,19 +984,19 @@
           <div>
             <div class="relative h-44 overflow-hidden">
               <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-3 left-3 bg-ocean-950/80 backdrop-blur text-white text-[10px] font-bold px-2 py-1 rounded-lg">
+              <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur text-white text-[10px] font-bold px-2 py-1 rounded-lg">
                 ⏱ ${recipe.time} • ${recipe.difficulty}
               </div>
             </div>
             <div class="p-5">
-              <span class="text-[11px] font-bold text-coral-600 block uppercase">${recipe.seafoodName}</span>
-              <h3 class="text-sm font-bold text-ocean-950 mt-1 mb-2 line-clamp-2">${recipe.title}</h3>
+              <span class="text-[11px] font-bold text-orange-600 block uppercase">${recipe.seafoodName}</span>
+              <h3 class="text-sm font-bold text-slate-900 mt-1 mb-2 line-clamp-2">${recipe.title}</h3>
               <p class="text-xs text-slate-500 line-clamp-2">${recipe.desc}</p>
             </div>
           </div>
           <div class="p-5 pt-0">
-            <button onclick="app.addCatalogProductToCart('${recipe.seafoodId}')" class="w-full py-2.5 rounded-xl bg-ocean-900 hover:bg-ocean-800 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition">
-              <i class="fa-solid fa-cart-plus text-coral-400"></i>
+            <button type="button" onclick="app.addCatalogProductToCart('${recipe.seafoodId}')" class="w-full py-2.5 rounded-xl bg-[#0B1B2B] hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer active:scale-95">
+              <i class="fa-solid fa-cart-plus text-orange-400"></i>
               Add Catch to Cart
             </button>
           </div>
@@ -1017,7 +1019,7 @@
                   <span class="text-[10px] text-slate-500">$${cs.price.toFixed(2)} • ${cs.weight}</span>
                 </div>
               </div>
-              <button onclick="app.addCrossSell('${cs.id}')" class="px-2.5 py-1 rounded-lg bg-white border border-coral-400 text-coral-600 hover:bg-coral-500 hover:text-white font-bold text-[11px] transition">
+              <button type="button" onclick="app.addCrossSell('${cs.id}')" class="px-2.5 py-1 rounded-lg bg-white border border-orange-400 text-orange-600 hover:bg-orange-600 hover:text-white font-bold text-[11px] transition cursor-pointer active:scale-95">
                 + Add
               </button>
             </div>
@@ -1070,27 +1072,29 @@
     addCatalogProductToCart: function (productId) {
       const prepSelect = document.getElementById(`prep-${productId}`);
       const prep = prepSelect ? prepSelect.value : null;
-      window.app.addToCart(productId, 0, prep);
+      const varIdx = state.selectedVariants[productId] || 0;
+      window.app.addToCart(productId, varIdx, prep);
     },
     selectProductVariant: function (productId, variantIdx) {
       const p = PRODUCTS.find(prod => prod.id === productId);
       if (!p) return;
+      state.selectedVariants[productId] = variantIdx;
       const v = p.variants[variantIdx];
       const prEl = document.getElementById(`price-${productId}`);
       const compEl = document.getElementById(`compare-${productId}`);
       const portionEl = document.getElementById(`portion-price-${productId}`);
 
-      if (prEl) prEl.textContent = `$${v.price}`;
-      if (compEl) compEl.textContent = `$${v.compareAtPrice}`;
-      if (portionEl) portionEl.textContent = `~$${(v.price / v.packCount).toFixed(2)}/portion`;
+      if (prEl) prEl.textContent = `${v.price}`;
+      if (compEl) compEl.textContent = `${v.compareAtPrice}`;
+      if (portionEl) portionEl.textContent = `~${(v.price / v.packCount).toFixed(2)}/portion`;
 
       p.variants.forEach((_, idx) => {
         const btn = document.getElementById(`var-btn-${productId}-${idx}`);
         if (btn) {
           if (idx === variantIdx) {
-            btn.className = "var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border bg-ocean-900 text-white border-ocean-900 shadow-sm";
+            btn.className = "var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border bg-[#0B1B2B] text-white border-[#0B1B2B] shadow-sm cursor-pointer active:scale-95";
           } else {
-            btn.className = "var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border bg-white text-slate-600 border-slate-200";
+            btn.className = "var-btn flex-1 py-1 px-2 rounded-lg text-[11px] font-bold transition border bg-white text-slate-600 border-slate-200 hover:bg-slate-50 cursor-pointer active:scale-95";
           }
         }
       });
@@ -1224,7 +1228,7 @@
     addCustomBoxToCart: function () {
       const total = Object.values(state.customBoxPortions).reduce((sum, q) => sum + (q || 0), 0);
       if (total !== state.boxTargetSize) {
-        alert(`Please select exactly ${state.boxTargetSize} portions to fill your box.`);
+        showToast(`⚠️ Please select exactly ${state.boxTargetSize} portions to fill your box.`);
         return;
       }
 
@@ -1303,13 +1307,20 @@
       state.sortBy = val;
       renderCatalog();
     },
+    handleNewsletter: function (e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const input = document.getElementById('newsletter-email');
+      const email = input ? input.value : '';
+      if (!email) return;
+      showToast("🎉 Thank you for subscribing to AMC FOODS Catch of the Week! Use code AMC10 for 10% off.");
+      if (input) input.value = '';
+    },
     resetFilters: function () {
-      state.activeCategory = 'All Catch';
-      state.activeTag = 'All';
       state.searchQuery = '';
       const input = document.getElementById('search-input');
       if (input) input.value = '';
-      renderCatalog();
+      window.app.setCategory('All Catch');
+      window.app.setTag('All');
     },
 
     // Zip modal
@@ -1511,13 +1522,13 @@
       if (step === 1) {
         if (s1) s1.classList.remove('hidden');
         if (s2) s2.classList.add('hidden');
-        if (t1) t1.className = "text-coral-600 underline";
+        if (t1) t1.className = "text-orange-600 underline";
         if (t2) t2.className = "text-slate-400";
       } else {
         if (s1) s1.classList.add('hidden');
         if (s2) s2.classList.remove('hidden');
         if (t1) t1.className = "text-slate-400";
-        if (t2) t2.className = "text-coral-600 underline";
+        if (t2) t2.className = "text-orange-600 underline";
       }
     },
     placeFinalOrder: function () {
