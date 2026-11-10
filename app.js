@@ -1,5 +1,5 @@
 /**
- * AMCFOOD - Pure Natural Seafood D2C Storefront
+ * AMC FOODS - Pure Natural Seafood D2C Storefront
  * High-Converting Seafood D2C Storefront
  * Works 100% both offline (file://) and online (http://localhost:3000)
  */
@@ -1166,7 +1166,7 @@
       if (code === 'AMC10' || code === 'SIZZLE10' || code === 'SF10') {
         state.discountPercent = 10;
         state.appliedPromoName = 'AMC10 (10% OFF)';
-        showToast("🎉 Promo AMC10 applied: 10% OFF your AMCFOOD box!");
+        showToast("🎉 Promo AMC10 applied: 10% OFF your AMC FOODS box!");
       } else if (code === 'AMC15' || code === 'SIZZLE15' || code === 'AM15') {
         state.discountPercent = 15;
         state.appliedPromoName = 'AMC15 (15% OFF)';

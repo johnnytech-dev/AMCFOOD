@@ -1,4 +1,4 @@
-# AMCFOOD 🐟🔥
+# AMC FOODS 🐟🔥
 > **Pure Natural Seafood Delivered Directly to Your Door**  
 > High-converting, direct-to-consumer (D2C) e-commerce storefront with cold-chain assurance and custom seafood subscription boxes.
 
@@ -9,7 +9,7 @@
 ### 1. Global Header & Announcement Bar
 - **Promotional Bar**: Fast Free Shipping on Orders $100+ • Call Us Mon-Fri, 7-4 ET at: (833) 603-0888.
 - **Interactive Zip Code Estimator**: Dynamic delivery date calculator based on customer's zip code, routing through FedEx / UPS Chilled Air with guaranteed frozen delivery with dry ice.
-- **AMCFOOD Brand Identity**: Modern typography with orange/coral flame fish emblem and "Pure Natural Seafood" tagline.
+- **AMC FOODS Brand Identity**: Modern typography with orange/coral flame fish emblem and "Pure Natural Seafood" tagline.
 - **Search & Cart Trigger**: Instant auto-filtering and slide-over cart with live quantity and subtotal counter.
 
 ### 2. High-Impact Hero & Trust Bar
@@ -18,7 +18,7 @@
 - **Dual CTAs**: "Shop Best Sellers" (Primary Coral) & "Build Your Own Box" (Secondary Ice Blue with Save 10% badge).
 - **Core Trust Indicators**: *30+ Years Experience*, *100% Sustainably Sourced*, *Zero Additives or Chemicals (No STPP)*, *Flash-Frozen at Sea (-40°F)*, *100% Satisfaction Guarantee*.
 
-### 3. AMCFOOD Prime / Custom Box Builder
+### 3. AMC FOODS Prime / Custom Box Builder
 - **Box Sizes**: 12-Portion Box & 6-Portion Starter.
 - **Purchase Mode**: One-time purchase vs. **Subscribe & Save 10%** recurring deliveries.
 - **Visual Slot Tray**: Real-time slot filling animations as portions are selected.
@@ -32,13 +32,13 @@
 - **Preparation Dropdown**: Portioned fillets (Skin-on), Skinless portions, Thick-cut steaks.
 - **Quick View Modal**: Deep dive into nutritional facts (calories, protein, omega-3s), certifications, interactive pack size switcher, and chef preparation techniques.
 
-### 5. 3-Step "How AMCFOOD Works" Section
+### 5. 3-Step "How AMC FOODS Works" Section
 1. **You Choose Your Catch**: Pick individual portions or subscribe to curated boxes.
 2. **Flash-Frozen at Peak Freshness**: Cryogenically frozen within hours of harvest at -40°F to seal in ocean flavor.
 3. **Packed With Solid Dry Ice**: Shipped in recyclable insulated coolers, guaranteed rock-solid frozen at your doorstep.
 
-### 6. Why AMCFOOD Comparison
-- Direct side-by-side comparison between **AMCFOOD** and typical supermarket seafood display cases.
+### 6. Why AMC FOODS Comparison
+- Direct side-by-side comparison between **AMC FOODS** and typical supermarket seafood display cases.
 
 ### 7. Chef Recipes & Cooking Inspiration
 - Culinary guides for pan-seared halibut, cedar plank salmon, and seafood dishes with 1-click "Add Catch to Cart".

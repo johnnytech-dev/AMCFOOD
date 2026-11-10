@@ -198,7 +198,7 @@ app.post('/api/newsletter', (req, res) => {
   res.json({
     success: true,
     promoCode: 'AMC10',
-    message: 'Welcome to the AMCFOOD family! Use code AMC10 at checkout for 10% off your first box.'
+    message: 'Welcome to the AMC FOODS family! Use code AMC10 at checkout for 10% off your first box.'
   });
 });
 
@@ -208,6 +208,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`AMCFOOD Seafood Market server running at http://localhost:${PORT}`);
+  console.log(`AMC FOODS Seafood Market server running at http://localhost:${PORT}`);
 });
 

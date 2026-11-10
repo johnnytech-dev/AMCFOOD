@@ -1,7 +1,7 @@
 {
-  "name": "amcfood",
+  "name": "amc-foods",
   "version": "1.0.0",
-  "description": "AMCFOOD - Pure Natural Seafood Delivered To Your Door. Direct-to-Consumer fresh & flash-frozen premium seafood e-commerce market.",
+  "description": "AMC FOODS - Pure Natural Seafood Delivered To Your Door. Direct-to-Consumer fresh & flash-frozen premium seafood e-commerce market.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
