@@ -1,6 +1,7 @@
 -- ============================================================
 -- AMC FOODS — Supabase Database Schema
 -- Run this in Supabase Dashboard → SQL Editor
+-- (Idempotent: safe to run multiple times)
 -- ============================================================
 
 -- ── ORDERS TABLE ─────────────────────────────────────────────
@@ -50,31 +51,36 @@ CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers (email);
 ALTER TABLE orders      ENABLE ROW LEVEL SECURITY;
 ALTER TABLE subscribers ENABLE ROW LEVEL SECURITY;
 
--- Allow anon (public API) to INSERT orders and subscribers
+-- 1. Allow anon (public API) to INSERT orders
+DROP POLICY IF EXISTS "Allow anon insert orders" ON orders;
 CREATE POLICY "Allow anon insert orders"
   ON orders FOR INSERT
   TO anon
   WITH CHECK (true);
 
+-- 2. Allow anon to INSERT subscribers
+DROP POLICY IF EXISTS "Allow anon insert subscribers" ON subscribers;
 CREATE POLICY "Allow anon insert subscribers"
   ON subscribers FOR INSERT
   TO anon
   WITH CHECK (true);
 
--- Allow anon to upsert subscribers (for newsletter re-signups)
+-- 3. Allow anon to UPDATE / upsert subscribers (for newsletter re-signups)
+DROP POLICY IF EXISTS "Allow anon upsert subscribers" ON subscribers;
 CREATE POLICY "Allow anon upsert subscribers"
   ON subscribers FOR UPDATE
   TO anon
   USING (true)
   WITH CHECK (true);
 
--- Allow anon to SELECT subscribers (for upsert conflict check)
+-- 4. Allow anon to SELECT subscribers (for upsert conflict check)
+DROP POLICY IF EXISTS "Allow anon select subscribers" ON subscribers;
 CREATE POLICY "Allow anon select subscribers"
   ON subscribers FOR SELECT
   TO anon
   USING (true);
 
 -- ── VERIFY TABLES EXIST ───────────────────────────────────────
--- After running above, verify with:
--- SELECT * FROM orders LIMIT 5;
--- SELECT * FROM subscribers LIMIT 5;
+-- Run these checks to verify everything works:
+SELECT * FROM orders LIMIT 5;
+SELECT * FROM subscribers LIMIT 5;
